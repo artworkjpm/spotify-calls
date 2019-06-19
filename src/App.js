@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      artistName: []
+    };
+  }
+  componentDidMount() {
+    let parsed = new URLSearchParams(window.location.search).get(
+      "access_token"
+    );
+    parsed = { token: parsed };
+    console.log(parsed.token);
+
+    fetch("https://api.spotify.com/v1/search?q=oasis&type=artist", {
+      headers: { Authorization: "Bearer " + parsed.token }
+    })
+      .then(response => response.json())
+      .then(data =>
+        this.setState({
+          artistName: data.artists.items[0].name,
+          log: console.log(data)
+        })
+      );
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <h1>Johns latest songs</h1>
+        <p>{this.state.artistName}</p>
+      </div>
+    );
+  }
 }
 
 export default App;
