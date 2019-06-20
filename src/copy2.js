@@ -24,22 +24,63 @@ class App extends Component {
     console.log(this.state.searchName);
 
     event.preventDefault();
-    this.searchBands(this.state.searchName);
-  }
-  componentDidMount() {
-    this.searchBands();
+    var parsed = new URLSearchParams(window.location.search).get(
+      "access_token"
+    );
+    parsed = { token: parsed };
+    console.log(parsed.token);
+
+    var headersAPI = {
+      headers: { Authorization: "Bearer " + parsed.token }
+    };
+    fetch(
+      `https://api.spotify.com/v1/search?q=${
+        this.state.searchName
+      }&type=artist`,
+      headersAPI
+    )
+      .then(response => response.json())
+      .then(data =>
+        this.setState({
+          artistName: data.artists.items[0],
+          log: console.log(data),
+          image: data.artists.items[0].images[0].url
+        })
+      )
+      .catch(error =>
+        this.setState({
+          log: console.error("Error:", error),
+          errorApi: true
+        })
+      );
   }
 
-  searchBands(name) {
+  componentDidMount() {
     let parsed = new URLSearchParams(window.location.search).get(
       "access_token"
     );
     parsed = { token: parsed };
     console.log(parsed.token);
-    let searchName = this.state.searchName === "" ? "The Cure" : name;
+    let searchName = "nick cave";
     let headersAPI = {
       headers: { Authorization: "Bearer " + parsed.token }
     };
+
+    //get user profile
+    fetch(`https://api.spotify.com/v1/me`, headersAPI)
+      .then(response => response.json())
+      .then(data =>
+        this.setState({
+          userName: data.display_name,
+          log: console.log(data)
+        })
+      )
+      .catch(error =>
+        this.setState({
+          log: console.error("Error:", error),
+          errorApi: true
+        })
+      );
 
     //search band
     fetch(

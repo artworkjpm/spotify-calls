@@ -24,19 +24,18 @@ class App extends Component {
     console.log(this.state.searchName);
 
     event.preventDefault();
-    this.searchBands(this.state.searchName);
   }
   componentDidMount() {
     this.searchBands();
   }
 
-  searchBands(name) {
+  searchBands() {
     let parsed = new URLSearchParams(window.location.search).get(
       "access_token"
     );
     parsed = { token: parsed };
     console.log(parsed.token);
-    let searchName = this.state.searchName === "" ? "The Cure" : name;
+    let searchName = "nick cave";
     let headersAPI = {
       headers: { Authorization: "Bearer " + parsed.token }
     };
