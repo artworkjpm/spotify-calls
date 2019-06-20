@@ -11,7 +11,7 @@ https://developer.spotify.com/my-applications
 
 On that page, add http://localhost:8888 as a callback url (don't forget to hit save at the bottom of the page)
 
-Write the below commands in your terminal (replacing XXXX AND YYYY with your acutal client id and secret from the page where you registered your application)
+Write the below commands in your terminal (replacing XXXX AND YYYY with your actual client id and secret from the page where you registered your application)
 
 ```
 export SPOTIFY_CLIENT_ID=XXXX

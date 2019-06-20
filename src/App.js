@@ -6,7 +6,8 @@ class App extends Component {
     super();
     this.state = {
       artistName: [],
-      image: []
+      image: [],
+      errorApi: false
     };
   }
   componentDidMount() {
@@ -26,17 +27,29 @@ class App extends Component {
           log: console.log(data),
           image: data.artists.items[0].images[0].url
         })
+      )
+      .catch(error =>
+        this.setState({
+          log: console.error("Error:", error),
+          errorApi: true
+        })
       );
   }
 
   render() {
     return (
       <div className="App">
-        <h1>Johns latest songs</h1>
-        <p>{this.state.artistName.name}</p>
-        <p>{this.state.artistName.id}</p>
-        <p>{this.state.image}</p>
-        <img src={this.state.image} alt="group" width="200" />
+        {this.state.errorApi ? (
+          <h1>Problem with the Spotify API backend</h1>
+        ) : (
+          <>
+            <h1>Johns latest songs xxx</h1>
+            <p>{this.state.artistName.name}</p>
+            <p>{this.state.artistName.id}</p>
+            <p>{this.state.image}</p>
+            <img src={this.state.image} alt="group" width="200" />
+          </>
+        )}
       </div>
     );
   }
