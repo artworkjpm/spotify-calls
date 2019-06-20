@@ -1,4 +1,13 @@
+
+
+move bserver out of repo because its a seperat repo, separate app
+http://localhost:8888/login
 https://github.com/mpj/oauth-bridge-template
+git push heroku master
+https://spotify-calls.herokuapp.com/
+https://jmbackend.herokuapp.com/login to make the frontend site work.
+
+Understanding OAuth with the Spotify API - #12 React JS prototyping
 
 ## Available Scripts
 

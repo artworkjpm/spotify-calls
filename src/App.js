@@ -36,7 +36,7 @@ class App extends Component {
         <p>{this.state.artistName.name}</p>
         <p>{this.state.artistName.id}</p>
         <p>{this.state.image}</p>
-        <img src={this.state.image} alt="group image" width="200" />
+        <img src={this.state.image} alt="group" width="200" />
       </div>
     );
   }
