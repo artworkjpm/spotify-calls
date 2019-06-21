@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
 
+//variables for the api calls
+const parsed = new URLSearchParams(window.location.search).get("access_token");
+const headersAPI = {
+  headers: { Authorization: "Bearer " + parsed }
+};
+
 class App extends Component {
   constructor() {
     super();
@@ -20,26 +26,33 @@ class App extends Component {
   }
 
   handleSubmit(event) {
-    alert(this.state.searchName);
-    console.log(this.state.searchName);
-
     event.preventDefault();
     this.searchBands(this.state.searchName);
   }
   componentDidMount() {
+    this.getUserProfile();
     this.searchBands();
   }
 
+  getUserProfile() {
+    fetch(`https://api.spotify.com/v1/me`, headersAPI)
+      .then(response => response.json())
+      .then(data =>
+        this.setState({
+          userName: data.display_name,
+          log: console.log(data)
+        })
+      )
+      .catch(error =>
+        this.setState({
+          log: console.error("Error:", error),
+          errorApi: true
+        })
+      );
+  }
+
   searchBands(name) {
-    let parsed = new URLSearchParams(window.location.search).get(
-      "access_token"
-    );
-    parsed = { token: parsed };
-    console.log(parsed.token);
     let searchName = this.state.searchName === "" ? "The Cure" : name;
-    let headersAPI = {
-      headers: { Authorization: "Bearer " + parsed.token }
-    };
 
     //search band
     fetch(
