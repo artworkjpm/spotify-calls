@@ -18,7 +18,9 @@ https://www.spotify.com/is/
 ## great website
 https://artist-explorer.glitch.me
 
+## spotify web player guide
 
+https://developer.spotify.com/documentation/web-playback-sdk/quick-start/
 
 
 

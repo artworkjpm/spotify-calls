@@ -126,6 +126,21 @@ class App extends Component {
             <p>{this.state.artistName.id}</p>
             <p>{this.state.image}</p>
             <img src={this.state.image} alt="group" width="200" />
+
+            <audio controls>
+              <source
+                src="https://open.spotify.com/track/08nqNn2aPDjIEHeiMZ39hH"
+                type="audio/ogg"
+              />
+              Your browser does not support the audio element.
+            </audio>
+            <audio controls>
+              <source
+                src="https://open.spotify.com/track/08nqNn2aPDjIEHeiMZ39hH"
+                type="audio/mpeg"
+              />
+              Your browser does not support the audio element.
+            </audio>
           </>
         )}
       </div>

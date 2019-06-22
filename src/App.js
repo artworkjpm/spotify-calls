@@ -3,6 +3,7 @@ import SearchBands from "./methods/SearchBand";
 import "./App.css";
 
 //variables for the api calls
+var artistID;
 const parsed = new URLSearchParams(window.location.search).get("access_token");
 const headersAPI = {
   headers: { Authorization: "Bearer " + parsed }
@@ -17,6 +18,8 @@ class App extends Component {
     this.state = {
       searchName: "",
       artistName: [],
+      artistID: "",
+      popularSongID: "",
       image: [],
       errorApi: false,
       userName: ""
@@ -63,10 +66,37 @@ class App extends Component {
     )
       .then(response => response.json())
       .then(data =>
+        this.setState(
+          {
+            artistName: data.artists.items[0],
+            log: console.log(data),
+            image: data.artists.items[0].images[0].url,
+            artistID: data.artists.items[0].id
+          },
+          this.getTopTracks
+        )
+      )
+      .catch(error =>
         this.setState({
-          artistName: data.artists.items[0],
+          log: console.error("Error:", error),
+          errorApi: true
+        })
+      );
+  }
+
+  getTopTracks() {
+    artistID = this.state.artistID;
+    console.log("artistID: " + this.state.artistID);
+
+    fetch(
+      `https://api.spotify.com/v1/artists/${artistID}/top-tracks?country=SE`,
+      headersAPI
+    )
+      .then(response => response.json())
+      .then(data =>
+        this.setState({
           log: console.log(data),
-          image: data.artists.items[0].images[0].url
+          popularSongID: data.tracks[0].id
         })
       )
       .catch(error =>
@@ -78,6 +108,8 @@ class App extends Component {
   }
 
   render() {
+    console.log("popular song: " + this.state.popularSongID);
+    let popsong = this.state.popularSongID;
     return (
       <div className="App">
         {this.state.errorApi ? (
@@ -95,20 +127,6 @@ class App extends Component {
             <p>{this.state.image}</p>
             <img src={this.state.image} alt="group" width="200" />
 
-            <audio controls>
-              <source
-                src="https://open.spotify.com/track/08nqNn2aPDjIEHeiMZ39hH"
-                type="audio/ogg"
-              />
-              Your browser does not support the audio element.
-            </audio>
-            <audio controls>
-              <source
-                src="https://open.spotify.com/track/08nqNn2aPDjIEHeiMZ39hH"
-                type="audio/mpeg"
-              />
-              Your browser does not support the audio element.
-            </audio>
             <iframe
               title="spotify player"
               //https://open.spotify.com/track/79RUMZfMNMpqZnswovvTqv
@@ -116,8 +134,8 @@ class App extends Component {
               //src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3"
               //src="https://open.spotify.com/artist/"{this.state.artistName.id}
 
-              src="https://open.spotify.com/embed/track/08nqNn2aPDjIEHeiMZ39hH"
-              //src="https://api.spotify.com/v1/artists/2DaxqgrOhkeH0fpeiQq2f4/top-tracks"
+              src={`https://open.spotify.com/embed/track/${popsong}`}
+              //src={`https://open.spotify.com/embed/artist/${artistID}/top-tracks?country=SE`}
               width="300"
               height="380"
               frameBorder="0"
