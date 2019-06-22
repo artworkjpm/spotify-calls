@@ -4,9 +4,10 @@ export default class SearchBands extends Component {
   render() {
     return (
       <form onSubmit={this.props.onSubmitValue}>
-        <label>
+        <label style={{ marginRight: "10px" }}>
           Search artist:
           <input
+            style={{ marginLeft: "10px" }}
             type="text"
             value={this.props.value}
             onChange={this.props.onChangeValue}

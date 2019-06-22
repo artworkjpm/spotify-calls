@@ -1,9 +1,6 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Popular from "./components/Popular";
-import SearchBands from "./components/SearchBand";
 
-import "./App.css";
+import SearchBands from "./SearchBand";
 
 //variables for the api calls
 var artistID;
@@ -15,7 +12,7 @@ const headersAPI = {
 //https://api.spotify.com/v1/artists/{id}/top-tracks
 //make call to above, get all the top track id's, put into audio player, easy!
 
-class App extends Component {
+class Popular extends Component {
   constructor() {
     super();
     this.state = {
@@ -115,9 +112,6 @@ class App extends Component {
     let popsong = this.state.popularSongID;
     return (
       <div className="App">
-        <Router>
-          <Route path="/popular" component={Popular} />
-        </Router>
         {this.state.errorApi ? (
           <h1>Problem with the Spotify API backend</h1>
         ) : (
@@ -152,4 +146,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Popular;
