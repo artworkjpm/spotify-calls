@@ -116,7 +116,7 @@ class Popular extends Component {
           <h1>Problem with the Spotify API backend</h1>
         ) : (
           <>
-            <h1>Hi {this.state.userName.split(" ")[0]}!</h1>
+            <h1>Hi {this.state.userName.split(" ")[0]}! POPULAR PAGE</h1>
             <h2>Most popular Artist's songs on Spotify</h2>
             <SearchBands
               onSubmitValue={this.handleSubmit}

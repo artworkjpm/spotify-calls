@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Popular from "./components/Popular";
-import SearchBands from "./components/SearchBand";
+import Home from "./components/Home";
 
 import "./App.css";
 
@@ -19,6 +19,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      parsed: parsed,
       searchName: "",
       artistName: [],
       artistID: "",
@@ -92,7 +93,7 @@ class App extends Component {
     console.log("artistID: " + this.state.artistID);
 
     fetch(
-      `https://api.spotify.com/v1/artists/${artistID}/top-tracks?country=SE`,
+      `https://api.spotify.com/v1/artists/${artistID}/top-tracks?country=GB`,
       headersAPI
     )
       .then(response => response.json())
@@ -116,37 +117,28 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <Route path="/popular" component={Popular} />
-        </Router>
-        {this.state.errorApi ? (
-          <h1>Problem with the Spotify API backend</h1>
-        ) : (
-          <>
-            <h1>Hi {this.state.userName.split(" ")[0]}!</h1>
-            <h2>Most popular Artist's songs on Spotify</h2>
-            <SearchBands
-              onSubmitValue={this.handleSubmit}
-              value={this.state.value}
-              onChangeValue={this.handleChange}
-            />
-            <p>
-              {this.state.artistName.name}, artist id:{" "}
-              {this.state.artistName.id}
-            </p>
-            <img src={this.state.image} alt="group" width="200" />
+          <nav>
+            <Link to="/popular">Popular</Link>
+          </nav>
 
-            <iframe
-              title="spotify player"
-              src={`https://open.spotify.com/embed/track/${popsong}`}
-              //src={`https://open.spotify.com/embed/artist/${artistID}/top-tracks?country=SE`}
-              width="300"
-              height="380"
-              frameBorder="0"
-              allowtransparency="true"
-              allow="encrypted-media"
-            />
-          </>
-        )}
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <Home
+                errorApi={this.state.errorApi}
+                username={this.state.userName.split(" ")[0]}
+                artistName={this.state.artistName}
+                artistImage={this.state.image}
+                popularSong={popsong}
+                onSubmitValue={this.handleSubmit}
+                value={this.state.value}
+                onChangeValue={this.handleChange}
+              />
+            )}
+          />
+          <Route path="/popular" render={() => <Popular Token={parsed} />} />
+        </Router>
       </div>
     );
   }
