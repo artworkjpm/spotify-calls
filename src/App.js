@@ -124,7 +124,10 @@ class App extends Component {
       <div className="App">
         <Router>
           <nav>
-            <Link to={`/popular?access_token=${parsed}`}>Popular</Link>
+            <Link to={`/?access_token=${parsed}`}>Home</Link> /{" "}
+            <Link to={`/popular?access_token=${parsed}`}>
+              Most Popular Song App
+            </Link>
           </nav>
 
           <Route
