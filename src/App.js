@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Redirect
+} from "react-router-dom";
 import Popular from "./components/Popular";
 import Home from "./components/Home";
 
@@ -14,6 +19,7 @@ const headersAPI = {
 
 //https://api.spotify.com/v1/artists/{id}/top-tracks
 //make call to above, get all the top track id's, put into audio player, easy!
+//?access_token=${parsed}
 
 class App extends Component {
   constructor() {
@@ -118,7 +124,7 @@ class App extends Component {
       <div className="App">
         <Router>
           <nav>
-            <Link to="/popular">Popular</Link>
+            <Link to={`/popular?access_token=${parsed}`}>Popular</Link>
           </nav>
 
           <Route
@@ -137,7 +143,12 @@ class App extends Component {
               />
             )}
           />
-          <Route path="/popular" render={() => <Popular Token={parsed} />} />
+          <Route
+            path="/popular"
+            render={() => <Redirect to={`/popular?access_token=${parsed}`} />}
+          />
+
+          <Route path="/popular" render={() => <Popular token={parsed} />} />
         </Router>
       </div>
     );
