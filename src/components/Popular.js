@@ -16,10 +16,12 @@ class Popular extends Component {
   constructor() {
     super();
     this.state = {
+      parsed: parsed,
       searchName: "",
       artistName: [],
       artistID: "",
       popularSongID: "",
+      popularSongs: [],
       image: [],
       errorApi: false,
       userName: ""
@@ -96,7 +98,8 @@ class Popular extends Component {
       .then(data =>
         this.setState({
           log: console.log(data),
-          popularSongID: data.tracks[0].id
+          popularSongID: data.tracks[0].id,
+          popularSongs: data.tracks
         })
       )
       .catch(error =>
@@ -108,8 +111,10 @@ class Popular extends Component {
   }
 
   render() {
-    console.log("popular song: " + this.state.popularSongID);
     let popsong = this.state.popularSongID;
+    if (popsong !== "") {
+      console.log("popular song: " + this.state.popularSongID);
+    }
     return (
       <div className="App">
         {this.state.errorApi ? (
@@ -139,6 +144,14 @@ class Popular extends Component {
               allowtransparency="true"
               allow="encrypted-media"
             />
+            <div>
+              <h2>{this.state.artistName.name}'s most popular songs:</h2>
+              <ol className="center-list">
+                {this.state.popularSongs.map((song, i) => (
+                  <li key={i}>{song.name}</li>
+                ))}
+              </ol>
+            </div>
           </>
         )}
       </div>

@@ -1,3 +1,14 @@
 .App{
   text-align: center
 }
+
+.center-div {
+  margin: auto;
+  width: 50%;
+}
+
+.center-list {
+    list-style-position: inside;
+
+
+}

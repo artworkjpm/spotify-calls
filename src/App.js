@@ -30,6 +30,7 @@ class App extends Component {
       artistName: [],
       artistID: "",
       popularSongID: "",
+      popularSongs: [],
       image: [],
       errorApi: false,
       userName: ""
@@ -106,7 +107,8 @@ class App extends Component {
       .then(data =>
         this.setState({
           log: console.log(data),
-          popularSongID: data.tracks[0].id
+          popularSongID: data.tracks[0].id,
+          popularSongs: data.tracks
         })
       )
       .catch(error =>
@@ -118,8 +120,11 @@ class App extends Component {
   }
 
   render() {
-    console.log("popular song: " + this.state.popularSongID);
     let popsong = this.state.popularSongID;
+    if (popsong !== "") {
+      console.log("popular song: " + this.state.popularSongID);
+    }
+
     return (
       <div className="App">
         <Router>
@@ -140,6 +145,7 @@ class App extends Component {
                 artistName={this.state.artistName}
                 artistImage={this.state.image}
                 popularSong={popsong}
+                popularSongsArray={this.state.popularSongs}
                 onSubmitValue={this.handleSubmit}
                 value={this.state.value}
                 onChangeValue={this.handleChange}
