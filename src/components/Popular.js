@@ -28,6 +28,7 @@ class Popular extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClickSong = this.handleClickSong.bind(this);
   }
 
   handleChange(event) {
@@ -38,6 +39,12 @@ class Popular extends Component {
     event.preventDefault();
     this.searchBands(this.state.searchName);
   }
+
+  handleClickSong(e) {
+    e.preventDefault();
+    alert("list clicked");
+  }
+
   componentDidMount() {
     this.getUserProfile();
     this.searchBands();
@@ -148,7 +155,9 @@ class Popular extends Component {
               <h2>{this.state.artistName.name}'s most popular songs:</h2>
               <ol className="center-list">
                 {this.state.popularSongs.map((song, i) => (
-                  <li key={i}>{song.name}</li>
+                  <li key={i}>
+                    <button onClick={this.handleClickSong}>{song.name}</button>
+                  </li>
                 ))}
               </ol>
             </div>

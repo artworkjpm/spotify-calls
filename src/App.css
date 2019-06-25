@@ -9,6 +9,18 @@
 
 .center-list {
     list-style-position: inside;
-
-
 }
+
+button {
+  background:none;
+  color:blue;
+  border:none; 
+  padding:0!important;
+  font: inherit;
+  border-bottom:1px solid blue; 
+  cursor: pointer;
+}
+button:link { color: #0000EE; }
+button:visited { color: #551A8B; }
+button:active, button:visited:active { color: #FF0000; }
+button:link, button:visited { text-decoration: underline; cursor: pointer; }
