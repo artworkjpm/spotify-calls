@@ -38,7 +38,8 @@ class App extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    //this.handleClickSong = this.handleClickSong.bind(this);
+    this.handleClickSong = this.handleClickSong.bind(this);
+    this.handleClickGroup = this.handleClickGroup.bind(this);
   }
 
   handleChange(event) {
@@ -49,9 +50,19 @@ class App extends Component {
     event.preventDefault();
     this.searchBands(this.state.searchName);
   }
+
+  handleClickSong(e) {
+    this.setState({ popularSongID: e.target.value });
+  }
+
+  handleClickGroup(e) {
+    //alert("name: " + e.target.value);
+    this.searchBands(e.target.value);
+  }
+
   componentDidMount() {
     this.getUserProfile();
-    this.searchBands();
+    this.searchBands("Oasis");
   }
 
   getUserProfile() {
@@ -72,11 +83,7 @@ class App extends Component {
   }
 
   searchBands(name) {
-    let searchName = this.state.searchName === "" ? "The Cure" : name;
-    fetch(
-      `https://api.spotify.com/v1/search?q=${searchName}&type=artist`,
-      headersAPI
-    )
+    fetch(`https://api.spotify.com/v1/search?q=${name}&type=artist`, headersAPI)
       .then(response => response.json())
       .then(data =>
         this.setState(
@@ -121,6 +128,10 @@ class App extends Component {
       );
   }
 
+  goBackError() {
+    this.props.history.goBack();
+  }
+
   render() {
     let popsong = this.state.popularSongID;
     if (popsong !== "") {
@@ -155,6 +166,8 @@ class App extends Component {
                 onSubmitValue={this.handleSubmit}
                 value={this.state.value}
                 onChangeValue={this.handleChange}
+                handleClickSong={this.handleClickSong}
+                handleClickGroup={this.handleClickGroup}
               />
             )}
           />

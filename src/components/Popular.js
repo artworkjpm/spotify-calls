@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SearchBands from "./SearchBand";
+import { withRouter } from "react-router-dom";
 //get local json bands list
 var bands = require("../festivals/bands.json");
 
@@ -14,8 +15,8 @@ const headersAPI = {
 //make call to above, get all the top track id's, put into audio player, easy!
 
 class Popular extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       parsed: parsed,
       searchName: "",
@@ -124,6 +125,10 @@ class Popular extends Component {
       );
   }
 
+  goBackError() {
+    this.props.history.goBack();
+  }
+
   render() {
     let popsong = this.state.popularSongID;
     if (popsong !== "") {
@@ -132,7 +137,10 @@ class Popular extends Component {
     return (
       <div className="App">
         {this.state.errorApi ? (
-          <h1>Problem with the Spotify API backend</h1>
+          <h1>
+            Spotify has no group of this band, please go back{" "}
+            {this.goBackError()}
+          </h1>
         ) : (
           <>
             <h1>Hi {this.state.userName.split(" ")[0]}! POPULAR PAGE</h1>
@@ -196,4 +204,4 @@ class Popular extends Component {
   }
 }
 
-export default Popular;
+export default withRouter(Popular);

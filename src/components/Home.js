@@ -1,11 +1,12 @@
 import React from "react";
 import SearchBands from "./SearchBand";
+var bands = require("../festivals/bands.json");
 
 const Home = props => {
   return (
     <div className="Home">
       {props.errorApi ? (
-        <h1>Problem with the Spotify API backend</h1>
+        <h1>Spotify has no group of this band, please go back</h1>
       ) : (
         <>
           <h1>Hi {props.username}!</h1>
@@ -31,13 +32,33 @@ const Home = props => {
             allow="encrypted-media"
           />
 
-          <div className="center-div">
-            <h2>{props.artistName.name}'s most popular songs:</h2>
-            <ol className="center-list">
-              {props.popularSongsArray.map((song, i) => (
-                <li key={i}>{song.name}</li>
-              ))}
-            </ol>
+          <div className="main-wrap">
+            <div className="center-div">
+              <h2>
+                {bands.festival}: {bands.name}
+              </h2>
+              <ul className="center-list">
+                {bands.events.map((group, i) => (
+                  <li key={i}>
+                    <button value={group.name} onClick={props.handleClickGroup}>
+                      {group.name}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="center-div">
+              <h2>{props.artistName.name}'s most popular songs:</h2>
+              <ol className="center-list">
+                {props.popularSongsArray.map((song, i) => (
+                  <li key={i}>
+                    <button value={song.id} onClick={props.handleClickSong}>
+                      {song.name}
+                    </button>
+                  </li>
+                ))}
+              </ol>
+            </div>
           </div>
         </>
       )}
