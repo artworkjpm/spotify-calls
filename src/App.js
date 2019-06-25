@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ErrorBoundary from "./components/ErrorBoundary";
 import {
   BrowserRouter as Router,
   Route,
@@ -130,6 +131,10 @@ class App extends Component {
       <div className="App">
         <Router>
           <nav>
+            <a href="http://localhost:8888/login">Login Dev</a> /{" "}
+            <a href="https://clipify-backend.herokuapp.com/login">Login Prod</a>
+          </nav>
+          <nav>
             <Link to={`/?access_token=${parsed}`}>Home</Link> /{" "}
             <Link to={`/popular?access_token=${parsed}`}>
               Most Popular Song App
@@ -158,7 +163,14 @@ class App extends Component {
             render={() => <Redirect to={`/popular?access_token=${parsed}`} />}
           />
 
-          <Route path="/popular" render={() => <Popular token={parsed} />} />
+          <Route
+            path="/popular"
+            render={() => (
+              <ErrorBoundary>
+                <Popular token={parsed} />{" "}
+              </ErrorBoundary>
+            )}
+          />
         </Router>
       </div>
     );

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import SearchBands from "./SearchBand";
 
 //variables for the api calls
@@ -42,7 +41,8 @@ class Popular extends Component {
 
   handleClickSong(e) {
     e.preventDefault();
-    alert("list clicked");
+    //alert("song id" + e.target.value);
+    this.setState({ popularSongID: e.target.value });
   }
 
   componentDidMount() {
@@ -62,7 +62,8 @@ class Popular extends Component {
       .catch(error =>
         this.setState({
           log: console.error("Error:", error),
-          errorApi: true
+          errorApi: true,
+          logError: console.log(this.state.errorApi)
         })
       );
   }
@@ -151,12 +152,14 @@ class Popular extends Component {
               allowtransparency="true"
               allow="encrypted-media"
             />
-            <div>
+            <div className="center-div">
               <h2>{this.state.artistName.name}'s most popular songs:</h2>
               <ol className="center-list">
                 {this.state.popularSongs.map((song, i) => (
                   <li key={i}>
-                    <button onClick={this.handleClickSong}>{song.name}</button>
+                    <button value={song.id} onClick={this.handleClickSong}>
+                      {song.name}
+                    </button>
                   </li>
                 ))}
               </ol>

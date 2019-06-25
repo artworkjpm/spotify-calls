@@ -3,12 +3,14 @@
 }
 
 .center-div {
-  margin: auto;
-  width: 50%;
+  margin: 0 auto;
+  width: 400px;
 }
 
 .center-list {
-    list-style-position: inside;
+  text-align: left;
+  width: 500px;
+  margin: 0 auto;
 }
 
 button {
