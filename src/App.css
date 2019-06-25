@@ -2,9 +2,17 @@
   text-align: center
 }
 
+.main-wrap{
+  display: flex;
+}
+
 .center-div {
   margin: 0 auto;
   width: 400px;
+}
+
+.center-div h2{
+  text-align: left;
 }
 
 .center-list {
@@ -21,6 +29,7 @@ button {
   font: inherit;
   border-bottom:1px solid blue; 
   cursor: pointer;
+  text-align: left;
 }
 button:link { color: #0000EE; }
 button:visited { color: #551A8B; }

@@ -30,7 +30,8 @@ const Home = props => {
             allowtransparency="true"
             allow="encrypted-media"
           />
-          <div>
+
+          <div className="center-div">
             <h2>{props.artistName.name}'s most popular songs:</h2>
             <ol className="center-list">
               {props.popularSongsArray.map((song, i) => (

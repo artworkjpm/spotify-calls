@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import SearchBands from "./SearchBand";
+//get local json bands list
+var bands = require("../festivals/bands.json");
 
 //variables for the api calls
 var artistID;
@@ -28,6 +30,7 @@ class Popular extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClickSong = this.handleClickSong.bind(this);
+    this.handleClickGroup = this.handleClickGroup.bind(this);
   }
 
   handleChange(event) {
@@ -40,15 +43,21 @@ class Popular extends Component {
   }
 
   handleClickSong(e) {
-    e.preventDefault();
-    //alert("song id" + e.target.value);
     this.setState({ popularSongID: e.target.value });
+  }
+
+  handleClickGroup(e) {
+    //alert("name: " + e.target.value);
+    this.searchBands(e.target.value);
   }
 
   componentDidMount() {
     this.getUserProfile();
-    this.searchBands();
+    this.searchBands("Oasis");
   }
+  /* componentWillUpdate() {
+    this.searchBands(name);
+  } */
 
   getUserProfile() {
     fetch(`https://api.spotify.com/v1/me`, headersAPI)
@@ -69,17 +78,14 @@ class Popular extends Component {
   }
 
   searchBands(name) {
-    let searchName = this.state.searchName === "" ? "The Cure" : name;
-    fetch(
-      `https://api.spotify.com/v1/search?q=${searchName}&type=artist`,
-      headersAPI
-    )
+    console.log("seachBands RAN");
+    fetch(`https://api.spotify.com/v1/search?q=${name}&type=artist`, headersAPI)
       .then(response => response.json())
       .then(data =>
         this.setState(
           {
             artistName: data.artists.items[0],
-            log: console.log(data),
+            log: console.log(data, "DATA SETSTATE RAN INSIDE SEARCH"),
             image: data.artists.items[0].images[0].url,
             artistID: data.artists.items[0].id
           },
@@ -99,7 +105,7 @@ class Popular extends Component {
     console.log("artistID: " + this.state.artistID);
 
     fetch(
-      `https://api.spotify.com/v1/artists/${artistID}/top-tracks?country=SE`,
+      `https://api.spotify.com/v1/artists/${artistID}/top-tracks?country=GB`,
       headersAPI
     )
       .then(response => response.json())
@@ -152,17 +158,36 @@ class Popular extends Component {
               allowtransparency="true"
               allow="encrypted-media"
             />
-            <div className="center-div">
-              <h2>{this.state.artistName.name}'s most popular songs:</h2>
-              <ol className="center-list">
-                {this.state.popularSongs.map((song, i) => (
-                  <li key={i}>
-                    <button value={song.id} onClick={this.handleClickSong}>
-                      {song.name}
-                    </button>
-                  </li>
-                ))}
-              </ol>
+            <div className="main-wrap">
+              <div className="center-div">
+                <h2>
+                  {bands.festival}: {bands.name}
+                </h2>
+                <ul className="center-list">
+                  {bands.events.map((group, i) => (
+                    <li key={i}>
+                      <button
+                        value={group.name}
+                        onClick={this.handleClickGroup}
+                      >
+                        {group.name}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="center-div">
+                <h2>{this.state.artistName.name}'s most popular songs:</h2>
+                <ol className="center-list">
+                  {this.state.popularSongs.map((song, i) => (
+                    <li key={i}>
+                      <button value={song.id} onClick={this.handleClickSong}>
+                        {song.name}
+                      </button>
+                    </li>
+                  ))}
+                </ol>
+              </div>
             </div>
           </>
         )}
