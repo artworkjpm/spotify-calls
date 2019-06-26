@@ -15,12 +15,12 @@ class FestivalTable extends React.Component {
   render() {
     const columns = [
       {
-        width: 400,
+        width: 200,
         Header: "Time",
         accessor: "start"
       },
       {
-        width: 400,
+        width: 300,
         Header: "Artist Name",
         accessor: "name"
       }

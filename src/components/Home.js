@@ -43,7 +43,7 @@ const Home = props => {
         </div>
       </div>
 
-      <div className="main-wrap">
+      <div className="table-wrap">
         <FestivalTable />
       </div>
 

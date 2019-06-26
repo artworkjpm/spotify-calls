@@ -5,6 +5,11 @@
 .main-wrap{
   display: flex;
 }
+.table-wrap{
+  display: flex;
+  width: 500px;
+  margin: 20px auto;
+}
 
 .center-div {
   margin: 0 auto;
