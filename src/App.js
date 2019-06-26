@@ -70,7 +70,7 @@ class App extends Component {
       .then(response => response.json())
       .then(data =>
         this.setState({
-          userName: data.display_name,
+          userName: data.display_name.split(" ")[0],
           log: console.log(data)
         })
       )
@@ -84,11 +84,18 @@ class App extends Component {
 
   searchBands(name) {
     fetch(`https://api.spotify.com/v1/search?q=${name}&type=artist`, headersAPI)
-      .then(response => response.json())
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("searchBands found no band in spotify");
+        }
+      })
       .then(data =>
         this.setState(
           {
             artistName: data.artists.items[0],
+            errorApi: false,
             log: console.log(data),
             image: data.artists.items[0].images[0].url,
             artistID: data.artists.items[0].id
@@ -97,10 +104,13 @@ class App extends Component {
         )
       )
       .catch(error =>
-        this.setState({
-          log: console.error("Error:", error),
-          errorApi: true
-        })
+        this.setState(
+          {
+            log: console.error("Error:", error),
+            errorApi: true
+          },
+          alert("oops, Spotify could find no artists with this name")
+        )
       );
   }
 
