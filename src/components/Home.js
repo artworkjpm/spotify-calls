@@ -2,8 +2,20 @@ import React from "react";
 import SearchBands from "./SearchBand";
 import FestivalTable from "./FestivalTable";
 var bands = require("../festivals/bands.json");
-
+var weekday = new Array(7);
 const Home = props => {
+  function findDay(d) {
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+
+    return weekday[d.getDay()];
+  }
+
   return (
     <div className="Home">
       <h1>Hi {props.username}!</h1>
@@ -43,9 +55,9 @@ const Home = props => {
         </div>
       </div>
 
-      <div className="table-wrap">
-        <FestivalTable />
-      </div>
+      {/*   <div className="table-wrap">
+        <FestivalTable handleClickGroup={props.handleClickGroup} />
+      </div> */}
 
       <div className="main-wrap">
         <div className="center-div">
@@ -54,17 +66,29 @@ const Home = props => {
           </h2>
           <table className="center-list">
             <tbody>
-              {bands.events.map((group, i) => (
-                <tr key={i}>
-                  <td>{group.start}</td>
-                  <td>
-                    {" "}
-                    <button value={group.name} onClick={props.handleClickGroup}>
-                      {group.name}
-                    </button>
-                  </td>
-                </tr>
-              ))}
+              <tr>
+                <th>Day</th>
+                <th>Date & Time</th>
+                <th>Artist</th>
+              </tr>
+
+              {bands.events
+                .sort((a, b) => new Date(b.start) - new Date(a.start))
+                .map((group, i) => (
+                  <tr key={i}>
+                    <td>{findDay(new Date(group.start))}</td>
+                    <td>{group.start}</td>
+                    <td>
+                      {" "}
+                      <button
+                        value={group.name}
+                        onClick={props.handleClickGroup}
+                      >
+                        {group.name}
+                      </button>
+                    </td>
+                  </tr>
+                ))}
             </tbody>
           </table>
         </div>
