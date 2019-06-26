@@ -1,5 +1,6 @@
 import React from "react";
 import SearchBands from "./SearchBand";
+import FestivalTable from "./FestivalTable";
 var bands = require("../festivals/bands.json");
 
 const Home = props => {
@@ -40,6 +41,10 @@ const Home = props => {
             ))}
           </ol>
         </div>
+      </div>
+
+      <div className="main-wrap">
+        <FestivalTable />
       </div>
 
       <div className="main-wrap">
