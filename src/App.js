@@ -1,13 +1,9 @@
 import React, { Component } from "react";
-import ErrorBoundary from "./components/ErrorBoundary";
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Redirect
-} from "react-router-dom";
+//import ErrorBoundary from "./components/ErrorBoundary";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Popular from "./components/Popular";
 import Home from "./components/Home";
+import ShowFestivals from "./components/ShowFestival";
 
 import "./App.css";
 
@@ -138,15 +134,23 @@ class App extends Component {
       );
   }
 
-  goBackError() {
-    this.props.history.goBack();
-  }
-
   render() {
     let popsong = this.state.popularSongID;
     if (popsong !== "") {
       console.log("popular song: " + this.state.popularSongID);
     }
+    var findDay = date => {
+      var weekday = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ];
+      return weekday[date.getDay()];
+    };
 
     return (
       <div className="App">
@@ -159,7 +163,8 @@ class App extends Component {
             <Link to={`/?access_token=${parsed}`}>Home</Link> /{" "}
             <Link to={`/popular?access_token=${parsed}`}>
               Most Popular Song App
-            </Link>
+            </Link>{" "}
+            / <Link to={`/festivals?access_token=${parsed}`}>Festivals</Link>
           </nav>
 
           <Route
@@ -178,20 +183,27 @@ class App extends Component {
                 onChangeValue={this.handleChange}
                 handleClickSong={this.handleClickSong}
                 handleClickGroup={this.handleClickGroup}
+                findDay={findDay}
               />
             )}
           />
+          <Route path="/popular" component={Popular} />
           <Route
-            path="/popular"
-            render={() => <Redirect to={`/popular?access_token=${parsed}`} />}
-          />
-
-          <Route
-            path="/popular"
+            path="/festivals"
             render={() => (
-              <ErrorBoundary>
-                <Popular token={parsed} />{" "}
-              </ErrorBoundary>
+              <ShowFestivals
+                errorApi={this.state.errorApi}
+                username={this.state.userName.split(" ")[0]}
+                artistName={this.state.artistName}
+                artistImage={this.state.image}
+                popularSong={popsong}
+                popularSongsArray={this.state.popularSongs}
+                onSubmitValue={this.handleSubmit}
+                value={this.state.value}
+                onChangeValue={this.handleChange}
+                handleClickSong={this.handleClickSong}
+                handleClickGroup={this.handleClickGroup}
+              />
             )}
           />
         </Router>

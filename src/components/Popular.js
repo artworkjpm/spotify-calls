@@ -165,7 +165,7 @@ class Popular extends Component {
             allow="encrypted-media"
           />
           <div className="main-wrap">
-            <div className="center-div">
+            <div className="center-div-pop">
               <h2>
                 {bands.festival}: {bands.name}
               </h2>
@@ -179,7 +179,7 @@ class Popular extends Component {
                 ))}
               </ul>
             </div>
-            <div className="center-div">
+            <div className="center-div-pop">
               <h2>{this.state.artistName.name}'s most popular songs:</h2>
               <ol className="center-list">
                 {this.state.popularSongs.map((song, i) => (

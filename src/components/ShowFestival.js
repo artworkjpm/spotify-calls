@@ -1,34 +1,35 @@
 import React from "react";
-import SearchBands from "./SearchBand";
-//import FestivalTable from "./FestivalTable";
+
 var bands = require("../festivals/bands.json");
-const Home = props => {
+const ShowFestivals = props => {
+  function findDay(d) {
+    var weekday = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ];
+
+    return weekday[d.getDay()];
+  }
+
   return (
     <div className="Home">
-      <h1>Hi {props.username}!</h1>
-      <h2>Most popular Artist's songs on Spotify</h2>
-      <SearchBands
-        onSubmitValue={props.onSubmitValue}
-        value={props.value}
-        onChangeValue={props.onChangeValue}
-      />
-      <p>
-        {props.artistName.name}, artist id: {props.artistName.id}
-      </p>
-
       <div className="player-wrap">
-        <img src={props.artistImage} alt="group" width="200" height="200" />
         <iframe
           title="spotify player"
           src={`https://open.spotify.com/embed/track/${props.popularSong}`}
           //src={`https://open.spotify.com/embed/artist/${artistID}/top-tracks?country=SE`}
           width="300"
-          height="380"
-          frameBorder="0"
+          height="80"
+          frameborder="0"
           allowtransparency="true"
           allow="encrypted-media"
         />
-        <div className="center-div">
+        <div className="center-div popular-songs">
           <h2>{props.artistName.name}'s most popular songs:</h2>
           <ol className="center-list">
             {props.popularSongsArray.map((song, i) => (
@@ -41,12 +42,7 @@ const Home = props => {
           </ol>
         </div>
       </div>
-
-      {/*   <div className="table-wrap">
-        <FestivalTable handleClickGroup={props.handleClickGroup} />
-      </div> */}
-
-      <div className="main-wrap">
+      <div className="main-wrap lineup">
         <div className="center-div">
           <h2>
             {bands.festival}: {bands.name}
@@ -63,7 +59,7 @@ const Home = props => {
                 .sort((a, b) => new Date(b.start) - new Date(a.start))
                 .map((group, i) => (
                   <tr key={i}>
-                    <td>{props.findDay(new Date(group.start))}</td>
+                    <td>{findDay(new Date(group.start))}</td>
                     <td>{group.start}</td>
                     <td>
                       {" "}
@@ -84,4 +80,4 @@ const Home = props => {
   );
 };
 
-export default Home;
+export default ShowFestivals;
