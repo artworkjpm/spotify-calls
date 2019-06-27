@@ -58,7 +58,6 @@ class App extends Component {
 
   componentDidMount() {
     this.getUserProfile();
-    this.searchBands("Oasis");
   }
 
   getUserProfile() {
@@ -105,7 +104,7 @@ class App extends Component {
             log: console.error("Error:", error),
             errorApi: true
           },
-          alert("oops, Spotify could find no artists with this name")
+          alert("Oops, Spotify couldn't find an artist under that name!")
         )
       );
   }
@@ -203,6 +202,7 @@ class App extends Component {
                 onChangeValue={this.handleChange}
                 handleClickSong={this.handleClickSong}
                 handleClickGroup={this.handleClickGroup}
+                findDay={findDay}
               />
             )}
           />

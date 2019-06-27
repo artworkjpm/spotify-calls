@@ -12,35 +12,39 @@ const Home = props => {
         value={props.value}
         onChangeValue={props.onChangeValue}
       />
-      <p>
-        {props.artistName.name}, artist id: {props.artistName.id}
-      </p>
 
-      <div className="player-wrap">
-        <img src={props.artistImage} alt="group" width="200" height="200" />
-        <iframe
-          title="spotify player"
-          src={`https://open.spotify.com/embed/track/${props.popularSong}`}
-          //src={`https://open.spotify.com/embed/artist/${artistID}/top-tracks?country=SE`}
-          width="300"
-          height="380"
-          frameBorder="0"
-          allowtransparency="true"
-          allow="encrypted-media"
-        />
-        <div className="center-div">
-          <h2>{props.artistName.name}'s most popular songs:</h2>
-          <ol className="center-list">
-            {props.popularSongsArray.map((song, i) => (
-              <li key={i}>
-                <button value={song.id} onClick={props.handleClickSong}>
-                  {song.name}
-                </button>
-              </li>
-            ))}
-          </ol>
+      {props.artistName.length !== 0 ? (
+        <div className="player-wrap">
+          <p>
+            {props.artistName.name}, artist id: {props.artistName.id}
+          </p>
+          <img src={props.artistImage} alt="group" width="200" height="200" />
+          <iframe
+            title="spotify player"
+            src={`https://open.spotify.com/embed/track/${props.popularSong}`}
+            //src={`https://open.spotify.com/embed/artist/${artistID}/top-tracks?country=SE`}
+            width="300"
+            height="380"
+            frameBorder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          />
+          <div className="center-div">
+            <h2>{props.artistName.name}'s most popular songs:</h2>
+            <ol className="center-list">
+              {props.popularSongsArray.map((song, i) => (
+                <li key={i}>
+                  <button value={song.id} onClick={props.handleClickSong}>
+                    {song.name}
+                  </button>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
-      </div>
+      ) : (
+        ""
+      )}
 
       {/*   <div className="table-wrap">
         <FestivalTable handleClickGroup={props.handleClickGroup} />

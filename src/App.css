@@ -25,6 +25,16 @@
   margin: 0 auto;
 }
 
+.popular-songs{
+  margin: 0 1.5em 1.5em 1.5em;
+}
+
+.popular-songs-list{
+  margin: 0;
+  padding-left: 1em;
+  text-align: left;
+}
+
 button {
   background:none;
   color:blue;
