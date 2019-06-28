@@ -1,5 +1,6 @@
 import React from "react";
 import SearchBands from "./SearchBand";
+import Moment from "react-moment";
 //import FestivalTable from "./FestivalTable";
 var bands = require("../festivals/bands.json");
 const Home = props => {
@@ -59,7 +60,8 @@ const Home = props => {
             <tbody>
               <tr>
                 <th>Day</th>
-                <th>Date & Time</th>
+                <th>Date</th>
+                <th>Time</th>
                 <th>Artist</th>
               </tr>
 
@@ -67,8 +69,15 @@ const Home = props => {
                 .sort((a, b) => new Date(b.start) - new Date(a.start))
                 .map((group, i) => (
                   <tr key={i}>
-                    <td>{props.findDay(new Date(group.start))}</td>
-                    <td>{group.start}</td>
+                    <td>
+                      <Moment format="ddd">{group.start}</Moment>
+                    </td>
+                    <td>
+                      <Moment format="DD/MM/YYYY">{group.start}</Moment>
+                    </td>
+                    <td>
+                      <Moment format="LT">{group.start}</Moment>
+                    </td>
                     <td>
                       {" "}
                       <button

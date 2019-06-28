@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Modal from "@material-ui/core/Modal";
 import Button from "@material-ui/core/Button";
+import Moment from "react-moment";
 var bands = require("../festivals/bands.json");
 
 function rand() {
@@ -36,8 +37,12 @@ const ShowFestivals = props => {
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = React.useState(getModalStyle);
 
-  const handleOpen = () => {
+  const handleOpen = e => {
+    props.handleClickGroup(e);
     setOpen(true);
+    /* if (!props.errorApi) {
+      setOpen(true);
+    } */
   };
 
   const handleClose = () => {
@@ -90,7 +95,8 @@ const ShowFestivals = props => {
             <tbody>
               <tr>
                 <th>Day</th>
-                <th>Date & Time</th>
+                <th>Date</th>
+                <th>Time</th>
                 <th>Artist</th>
               </tr>
 
@@ -98,15 +104,21 @@ const ShowFestivals = props => {
                 .sort((a, b) => new Date(b.start) - new Date(a.start))
                 .map((group, i) => (
                   <tr key={i}>
-                    <td>{props.findDay(new Date(group.start))}</td>
-                    <td>{group.start}</td>
+                    <td>
+                      <Moment format="ddd">{group.start}</Moment>
+                    </td>
+                    <td>
+                      <Moment format="DD/MM/YYYY">{group.start}</Moment>
+                    </td>
+                    <td>
+                      <Moment format="LT">{group.start}</Moment>
+                    </td>
                     <td>
                       {" "}
                       <button
                         value={group.name}
                         onClick={e => {
-                          handleOpen();
-                          props.handleClickGroup(e);
+                          handleOpen(e);
                         }}
                       >
                         {group.name}

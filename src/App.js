@@ -138,18 +138,6 @@ class App extends Component {
     if (popsong !== "") {
       console.log("popular song: " + this.state.popularSongID);
     }
-    var findDay = date => {
-      var weekday = [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ];
-      return weekday[date.getDay()];
-    };
 
     return (
       <div className="App">
@@ -182,7 +170,6 @@ class App extends Component {
                 onChangeValue={this.handleChange}
                 handleClickSong={this.handleClickSong}
                 handleClickGroup={this.handleClickGroup}
-                findDay={findDay}
               />
             )}
           />
@@ -202,7 +189,6 @@ class App extends Component {
                 onChangeValue={this.handleChange}
                 handleClickSong={this.handleClickSong}
                 handleClickGroup={this.handleClickGroup}
-                findDay={findDay}
               />
             )}
           />
