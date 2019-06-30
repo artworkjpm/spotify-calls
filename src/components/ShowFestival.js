@@ -82,6 +82,8 @@ const ShowFestivals = props => {
                 ))}
               </ol>
             </div>
+
+            <div>{props.genres.map((genre, i) => genre + ", ")}</div>
           </div>
         </Modal>
       </div>

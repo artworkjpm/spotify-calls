@@ -29,6 +29,7 @@ class App extends Component {
       popularSongID: "",
       popularSongs: [],
       image: [],
+      genres: [],
       errorApi: false,
       userName: "",
       setOpen: false
@@ -85,7 +86,10 @@ class App extends Component {
         if (response.ok) {
           return response.json();
         } else {
-          throw new Error("searchBands found no band in spotify");
+          throw new Error(
+            "searchBands found no band in spotify",
+            (window.location.href = "http://localhost:8888/login")
+          );
         }
       })
       .then(data =>
@@ -94,8 +98,9 @@ class App extends Component {
             artistName: data.artists.items[0],
             errorApi: false,
             log: console.log(data),
-            image: data.artists.items[0].images[0].url,
-            artistID: data.artists.items[0].id
+            image: data.artists.items[0],
+            artistID: data.artists.items[0].id,
+            genres: data.artists.items[0].genres
           },
           this.getTopTracks
         )
@@ -145,7 +150,8 @@ class App extends Component {
 
   render() {
     let popsong = this.state.popularSongID;
-    console.log("popular song: " + this.state.popularSongID);
+    //console.log("popular song: " + this.state.popularSongID);
+    //console.log("images: " + this.state.image);
 
     return (
       <div className="App">
@@ -199,6 +205,7 @@ class App extends Component {
                 handleClickGroup={this.handleClickGroup}
                 setOpen={this.state.setOpen}
                 onHandleClose={this.handleClose}
+                genres={this.state.genres}
               />
             )}
           />
