@@ -30,12 +30,14 @@ class App extends Component {
       popularSongs: [],
       image: [],
       errorApi: false,
-      userName: ""
+      userName: "",
+      setOpen: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClickSong = this.handleClickSong.bind(this);
     this.handleClickGroup = this.handleClickGroup.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
   handleChange(event) {
@@ -102,9 +104,10 @@ class App extends Component {
         this.setState(
           {
             log: console.error("Error:", error),
-            errorApi: true
+            errorApi: true,
+            setOpen: false
           },
-          alert("Oops, Spotify couldn't find an artist under that name!")
+          alert("Sorry, there are no artists with that name on Spotify")
         )
       );
   }
@@ -122,7 +125,8 @@ class App extends Component {
         this.setState({
           log: console.log(data),
           popularSongID: data.tracks[0].id,
-          popularSongs: data.tracks
+          popularSongs: data.tracks,
+          setOpen: true
         })
       )
       .catch(error =>
@@ -133,11 +137,15 @@ class App extends Component {
       );
   }
 
+  handleClose() {
+    this.setState({
+      setOpen: false
+    });
+  }
+
   render() {
     let popsong = this.state.popularSongID;
-    if (popsong !== "") {
-      console.log("popular song: " + this.state.popularSongID);
-    }
+    console.log("popular song: " + this.state.popularSongID);
 
     return (
       <div className="App">
@@ -189,6 +197,8 @@ class App extends Component {
                 onChangeValue={this.handleChange}
                 handleClickSong={this.handleClickSong}
                 handleClickGroup={this.handleClickGroup}
+                setOpen={this.state.setOpen}
+                onHandleClose={this.handleClose}
               />
             )}
           />

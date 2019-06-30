@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import Modal from "@material-ui/core/Modal";
-import Button from "@material-ui/core/Button";
 import Moment from "react-moment";
 var bands = require("../festivals/bands.json");
 
@@ -34,20 +32,21 @@ const useStyles = makeStyles(theme => ({
 
 const ShowFestivals = props => {
   const [open, setOpen] = React.useState(false);
+
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = React.useState(getModalStyle);
 
   const handleOpen = e => {
     props.handleClickGroup(e);
-    setOpen(true);
-    /* if (!props.errorApi) {
-      setOpen(true);
-    } */
   };
 
-  const handleClose = () => {
+  useEffect(() => {
+    setOpen(props.setOpen);
+  }, [props.setOpen]);
+
+  /* const handleClose = () => {
     setOpen(false);
-  };
+  }; */
   const classes = useStyles();
 
   return (
@@ -57,7 +56,7 @@ const ShowFestivals = props => {
           aria-labelledby="simple-modal-title"
           aria-describedby="simple-modal-description"
           open={open}
-          onClose={handleClose}
+          onClose={props.onHandleClose}
         >
           <div style={modalStyle} className={classes.paper}>
             <img src={props.artistImage} alt="group" width="80" height="80" />
@@ -67,7 +66,7 @@ const ShowFestivals = props => {
               //src={`https://open.spotify.com/embed/artist/${artistID}/top-tracks?country=SE`}
               width="300"
               height="80"
-              frameborder="0"
+              frameBorder="0"
               allowtransparency="true"
               allow="encrypted-media"
             />
