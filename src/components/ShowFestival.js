@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Moment from "react-moment";
+import ImageComponent from "./imageComponent";
+
 var bands = require("../festivals/bands.json");
 
 function rand() {
@@ -44,9 +46,6 @@ const ShowFestivals = props => {
     setOpen(props.setOpen);
   }, [props.setOpen]);
 
-  /* const handleClose = () => {
-    setOpen(false);
-  }; */
   const classes = useStyles();
 
   return (
@@ -59,7 +58,8 @@ const ShowFestivals = props => {
           onClose={props.onHandleClose}
         >
           <div style={modalStyle} className={classes.paper}>
-            <img src={props.artistImage} alt="group" width="80" height="80" />
+            <ImageComponent artistImage={props.artistImage} />
+
             <iframe
               title="spotify player"
               src={`https://open.spotify.com/embed/track/${props.popularSong}`}
