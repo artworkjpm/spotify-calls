@@ -55,7 +55,11 @@ export default function ImageComponent(props) {
         onClose={handleClose}
       >
         <div style={modalStyle} className={classes.paper}>
-          <img src={props.artistImage.images[0].url} alt="group" />
+          <img
+            src={props.artistImage.images[0].url}
+            alt="group"
+            className="infoImage"
+          />
         </div>
       </Modal>
     </>

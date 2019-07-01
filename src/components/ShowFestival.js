@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Moment from "react-moment";
 import ImageComponent from "./imageComponent";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 var bands = require("../festivals/bands.json");
 
@@ -29,11 +30,17 @@ const useStyles = makeStyles(theme => ({
     boxShadow: theme.shadows[5],
     padding: 0,
     outline: "none"
+  },
+  progress: {
+    position: "relative",
+    top: -20,
+    left: 20
   }
 }));
 
 const ShowFestivals = props => {
   const [open, setOpen] = React.useState(false);
+  const [spinner, setLoading] = React.useState(true);
 
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = React.useState(getModalStyle);
@@ -48,6 +55,10 @@ const ShowFestivals = props => {
 
   const classes = useStyles();
 
+  const HandleSpinner = () => {
+    setLoading(false);
+  };
+
   return (
     <div className="Home">
       <div className="player-wrap">
@@ -59,6 +70,7 @@ const ShowFestivals = props => {
         >
           <div style={modalStyle} className={classes.paper}>
             <ImageComponent artistImage={props.artistImage} />
+            {spinner ? <CircularProgress className={classes.progress} /> : null}
 
             <iframe
               title="spotify player"
@@ -69,6 +81,7 @@ const ShowFestivals = props => {
               frameBorder="0"
               allowtransparency="true"
               allow="encrypted-media"
+              onLoad={HandleSpinner}
             />
             <div className="popular-songs">
               <h2>{props.artistName.name}'s most popular songs:</h2>
@@ -82,7 +95,6 @@ const ShowFestivals = props => {
                 ))}
               </ol>
             </div>
-
             <div className="genres">
               {props.genres.map(genre => genre + ", ")}
             </div>
