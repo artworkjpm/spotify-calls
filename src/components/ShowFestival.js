@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
-import Moment from "react-moment";
+import FestivalTable from "./FestivalTable";
 import ImageComponent from "./imageComponent";
 import CircularProgress from "@material-ui/core/CircularProgress";
-
-import bands from "../festivals/bands.json";
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -101,50 +99,7 @@ const ShowFestivals = props => {
           </div>
         </Modal>
       </div>
-      <div className="main-wrap lineup">
-        <div className="center-div">
-          <h2>
-            {bands.festival}: {bands.stage}
-          </h2>
-          <table className="center-list">
-            <tbody>
-              <tr>
-                <th>Day</th>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Artist</th>
-              </tr>
-
-              {bands.events
-                .sort((a, b) => new Date(b.start) - new Date(a.start))
-                .map((group, i) => (
-                  <tr key={i}>
-                    <td>
-                      <Moment format="ddd">{group.start}</Moment>
-                    </td>
-                    <td>
-                      <Moment format="DD/MM/YYYY">{group.start}</Moment>
-                    </td>
-                    <td>
-                      <Moment format="LT">{group.start}</Moment>
-                    </td>
-                    <td>
-                      {" "}
-                      <button
-                        value={group.name}
-                        onClick={e => {
-                          handleOpen(e);
-                        }}
-                      >
-                        {group.name}
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
+      <FestivalTable handleOpen={handleOpen} />
     </div>
   );
 };
