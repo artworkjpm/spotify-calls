@@ -5,7 +5,7 @@ import Moment from "react-moment";
 import ImageComponent from "./imageComponent";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
-var bands = require("../festivals/bands.json");
+import bands from "../festivals/bands.json";
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -104,7 +104,7 @@ const ShowFestivals = props => {
       <div className="main-wrap lineup">
         <div className="center-div">
           <h2>
-            {bands.festival}: {bands.name}
+            {bands.festival}: {bands.stage}
           </h2>
           <table className="center-list">
             <tbody>

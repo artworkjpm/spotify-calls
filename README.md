@@ -23,7 +23,8 @@ https://artist-explorer.glitch.me
 https://developer.spotify.com/documentation/web-playback-sdk/quick-start/
 
 
-
+## json of music festival listings
+https://clashfinder.com/
 
 
 
