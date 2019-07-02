@@ -23,11 +23,22 @@
   text-align: left;
   width: 500px;
   margin: 0 auto;
-  border-spacing: 5px;
-}
+  border-spacing: 0px;
+  
+  th{
+    padding: 5px 10px;
+  }
+  tr td {
+    padding: 5px 10px;
+    white-space: nowrap;
+  }
+  tr td button {
+    padding: 0px;
+  }
 
-.center-list tr td button {
-  padding: 0;
+  time{
+    white-space: nowrap;
+  }
 }
 
 .popular-songs {
@@ -38,10 +49,10 @@
   margin: 0;
   padding-left: 1em;
   text-align: left;
-}
 
-.popular-songs-list li {
-  margin-bottom: 5px;
+  li {
+    margin-bottom: 5px;
+  }
 }
 
 button {
@@ -85,16 +96,19 @@ button:visited {
 .desktop-menu {
   text-align: left;
   margin-top: -10px;
-}
 
-.desktop-menu p {
-  margin-left: 16px;
-}
+  p {
+    margin-left: 16px;
+    margin-bottom: 4px;
+    position: relative;
+    top: -2px;
+  }
 
-.desktop-menu li {
-  background-color: #dfdfdf;
-  border-bottom: 1px solid white;
-  margin-right: 20px;
+  li {
+    background-color: #dfdfdf;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+  }
 }
 
 .stage-button {
@@ -113,14 +127,14 @@ button:visited {
   }
 }
 .sunday {
-  background-color: #ffc7c7;
+  background-color: #ffdfdf;
 }
 .saturday {
-  background-color: #ffd78f;
+  background-color: #ffe9c0;
 }
 
 .friday {
-  background-color: green;
+  background-color: #e0ffe0;
 }
 
 .thursday {

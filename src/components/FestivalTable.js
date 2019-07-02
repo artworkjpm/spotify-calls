@@ -23,24 +23,26 @@ const FestivalTable = props => {
   }
 
   function findDay(d) {
-    var weekday = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ];
+    var weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
     return weekday[d.getDay()];
   }
 
   function changeClassDay(d) {
-    if (d === "Sunday") {
+    if (d === "Sun") {
       return "sunday";
-    } else if (d === "Saturday") {
+    } else if (d === "Sat") {
       return "saturday";
+    } else if (d === "Fri") {
+      return "friday";
+    } else if (d === "Thu") {
+      return "thursday";
+    } else if (d === "Wed") {
+      return "wednesday";
+    } else if (d === "Tue") {
+      return "tuesday";
+    } else if (d === "Mon") {
+      return "monday";
     }
   }
 
