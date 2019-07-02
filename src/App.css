@@ -1,11 +1,11 @@
-.App{
-  text-align: center
+.App {
+  text-align: center;
 }
 
-.main-wrap{
+.main-wrap {
   display: flex;
 }
-.table-wrap{
+.table-wrap {
   display: flex;
   width: 500px;
   margin: 20px auto;
@@ -16,7 +16,7 @@
 }
 .center-div-pop {
   margin: 0 auto;
-  width: 50%
+  width: 50%;
 }
 
 .center-list {
@@ -26,41 +26,92 @@
   border-spacing: 5px;
 }
 
-.popular-songs{
+.center-list tr td button{
+  padding: 0;
+}
+
+.popular-songs {
   margin: 0 1.5em 1.5em 1.5em;
 }
 
-.popular-songs-list{
+.popular-songs-list {
   margin: 0;
   padding-left: 1em;
   text-align: left;
 }
 
-.popular-songs-list li{
+.popular-songs-list li {
   margin-bottom: 5px;
 }
 
 button {
-  background:none;
-  color:blue;
-  border:none; 
-  padding:0!important;
+  background: none;
+  color: blue;
+  border: none;
   font: inherit;
   text-decoration: underline;
   cursor: pointer;
   text-align: left;
 }
-button:link { color: #0000EE; }
-button:visited { color: #551A8B; }
-button:active, button:visited:active { color: #FF0000; }
-button:link, button:visited { text-decoration: underline; cursor: pointer; }
-
-.genres{
-  font-style: italic;
-    margin: 0 20px 20px 20px;
+button:link {
+  color: #0000ee;
+}
+button:visited {
+  color: #551a8b;
+}
+button:active,
+button:visited:active {
+  color: #ff0000;
+}
+button:link,
+button:visited {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.infoImage{
+.genres {
+  font-style: italic;
+  margin: 0 20px 20px 20px;
+}
 
+.infoImage {
   width: 400px;
+}
+
+.activeMenu {
+  background: grey;
+}
+
+.desktop-menu {
+  text-align: left;
+  margin-top: -10px;
+}
+
+.desktop-menu p {
+  margin-left: 16px;
+}
+
+
+.desktop-menu li {
+  background-color: #dfdfdf;
+  border-bottom: 1px solid white;
+  margin-right: 20px;
+}
+
+
+
+.stage-button{
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .hide-on-desktop {
+    display: none;
+  }
 }
