@@ -8,12 +8,11 @@ import MenuItem from "@material-ui/core/MenuItem";
 
 const FestivalTable = props => {
   const [currentIndex, setIndex] = React.useState(0);
+  const [anchorEl, setAnchorEl] = React.useState(null);
 
   const getArray = e => {
     setIndex(e.target.value);
   };
-
-  const [anchorEl, setAnchorEl] = React.useState(null);
 
   function handleClick(event) {
     setAnchorEl(event.currentTarget);
@@ -21,6 +20,28 @@ const FestivalTable = props => {
 
   function handleClose() {
     setAnchorEl(null);
+  }
+
+  function findDay(d) {
+    var weekday = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ];
+
+    return weekday[d.getDay()];
+  }
+
+  function changeClassDay(d) {
+    if (d === "Sunday") {
+      return "sunday";
+    } else if (d === "Saturday") {
+      return "saturday";
+    }
   }
 
   return (
@@ -81,10 +102,11 @@ const FestivalTable = props => {
                 {glasto.festival[0].stages[currentIndex].events
                   .sort((a, b) => new Date(b.start) - new Date(a.start))
                   .map((group, i) => (
-                    <tr key={i}>
-                      <td>
-                        <Moment format="ddd">{group.start}</Moment>
-                      </td>
+                    <tr
+                      key={i}
+                      className={changeClassDay(findDay(new Date(group.start)))}
+                    >
+                      <td>{findDay(new Date(group.start))}</td>
                       <td>
                         <Moment format="DD/MM/YYYY">{group.start}</Moment>
                       </td>

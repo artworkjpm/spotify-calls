@@ -26,7 +26,7 @@
   border-spacing: 5px;
 }
 
-.center-list tr td button{
+.center-list tr td button {
   padding: 0;
 }
 
@@ -91,16 +91,13 @@ button:visited {
   margin-left: 16px;
 }
 
-
 .desktop-menu li {
   background-color: #dfdfdf;
   border-bottom: 1px solid white;
   margin-right: 20px;
 }
 
-
-
-.stage-button{
+.stage-button {
   margin-bottom: 10px;
 }
 
@@ -114,4 +111,30 @@ button:visited {
   .hide-on-desktop {
     display: none;
   }
+}
+.sunday {
+  background-color: #ffc7c7;
+}
+.saturday {
+  background-color: #ffd78f;
+}
+
+.friday {
+  background-color: green;
+}
+
+.thursday {
+  background-color: aquamarine;
+}
+
+.wednesday {
+  background-color: bisque;
+}
+
+.tuesday {
+  background-color: darkcyan;
+}
+
+.monday {
+  background-color: coral;
 }

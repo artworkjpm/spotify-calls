@@ -5,7 +5,7 @@ import Popular from "./components/Popular";
 import Home from "./components/Home";
 import ShowFestivals from "./components/ShowFestival";
 
-import "./App.css";
+import "./App.scss";
 
 //variables for the api calls
 var artistID;
