@@ -24,8 +24,8 @@
   width: 500px;
   margin: 0 auto;
   border-spacing: 0px;
-  
-  th{
+
+  th {
     padding: 5px 10px;
   }
   tr td {
@@ -36,7 +36,7 @@
     padding: 0px;
   }
 
-  time{
+  time {
     white-space: nowrap;
   }
 }
@@ -151,4 +151,9 @@ button:visited {
 
 .monday {
   background-color: coral;
+}
+
+.iframe-style {
+  position: absolute;
+  left: 80px;
 }

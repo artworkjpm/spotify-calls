@@ -68,9 +68,11 @@ const ShowFestivals = props => {
         >
           <div style={modalStyle} className={classes.paper}>
             <ImageComponent artistImage={props.artistImage} />
+
             {spinner ? <CircularProgress className={classes.progress} /> : null}
 
             <iframe
+              className="iframe-style"
               title="spotify player"
               src={`https://open.spotify.com/embed/track/${props.popularSong}`}
               //src={`https://open.spotify.com/embed/artist/${artistID}/top-tracks?country=SE`}
@@ -82,7 +84,9 @@ const ShowFestivals = props => {
               onLoad={HandleSpinner}
             />
             <div className="popular-songs">
-              <h2>{props.artistName.name}'s most popular songs:</h2>
+              <p>
+                <b>{props.artistName.name}'s</b> most popular songs:
+              </p>
               <ol className="popular-songs-list">
                 {props.popularSongsArray.map((song, i) => (
                   <li key={i}>

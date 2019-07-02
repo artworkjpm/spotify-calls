@@ -293,6 +293,1463 @@
                             "end": "2019-06-30 23:15"
                         }
                     ]
+                },
+                {
+                    "name": "West Holts Stage",
+                    "events": [
+                        {
+                            "name": "The Mauskovic Dance Band",
+                            "short": "mausko(1)",
+                            "start": "2019-06-28 11:30",
+                            "end": "2019-06-28 12:30"
+                        },
+                        {
+                            "name": "Acid Mothers Temple",
+                            "short": "acidmo(1)",
+                            "start": "2019-06-28 13:00",
+                            "end": "2019-06-28 14:00"
+                        },
+                        {
+                            "name": "Swindle",
+                            "short": "swindl(1)",
+                            "start": "2019-06-28 14:30",
+                            "end": "2019-06-28 15:30"
+                        },
+                        {
+                            "name": "Bcuc",
+                            "short": "bcuc(1)",
+                            "start": "2019-06-28 16:00",
+                            "end": "2019-06-28 17:00"
+                        },
+                        {
+                            "name": "The Comet Is Coming",
+                            "short": "cometi(1)",
+                            "start": "2019-06-28 17:30",
+                            "end": "2019-06-28 18:30"
+                        },
+                        {
+                            "name": "Maribou State",
+                            "short": "maribo(1)",
+                            "start": "2019-06-28 19:00",
+                            "end": "2019-06-28 20:00"
+                        },
+                        {
+                            "name": "Jorja Smith",
+                            "short": "jorjas(1)",
+                            "start": "2019-06-28 20:30",
+                            "end": "2019-06-28 21:30"
+                        },
+                        {
+                            "name": "Jon Hopkins",
+                            "short": "jonhop(2)",
+                            "start": "2019-06-28 22:15",
+                            "end": "2019-06-28 23:40"
+                        },
+                        {
+                            "name": "The Turbans",
+                            "short": "turban(1)",
+                            "start": "2019-06-29 11:30",
+                            "end": "2019-06-29 12:30"
+                        },
+                        {
+                            "name": "Grupo Magnetico",
+                            "short": "grupom(1)",
+                            "start": "2019-06-29 13:15",
+                            "end": "2019-06-29 14:15"
+                        },
+                        {
+                            "name": "Ezra Collective",
+                            "short": "ezraco(1)",
+                            "start": "2019-06-29 14:45",
+                            "end": "2019-06-29 15:45",
+                            "mbId": "d51acca9-a88b-4f5c-a2fe-f069de70ca1d"
+                        },
+                        {
+                            "name": "Slowthai",
+                            "short": "slowth(1)",
+                            "start": "2019-06-29 16:15",
+                            "end": "2019-06-29 17:00"
+                        },
+                        {
+                            "name": "Lizzo",
+                            "short": "lizzo(1)",
+                            "start": "2019-06-29 17:30",
+                            "end": "2019-06-29 18:30"
+                        },
+                        {
+                            "name": "Neneh Cherry",
+                            "short": "nenehc(1)",
+                            "start": "2019-06-29 19:00",
+                            "end": "2019-06-29 20:00"
+                        },
+                        {
+                            "name": "Jungle",
+                            "short": "jungle(1)",
+                            "start": "2019-06-29 20:30",
+                            "end": "2019-06-29 21:30",
+                            "mbId": "6bbb3983-ce8a-4971-96e0-7cae73268fc4"
+                        },
+                        {
+                            "name": "Wu-Tang Clan",
+                            "short": "wutang(1)",
+                            "start": "2019-06-29 22:15",
+                            "end": "2019-06-29 23:45"
+                        },
+                        {
+                            "name": "Kokoroko",
+                            "short": "kokoro(1)",
+                            "start": "2019-06-30 11:00",
+                            "end": "2019-06-30 12:00",
+                            "mbId": "2650f0e7-3879-4b2c-8908-d025113cbece"
+                        },
+                        {
+                            "name": "Hollie Cook",
+                            "short": "hollie(1)",
+                            "start": "2019-06-30 12:30",
+                            "end": "2019-06-30 13:30"
+                        },
+                        {
+                            "name": "Jeff Goldblum & the Mildred Snitzer Orchestra",
+                            "short": "jeffgo(1)",
+                            "start": "2019-06-30 14:00",
+                            "end": "2019-06-30 15:00"
+                        },
+                        {
+                            "name": "This Is the Kit",
+                            "short": "thisis(1)",
+                            "start": "2019-06-30 15:30",
+                            "end": "2019-06-30 16:30"
+                        },
+                        {
+                            "name": "Fatoumata Diawara",
+                            "short": "fatoum(1)",
+                            "start": "2019-06-30 17:00",
+                            "end": "2019-06-30 18:00"
+                        },
+                        {
+                            "name": "Roy Ayers",
+                            "short": "royaye(1)",
+                            "start": "2019-06-30 18:30",
+                            "end": "2019-06-30 19:30"
+                        },
+                        {
+                            "name": "Kamasi Washington",
+                            "short": "kamasi(1)",
+                            "start": "2019-06-30 20:00",
+                            "end": "2019-06-30 21:00"
+                        },
+                        {
+                            "name": "Janelle Monáe",
+                            "short": "janell2(1)",
+                            "start": "2019-06-30 21:45",
+                            "end": "2019-06-30 23:15"
+                        }
+                    ]
+                },
+                {
+                    "name": "John Peel Stage",
+                    "events": [
+                        {
+                            "name": "Pip Blom",
+                            "short": "pipblo(1)",
+                            "start": "2019-06-28 11:30",
+                            "end": "2019-06-28 12:15"
+                        },
+                        {
+                            "name": "Mahalia",
+                            "short": "mahali(1)",
+                            "start": "2019-06-28 12:45",
+                            "end": "2019-06-28 13:30"
+                        },
+                        {
+                            "name": "Goat Girl",
+                            "short": "goatgi(1)",
+                            "start": "2019-06-28 14:00",
+                            "end": "2019-06-28 14:45",
+                            "mbId": "29a2e15e-b14f-42ca-8f65-d52479872452"
+                        },
+                        {
+                            "name": "Sam Fender",
+                            "short": "samfen(1)",
+                            "start": "2019-06-28 15:15",
+                            "end": "2019-06-28 16:00"
+                        },
+                        {
+                            "name": "Pond",
+                            "short": "pond(1)",
+                            "start": "2019-06-28 16:30",
+                            "end": "2019-06-28 17:30"
+                        },
+                        {
+                            "name": "Rosalía",
+                            "short": "rosala(1)",
+                            "start": "2019-06-28 18:00",
+                            "end": "2019-06-28 19:00"
+                        },
+                        {
+                            "name": "Aurora",
+                            "short": "aurora(1)",
+                            "start": "2019-06-28 19:30",
+                            "end": "2019-06-28 20:30"
+                        },
+                        {
+                            "name": "Pale Waves",
+                            "short": "palewa(1)",
+                            "start": "2019-06-28 21:00",
+                            "end": "2019-06-28 22:00"
+                        },
+                        {
+                            "name": "Interpol",
+                            "short": "interp(1)",
+                            "start": "2019-06-28 22:30",
+                            "end": "2019-06-28 23:45"
+                        },
+                        {
+                            "name": "Swimming Girls",
+                            "short": "swimmi(3)",
+                            "start": "2019-06-29 11:30",
+                            "end": "2019-06-29 12:15"
+                        },
+                        {
+                            "name": "She Drew the Gun",
+                            "short": "shedre1(1)",
+                            "start": "2019-06-29 12:45",
+                            "end": "2019-06-29 13:30"
+                        },
+                        {
+                            "name": "Gerry Cinnamon",
+                            "short": "gerryc(1)",
+                            "start": "2019-06-29 14:00",
+                            "end": "2019-06-29 14:45"
+                        },
+                        {
+                            "name": "Shura",
+                            "short": "shura(1)",
+                            "start": "2019-06-29 15:15",
+                            "end": "2019-06-29 16:00"
+                        },
+                        {
+                            "name": "Freya Ridings",
+                            "short": "freyar(1)",
+                            "start": "2019-06-29 16:30",
+                            "end": "2019-06-29 17:30"
+                        },
+                        {
+                            "name": "Low",
+                            "short": "low(1)",
+                            "start": "2019-06-29 18:00",
+                            "end": "2019-06-29 19:00"
+                        },
+                        {
+                            "name": "Sharon Van Etten",
+                            "short": "sharon(1)",
+                            "start": "2019-06-29 19:30",
+                            "end": "2019-06-29 20:30"
+                        },
+                        {
+                            "name": "Bugzy Malone",
+                            "short": "bugzym(1)",
+                            "start": "2019-06-29 21:00",
+                            "end": "2019-06-29 22:00"
+                        },
+                        {
+                            "name": "Sean Paul",
+                            "short": "seanpa(1)",
+                            "start": "2019-06-29 22:30",
+                            "end": "2019-06-29 23:45"
+                        },
+                        {
+                            "name": "Eyre Llew",
+                            "short": "eyrell(1)",
+                            "start": "2019-06-30 11:15",
+                            "end": "2019-06-30 12:00"
+                        },
+                        {
+                            "name": "Alma",
+                            "short": "alma(1)",
+                            "start": "2019-06-30 12:30",
+                            "end": "2019-06-30 13:30"
+                        },
+                        {
+                            "name": "Octavian",
+                            "short": "octavi(1)",
+                            "start": "2019-06-30 14:00",
+                            "end": "2019-06-30 15:00"
+                        },
+                        {
+                            "name": "Dermot Kennedy",
+                            "short": "dermot(1)",
+                            "start": "2019-06-30 15:30",
+                            "end": "2019-06-30 16:30"
+                        },
+                        {
+                            "name": "Tom Walker",
+                            "short": "tomwal(2)",
+                            "start": "2019-06-30 17:00",
+                            "end": "2019-06-30 18:00"
+                        },
+                        {
+                            "name": "Stefflon Don",
+                            "short": "steffl(1)",
+                            "start": "2019-06-30 18:30",
+                            "end": "2019-06-30 19:30"
+                        },
+                        {
+                            "name": "Friendly Fires",
+                            "short": "friend(1)",
+                            "start": "2019-06-30 20:00",
+                            "end": "2019-06-30 21:00"
+                        },
+                        {
+                            "name": "The Streets",
+                            "short": "street(1)",
+                            "start": "2019-06-30 21:30",
+                            "end": "2019-06-30 22:45"
+                        }
+                    ]
+                },
+                {
+                    "name": "The Park Stage",
+                    "events": [
+                        {
+                            "name": "Lankum",
+                            "short": "lankum(1)",
+                            "start": "2019-06-28 11:30",
+                            "end": "2019-06-28 12:10"
+                        },
+                        {
+                            "name": "Steam Down",
+                            "short": "steamd(1)",
+                            "start": "2019-06-28 12:45",
+                            "end": "2019-06-28 13:30"
+                        },
+                        {
+                            "name": "Georgia",
+                            "short": "georgi(1)",
+                            "start": "2019-06-28 14:00",
+                            "end": "2019-06-28 14:45"
+                        },
+                        {
+                            "name": "Lukas Nelson & Promise of the Real",
+                            "short": "lukasn(1)",
+                            "start": "2019-06-28 15:15",
+                            "end": "2019-06-28 16:15"
+                        },
+                        {
+                            "name": "King Princess",
+                            "short": "kingpr(1)",
+                            "start": "2019-06-28 16:45",
+                            "end": "2019-06-28 17:45"
+                        },
+                        {
+                            "name": "Soak",
+                            "short": "soak(1)",
+                            "start": "2019-06-28 18:15",
+                            "end": "2019-06-28 19:15"
+                        },
+                        {
+                            "name": "Idles",
+                            "short": "idles(1)",
+                            "start": "2019-06-28 19:45",
+                            "end": "2019-06-28 20:45"
+                        },
+                        {
+                            "name": "Michael Kiwanuka",
+                            "short": "michae1(1)",
+                            "start": "2019-06-28 21:15",
+                            "end": "2019-06-28 22:15"
+                        },
+                        {
+                            "name": "Cat Power",
+                            "short": "catpow(1)",
+                            "start": "2019-06-28 23:00",
+                            "end": "2019-06-29 00:15"
+                        },
+                        {
+                            "name": "TBA",
+                            "short": "tba(10)",
+                            "start": "2019-06-29 11:30",
+                            "end": "2019-06-29 12:10"
+                        },
+                        {
+                            "name": "Ama Lou",
+                            "short": "amalou(1)",
+                            "start": "2019-06-29 12:45",
+                            "end": "2019-06-29 13:30"
+                        },
+                        {
+                            "name": "Mattiel",
+                            "short": "mattie(2)",
+                            "start": "2019-06-29 14:00",
+                            "end": "2019-06-29 14:45"
+                        },
+                        {
+                            "name": "Love Unlimited Synth Orchestra",
+                            "short": "loveun(1)",
+                            "start": "2019-06-29 15:15",
+                            "end": "2019-06-29 16:15"
+                        },
+                        {
+                            "name": "Sons of Kemet",
+                            "short": "sonsof(1)",
+                            "start": "2019-06-29 16:45",
+                            "end": "2019-06-29 17:45"
+                        },
+                        {
+                            "name": "TBA",
+                            "short": "tba(13)",
+                            "start": "2019-06-29 18:15",
+                            "end": "2019-06-29 19:15",
+                            "mbId": "6a65d878-fcd0-42cf-aff9-ca1d636a8bcc"
+                        },
+                        {
+                            "name": "Kurt Vile & the Violators",
+                            "short": "kurtvi(1)",
+                            "start": "2019-06-29 19:45",
+                            "end": "2019-06-29 20:45",
+                            "mbId": "e07a111e-4e8a-4651-a849-01ac60551ab2"
+                        },
+                        {
+                            "name": "Kate Tempest",
+                            "short": "katete(1)",
+                            "start": "2019-06-29 21:15",
+                            "end": "2019-06-29 22:15"
+                        },
+                        {
+                            "name": "Hot Chip",
+                            "short": "hotchi(1)",
+                            "start": "2019-06-29 23:00",
+                            "end": "2019-06-30 00:15"
+                        },
+                        {
+                            "name": "Black Peaches",
+                            "short": "blackp(1)",
+                            "start": "2019-06-30 11:30",
+                            "end": "2019-06-30 12:15"
+                        },
+                        {
+                            "name": "Jessie Buckley",
+                            "short": "jessie(1)",
+                            "start": "2019-06-30 12:45",
+                            "end": "2019-06-30 13:30"
+                        },
+                        {
+                            "name": "Koffee",
+                            "short": "koffee(1)",
+                            "start": "2019-06-30 14:00",
+                            "end": "2019-06-30 14:30"
+                        },
+                        {
+                            "name": "Palace",
+                            "short": "palace(1)",
+                            "start": "2019-06-30 15:00",
+                            "end": "2019-06-30 16:00"
+                        },
+                        {
+                            "name": "Fat White Family",
+                            "short": "fatwhi(1)",
+                            "start": "2019-06-30 16:30",
+                            "end": "2019-06-30 17:30",
+                            "mbId": "0935da47-cf41-4aa1-a91a-850ced520454"
+                        },
+                        {
+                            "name": "The Good, the Bad and the Queen",
+                            "short": "goodba1(1)",
+                            "start": "2019-06-30 18:15",
+                            "end": "2019-06-30 19:15"
+                        },
+                        {
+                            "name": "Little Simz",
+                            "short": "little1(1)",
+                            "start": "2019-06-30 19:45",
+                            "end": "2019-06-30 20:45"
+                        },
+                        {
+                            "name": "Rex Orange County",
+                            "short": "rexora(1)",
+                            "start": "2019-06-30 21:15",
+                            "end": "2019-06-30 22:30"
+                        }
+                    ]
+                },
+                {
+                    "name": "Acoustic Stage",
+                    "events": [
+                        {
+                            "name": "Ryan Mcmullan",
+                            "short": "ryanmc(1)",
+                            "start": "2019-06-28 12:00",
+                            "end": "2019-06-28 12:40"
+                        },
+                        {
+                            "name": "Rob Green",
+                            "short": "robgre(1)",
+                            "start": "2019-06-28 12:55",
+                            "end": "2019-06-28 13:25"
+                        },
+                        {
+                            "name": "Grace Petrie",
+                            "short": "gracep(1)",
+                            "start": "2019-06-28 13:40",
+                            "end": "2019-06-28 14:20"
+                        },
+                        {
+                            "name": "Lucy Rose",
+                            "short": "lucyro(1)",
+                            "start": "2019-06-28 14:30",
+                            "end": "2019-06-28 15:10"
+                        },
+                        {
+                            "name": "Julie Felix",
+                            "short": "julief(1)",
+                            "start": "2019-06-28 15:25",
+                            "end": "2019-06-28 16:15"
+                        },
+                        {
+                            "name": "Michael Eavis…..Explains All",
+                            "short": "michae3(1)",
+                            "start": "2019-06-28 16:25",
+                            "end": "2019-06-28 17:20",
+                            "mbId": "d818846a-b567-4ee0-9cd9-804ec8782b83"
+                        },
+                        {
+                            "name": "Gabrielle Aplin",
+                            "short": "gabrie(1)",
+                            "start": "2019-06-28 17:25",
+                            "end": "2019-06-28 18:10"
+                        },
+                        {
+                            "name": "Eric Bibb",
+                            "short": "ericbi(1)",
+                            "start": "2019-06-28 18:30",
+                            "end": "2019-06-28 19:30"
+                        },
+                        {
+                            "name": "The Mavericks",
+                            "short": "maveri(1)",
+                            "start": "2019-06-28 20:00",
+                            "end": "2019-06-28 21:00"
+                        },
+                        {
+                            "name": "Nick Lowe's Quality Rock & Roll Revue Starring Los Straitjackets",
+                            "short": "nicklo1(1)",
+                            "start": "2019-06-28 21:30",
+                            "end": "2019-06-28 22:45"
+                        },
+                        {
+                            "name": "Tommy Stewart Best Demo of the Year",
+                            "short": "tommys1(1)",
+                            "start": "2019-06-29 12:00",
+                            "end": "2019-06-29 12:40"
+                        },
+                        {
+                            "name": "Catherine Mcgrath",
+                            "short": "cather(1)",
+                            "start": "2019-06-29 12:50",
+                            "end": "2019-06-29 13:20"
+                        },
+                        {
+                            "name": "Tom Speight",
+                            "short": "tomspe(1)",
+                            "start": "2019-06-29 13:35",
+                            "end": "2019-06-29 14:15"
+                        },
+                        {
+                            "name": "Rodney Branigan",
+                            "short": "rodney(1)",
+                            "start": "2019-06-29 14:30",
+                            "end": "2019-06-29 15:10"
+                        },
+                        {
+                            "name": "Fun Lovin' Crime Writers with Mark Billingham, Chris Brookmyre, Doug Johnstone, Val Mcdermid, Stuart Neville & Luca Veste",
+                            "short": "funlov1(1)",
+                            "start": "2019-06-29 15:25",
+                            "end": "2019-06-29 16:15"
+                        },
+                        {
+                            "name": "Ladies in the Blues",
+                            "short": "ladies(1)",
+                            "start": "2019-06-29 16:30",
+                            "end": "2019-06-29 17:20"
+                        },
+                        {
+                            "name": "John Illsley the Life & Times of Dire Straits \"An Afternoon of Music & Memories\"",
+                            "short": "johnil1(1)",
+                            "start": "2019-06-29 17:30",
+                            "end": "2019-06-29 18:30"
+                        },
+                        {
+                            "name": "Marti Pellow the Voice of Wet Wet Wet",
+                            "short": "martip1(1)",
+                            "start": "2019-06-29 18:45",
+                            "end": "2019-06-29 19:45"
+                        },
+                        {
+                            "name": "Keane",
+                            "short": "keane(1)",
+                            "start": "2019-06-29 20:15",
+                            "end": "2019-06-29 21:15"
+                        },
+                        {
+                            "name": "Hawkwind",
+                            "short": "hawkwi(1)",
+                            "start": "2019-06-29 21:40",
+                            "end": "2019-06-29 23:00"
+                        },
+                        {
+                            "name": "Marie White Etc Winner",
+                            "short": "mariew1(1)",
+                            "start": "2019-06-30 12:00",
+                            "end": "2019-06-30 12:30"
+                        },
+                        {
+                            "name": "Amy Montgomery",
+                            "short": "amymon(1)",
+                            "start": "2019-06-30 12:45",
+                            "end": "2019-06-30 13:20"
+                        },
+                        {
+                            "name": "J.S. Ondara",
+                            "short": "jsonda(1)",
+                            "start": "2019-06-30 13:35",
+                            "end": "2019-06-30 14:15"
+                        },
+                        {
+                            "name": "Hackney Colliery Band",
+                            "short": "hackne(1)",
+                            "start": "2019-06-30 14:30",
+                            "end": "2019-06-30 15:10"
+                        },
+                        {
+                            "name": "Dervish",
+                            "short": "dervis(1)",
+                            "start": "2019-06-30 15:25",
+                            "end": "2019-06-30 16:05"
+                        },
+                        {
+                            "name": "Keb' Mo",
+                            "short": "kebmo1(1)",
+                            "start": "2019-06-30 16:25",
+                            "end": "2019-06-30 17:05"
+                        },
+                        {
+                            "name": "The Bootleg Beatles",
+                            "short": "bootle(1)",
+                            "start": "2019-06-30 17:20",
+                            "end": "2019-06-30 18:20"
+                        },
+                        {
+                            "name": "Madeleine Peyroux",
+                            "short": "madele1(1)",
+                            "start": "2019-06-30 18:40",
+                            "end": "2019-06-30 19:40"
+                        },
+                        {
+                            "name": "Albert Hammond",
+                            "short": "albert(1)",
+                            "start": "2019-06-30 20:00",
+                            "end": "2019-06-30 21:00",
+                            "mbId": "364f3cef-442b-4182-ae78-4e7e79683c24"
+                        },
+                        {
+                            "name": "Rickie Lee Jones",
+                            "short": "rickie(1)",
+                            "start": "2019-06-30 21:30",
+                            "end": "2019-06-30 22:45",
+                            "mbId": "9cd9232e-7a3e-4eb9-8043-ee05c1e396ec"
+                        }
+                    ]
+                },
+                {
+                    "name": "Avalon Stage",
+                    "events": [
+                        {
+                            "name": "Hobo Jones & the Junkyard Dogs",
+                            "short": "hobojo(1)",
+                            "start": "2019-06-28 13:00",
+                            "end": "2019-06-28 13:55"
+                        },
+                        {
+                            "name": "Tankus the Henge",
+                            "short": "tankus(2)",
+                            "start": "2019-06-28 14:15",
+                            "end": "2019-06-28 15:10"
+                        },
+                        {
+                            "name": "Elephant Sessions",
+                            "short": "elepha(1)",
+                            "start": "2019-06-28 15:40",
+                            "end": "2019-06-28 16:35"
+                        },
+                        {
+                            "name": "My Baby",
+                            "short": "mybaby(1)",
+                            "start": "2019-06-28 17:05",
+                            "end": "2019-06-28 18:05"
+                        },
+                        {
+                            "name": "Steeleye Span",
+                            "short": "steele(1)",
+                            "start": "2019-06-28 18:35",
+                            "end": "2019-06-28 19:35"
+                        },
+                        {
+                            "name": "Morcheeba",
+                            "short": "morche(1)",
+                            "start": "2019-06-28 20:05",
+                            "end": "2019-06-28 21:05",
+                            "mbId": "067102ea-9519-4622-9077-57ca4164cfbb"
+                        },
+                        {
+                            "name": "The Magic Numbers",
+                            "short": "magicn(1)",
+                            "start": "2019-06-28 21:35",
+                            "end": "2019-06-28 22:35"
+                        },
+                        {
+                            "name": "Frank Turner & the Sleeping Souls",
+                            "short": "frankt(1)",
+                            "start": "2019-06-28 23:05",
+                            "end": "2019-06-29 00:20",
+                            "mbId": "aca5718f-4f49-4439-b8f6-209db3f11757"
+                        },
+                        {
+                            "name": "The Burning Hell",
+                            "short": "burnin(1)",
+                            "start": "2019-06-29 11:30",
+                            "end": "2019-06-29 12:20"
+                        },
+                        {
+                            "name": "Cut Capers",
+                            "short": "cutcap(2)",
+                            "start": "2019-06-29 12:45",
+                            "end": "2019-06-29 13:40"
+                        },
+                        {
+                            "name": "Beans On Toast",
+                            "short": "beanso(2)",
+                            "start": "2019-06-29 14:00",
+                            "end": "2019-06-29 15:00"
+                        },
+                        {
+                            "name": "The Dead South",
+                            "short": "deadso(1)",
+                            "start": "2019-06-29 15:30",
+                            "end": "2019-06-29 16:30"
+                        },
+                        {
+                            "name": "Jade Bird",
+                            "short": "jadebi(1)",
+                            "start": "2019-06-29 17:00",
+                            "end": "2019-06-29 18:00"
+                        },
+                        {
+                            "name": "The Shires",
+                            "short": "shires(1)",
+                            "start": "2019-06-29 18:30",
+                            "end": "2019-06-29 19:30"
+                        },
+                        {
+                            "name": "James Morrison",
+                            "short": "jamesm(1)",
+                            "start": "2019-06-29 20:00",
+                            "end": "2019-06-29 21:00"
+                        },
+                        {
+                            "name": "Ibibio Sound Machine",
+                            "short": "ibibio(1)",
+                            "start": "2019-06-29 21:30",
+                            "end": "2019-06-29 22:30"
+                        },
+                        {
+                            "name": "The Cat Empire",
+                            "short": "catemp(2)",
+                            "start": "2019-06-29 23:00",
+                            "end": "2019-06-30 00:15"
+                        },
+                        {
+                            "name": "Yamäya",
+                            "short": "yamya(1)",
+                            "start": "2019-06-30 11:30",
+                            "end": "2019-06-30 12:15"
+                        },
+                        {
+                            "name": "The Bar-Steward Sons of Val Doonican",
+                            "short": "barste(1)",
+                            "start": "2019-06-30 12:35",
+                            "end": "2019-06-30 13:30"
+                        },
+                        {
+                            "name": "Yola",
+                            "short": "yola(1)",
+                            "start": "2019-06-30 13:55",
+                            "end": "2019-06-30 14:55"
+                        },
+                        {
+                            "name": "Lucy Spraggan",
+                            "short": "lucysp(1)",
+                            "start": "2019-06-30 15:20",
+                            "end": "2019-06-30 16:20"
+                        },
+                        {
+                            "name": "Skinny Lister",
+                            "short": "skinny(1)",
+                            "start": "2019-06-30 16:50",
+                            "end": "2019-06-30 17:50"
+                        },
+                        {
+                            "name": "The Blue Aeroplanes",
+                            "short": "blueae(1)",
+                            "start": "2019-06-30 18:20",
+                            "end": "2019-06-30 19:20"
+                        },
+                        {
+                            "name": "Bananarama",
+                            "short": "banana1(1)",
+                            "start": "2019-06-30 19:50",
+                            "end": "2019-06-30 20:50"
+                        },
+                        {
+                            "name": "Nahko and Medicine For the People",
+                            "short": "nahkoa(1)",
+                            "start": "2019-06-30 21:20",
+                            "end": "2019-06-30 22:20"
+                        },
+                        {
+                            "name": "Reef",
+                            "short": "reef(1)",
+                            "start": "2019-06-30 22:50",
+                            "end": "2019-06-30 23:50"
+                        }
+                    ]
+                },
+                {
+                    "name": "Glade",
+                    "events": [
+                        {
+                            "name": "Youth & Gaudi",
+                            "short": "youthg(1)",
+                            "start": "2019-06-27 18:00",
+                            "end": "2019-06-27 19:15"
+                        },
+                        {
+                            "name": "Spikey",
+                            "short": "spikey(1)",
+                            "start": "2019-06-27 19:20",
+                            "end": "2019-06-27 20:30"
+                        },
+                        {
+                            "name": "George Fitzgerald",
+                            "short": "george1(1)",
+                            "start": "2019-06-27 20:35",
+                            "end": "2019-06-27 21:35"
+                        },
+                        {
+                            "name": "Hernan Cattaneo B2B Nick Warren",
+                            "short": "hernan(1)",
+                            "start": "2019-06-27 21:40",
+                            "end": "2019-06-27 23:40"
+                        },
+                        {
+                            "name": "John Digweed",
+                            "short": "johndi(1)",
+                            "start": "2019-06-27 23:40",
+                            "end": "2019-06-28 01:35"
+                        },
+                        {
+                            "name": "Bushwacka!",
+                            "short": "bushwa(1)",
+                            "start": "2019-06-28 01:35",
+                            "end": "2019-06-28 02:50",
+                            "mbId": "21cbf9ea-bd99-43aa-8979-f72d65985de7"
+                        },
+                        {
+                            "name": "Das Brass Walkabout",
+                            "short": "brassw(1)",
+                            "start": "2019-06-28 11:30",
+                            "end": "2019-06-28 12:00"
+                        },
+                        {
+                            "name": "Six By Seven",
+                            "short": "sixbys(1)",
+                            "start": "2019-06-28 12:00",
+                            "end": "2019-06-28 13:00"
+                        },
+                        {
+                            "name": "Dirty Freud",
+                            "short": "dirtyf(2)",
+                            "start": "2019-06-28 13:05",
+                            "end": "2019-06-28 13:50"
+                        },
+                        {
+                            "name": "Darkmatta",
+                            "short": "darkma(1)",
+                            "start": "2019-06-28 14:20",
+                            "end": "2019-06-28 15:05"
+                        },
+                        {
+                            "name": "Dr Meaker",
+                            "short": "drmeak1(1)",
+                            "start": "2019-06-28 15:35",
+                            "end": "2019-06-28 16:20"
+                        },
+                        {
+                            "name": "Kuenta",
+                            "short": "kuenta(1)",
+                            "start": "2019-06-28 16:50",
+                            "end": "2019-06-28 17:55"
+                        },
+                        {
+                            "name": "North Base",
+                            "short": "northb(2)",
+                            "start": "2019-06-28 18:00",
+                            "end": "2019-06-28 19:15"
+                        },
+                        {
+                            "name": "Dancefloor Outlaws",
+                            "short": "dancef(1)",
+                            "start": "2019-06-28 19:20",
+                            "end": "2019-06-28 19:50"
+                        },
+                        {
+                            "name": "Dub Pistols",
+                            "short": "dubpis(1)",
+                            "start": "2019-06-28 20:00",
+                            "end": "2019-06-28 21:00"
+                        },
+                        {
+                            "name": "Solardo",
+                            "short": "solard(1)",
+                            "start": "2019-06-28 21:05",
+                            "end": "2019-06-28 22:20"
+                        },
+                        {
+                            "name": "Fatboy Slim",
+                            "short": "fatboy(1)",
+                            "start": "2019-06-28 22:25",
+                            "end": "2019-06-29 00:25"
+                        },
+                        {
+                            "name": "Late Nite Tuff Guy",
+                            "short": "lateni(1)",
+                            "start": "2019-06-29 00:35",
+                            "end": "2019-06-29 01:40"
+                        },
+                        {
+                            "name": "DJ Spikey B2B Tony Andrews",
+                            "short": "djspik(1)",
+                            "start": "2019-06-29 01:40",
+                            "end": "2019-06-29 02:50"
+                        },
+                        {
+                            "name": "Das Brass Walkabout",
+                            "short": "brassw(2)",
+                            "start": "2019-06-29 11:30",
+                            "end": "2019-06-29 12:00"
+                        },
+                        {
+                            "name": "The Egg",
+                            "short": "egg(1)",
+                            "start": "2019-06-29 12:00",
+                            "end": "2019-06-29 13:05"
+                        },
+                        {
+                            "name": "Tony Andrews",
+                            "short": "tonyan(1)",
+                            "start": "2019-06-29 13:10",
+                            "end": "2019-06-29 14:10"
+                        },
+                        {
+                            "name": "Carl Cox",
+                            "short": "carlco(1)",
+                            "start": "2019-06-29 14:15",
+                            "end": "2019-06-29 18:00"
+                        },
+                        {
+                            "name": "The Fedz",
+                            "short": "fedz(1)",
+                            "start": "2019-06-29 18:30",
+                            "end": "2019-06-29 19:30"
+                        },
+                        {
+                            "name": "Sg Lewis",
+                            "short": "sglewi(1)",
+                            "start": "2019-06-29 20:00",
+                            "end": "2019-06-29 21:00"
+                        },
+                        {
+                            "name": "Seth Troxler",
+                            "short": "sethtr(1)",
+                            "start": "2019-06-29 21:05",
+                            "end": "2019-06-29 22:50"
+                        },
+                        {
+                            "name": "Idris Elba",
+                            "short": "idrise(1)",
+                            "start": "2019-06-29 22:55",
+                            "end": "2019-06-30 00:25"
+                        },
+                        {
+                            "name": "Faithless DJ Set",
+                            "short": "faithl(1)",
+                            "start": "2019-06-30 00:25",
+                            "end": "2019-06-30 01:40"
+                        },
+                        {
+                            "name": "Darren Emerson",
+                            "short": "darren(1)",
+                            "start": "2019-06-30 01:40",
+                            "end": "2019-06-30 02:50"
+                        },
+                        {
+                            "name": "Davos",
+                            "short": "davos(1)",
+                            "start": "2019-06-30 13:00",
+                            "end": "2019-06-30 13:45"
+                        },
+                        {
+                            "name": "Cassetteboy vs DJ Rubbish",
+                            "short": "casset(1)",
+                            "start": "2019-06-30 13:50",
+                            "end": "2019-06-30 14:35"
+                        },
+                        {
+                            "name": "The Cuban Brothers",
+                            "short": "cubanb(1)",
+                            "start": "2019-06-30 14:35",
+                            "end": "2019-06-30 15:35"
+                        },
+                        {
+                            "name": "On the Corner Sound System",
+                            "short": "oncorn(1)",
+                            "start": "2019-06-30 15:35",
+                            "end": "2019-06-30 16:30"
+                        },
+                        {
+                            "name": "Khalab Feat Tenesha the Wordsmith",
+                            "short": "khalab(1)",
+                            "start": "2019-06-30 16:30",
+                            "end": "2019-06-30 17:20"
+                        },
+                        {
+                            "name": "Don Letts",
+                            "short": "donlet(2)",
+                            "start": "2019-06-30 17:20",
+                            "end": "2019-06-30 18:20"
+                        },
+                        {
+                            "name": "Grouch in Dub",
+                            "short": "grouch(1)",
+                            "start": "2019-06-30 18:50",
+                            "end": "2019-06-30 19:50"
+                        },
+                        {
+                            "name": "Josefin ÖHrn + the Liberation",
+                            "short": "josefi(1)",
+                            "start": "2019-06-30 20:20",
+                            "end": "2019-06-30 21:20"
+                        },
+                        {
+                            "name": "Giant Swan",
+                            "short": "giants(2)",
+                            "start": "2019-06-30 21:25",
+                            "end": "2019-06-30 22:25",
+                            "mbId": "bcd1d1f5-140c-445a-b139-46d31be6a2a8"
+                        },
+                        {
+                            "name": "Squarepusher (the Vic Acid DJ Set)",
+                            "short": "square(1)",
+                            "start": "2019-06-30 22:30",
+                            "end": "2019-06-30 23:55"
+                        },
+                        {
+                            "name": "Eat Static",
+                            "short": "eatsta(1)",
+                            "start": "2019-07-01 00:00",
+                            "end": "2019-07-01 01:30"
+                        }
+                    ]
+                },
+                {
+                    "name": "Left Field",
+                    "events": [
+                        {
+                            "name": "Debates: the Hostile Environment - Who's Responsible with Windrush Activist, Gary Younge, Joint Council For the Welfare of Immigrants,laura Clarke, John Harris",
+                            "short": "debate6(1)",
+                            "start": "2019-06-28 12:00",
+                            "end": "2019-06-28 13:00"
+                        },
+                        {
+                            "name": "Debates: Queer Liberation - How Far Have We Come with Alexander Leon, Asifa Lahore, Lesbians and Gays Support the Miners\/Migrants, Zena Davine From Queen Zee, Nim Ralph",
+                            "short": "debate7(1)",
+                            "start": "2019-06-28 13:30",
+                            "end": "2019-06-28 14:30"
+                        },
+                        {
+                            "name": "Radical Round Up: Billy Bragg, Emily Barker, Stella Donnelly, Connie Constance",
+                            "short": "radica3(1)",
+                            "start": "2019-06-28 15:00",
+                            "end": "2019-06-28 16:30"
+                        },
+                        {
+                            "name": "Declan Welsh and the Decadent West",
+                            "short": "declan(1)",
+                            "start": "2019-06-28 17:00",
+                            "end": "2019-06-28 17:30"
+                        },
+                        {
+                            "name": "Life",
+                            "short": "life(1)",
+                            "start": "2019-06-28 18:00",
+                            "end": "2019-06-28 19:00"
+                        },
+                        {
+                            "name": "Dream Wife",
+                            "short": "dreamw(1)",
+                            "start": "2019-06-28 19:30",
+                            "end": "2019-06-28 20:30"
+                        },
+                        {
+                            "name": "Billy Bragg",
+                            "short": "billyb(1)",
+                            "start": "2019-06-28 21:00",
+                            "end": "2019-06-28 22:00"
+                        },
+                        {
+                            "name": "Debates: Brexit - How Do We Put Britain Back Together with Lisa Nandy MP, Anand Menon,john Domokos, Dr.Faiza Shaheen, John Harris",
+                            "short": "debate8(1)",
+                            "start": "2019-06-29 12:00",
+                            "end": "2019-06-29 13:00"
+                        },
+                        {
+                            "name": "Debates: How To Save Our Planet with Caroline Lucas MP, Fracking Nanas, Clive Lewis MP, School Striker, Minnie Rahman, John Harris",
+                            "short": "debate9(1)",
+                            "start": "2019-06-29 13:30",
+                            "end": "2019-06-29 14:30"
+                        },
+                        {
+                            "name": "Radical Round Up: Billy Bragg, Josh O Keefe, Lily Bud",
+                            "short": "radica4(1)",
+                            "start": "2019-06-29 15:00",
+                            "end": "2019-06-29 16:30"
+                        },
+                        {
+                            "name": "The Wood Burning Savages",
+                            "short": "woodbu(1)",
+                            "start": "2019-06-29 17:00",
+                            "end": "2019-06-29 17:30"
+                        },
+                        {
+                            "name": "Stella Donnelly",
+                            "short": "stella(1)",
+                            "start": "2019-06-29 18:00",
+                            "end": "2019-06-29 19:00"
+                        },
+                        {
+                            "name": "Sam Fender",
+                            "short": "samfen(2)",
+                            "start": "2019-06-29 19:30",
+                            "end": "2019-06-29 20:30"
+                        },
+                        {
+                            "name": "Kt Tunstall",
+                            "short": "kttuns(1)",
+                            "start": "2019-06-29 21:00",
+                            "end": "2019-06-29 22:00"
+                        },
+                        {
+                            "name": "Debates: How To Resist the Rise of Hate with Hope Not Hate, Dr.Faiza Shaheen, Amos Schonfield, Magid Magid, Reni Eddo-Lodge",
+                            "short": "debate10(1)",
+                            "start": "2019-06-30 12:00",
+                            "end": "2019-06-30 13:00"
+                        },
+                        {
+                            "name": "Debates: Living On the Edge - the Future of Work with Emiliano Mellino, Tuc, Striking Ucl Cleaner, Ros Wynne Jones",
+                            "short": "debate11(1)",
+                            "start": "2019-06-30 13:30",
+                            "end": "2019-06-30 14:30"
+                        },
+                        {
+                            "name": "Radical Round Up; Billy Bragg, Geoff Berner, Arlo Parks, Hussain Manawer",
+                            "short": "radica5(1)",
+                            "start": "2019-06-30 15:00",
+                            "end": "2019-06-30 16:30"
+                        },
+                        {
+                            "name": "Queen Zee",
+                            "short": "queenz(1)",
+                            "start": "2019-06-30 17:00",
+                            "end": "2019-06-30 17:30"
+                        },
+                        {
+                            "name": "Fontaines Dc",
+                            "short": "fontai1(2)",
+                            "start": "2019-06-30 18:00",
+                            "end": "2019-06-30 19:00"
+                        },
+                        {
+                            "name": "Algiers",
+                            "short": "algier(1)",
+                            "start": "2019-06-30 19:30",
+                            "end": "2019-06-30 20:30"
+                        },
+                        {
+                            "name": "Fantastic Negrito",
+                            "short": "fantas(2)",
+                            "start": "2019-06-30 21:00",
+                            "end": "2019-06-30 22:00"
+                        }
+                    ]
+                },
+                {
+                    "name": "Arcadia's Pangea",
+                    "events": [
+                        {
+                            "name": "The Black Madonna",
+                            "short": "blackm2(1)",
+                            "start": "2019-06-28 22:00",
+                            "end": "2019-06-28 23:00"
+                        },
+                        {
+                            "name": "Bicep (DJ Set)",
+                            "short": "bicepd1(1)",
+                            "start": "2019-06-28 23:00",
+                            "end": "2019-06-29 00:00"
+                        },
+                        {
+                            "name": "Carl Cox B2B Jamie Jones",
+                            "short": "carlco1(1)",
+                            "start": "2019-06-29 00:00",
+                            "end": "2019-06-29 02:00"
+                        },
+                        {
+                            "name": "Charlotte De Witte",
+                            "short": "charlo(1)",
+                            "start": "2019-06-29 02:00",
+                            "end": "2019-06-29 03:00"
+                        },
+                        {
+                            "name": "Four Tet",
+                            "short": "fourte(2)",
+                            "start": "2019-06-29 22:00",
+                            "end": "2019-06-29 23:00"
+                        },
+                        {
+                            "name": "Daniel Avery",
+                            "short": "daniel2(2)",
+                            "start": "2019-06-29 23:00",
+                            "end": "2019-06-30 00:00"
+                        },
+                        {
+                            "name": "Fat Boy Eats Everything",
+                            "short": "fatboy1(1)",
+                            "start": "2019-06-30 00:00",
+                            "end": "2019-06-30 02:00"
+                        },
+                        {
+                            "name": "Annie Mac",
+                            "short": "anniem1(2)",
+                            "start": "2019-06-30 02:00",
+                            "end": "2019-06-30 03:00"
+                        },
+                        {
+                            "name": "The Blast DJs",
+                            "short": "blastd(2)",
+                            "start": "2019-06-30 22:00",
+                            "end": "2019-06-30 22:30"
+                        },
+                        {
+                            "name": "Dimension",
+                            "short": "dimens(1)",
+                            "start": "2019-06-30 22:30",
+                            "end": "2019-06-30 23:15"
+                        },
+                        {
+                            "name": "Sub Focus (DJ Set) + MC Id",
+                            "short": "subfoc(1)",
+                            "start": "2019-06-30 23:15",
+                            "end": "2019-07-01 00:00"
+                        },
+                        {
+                            "name": "Mefjus B2B Insideinfo B2B Kasra + Jakes",
+                            "short": "mefjus(1)",
+                            "start": "2019-07-01 00:00",
+                            "end": "2019-07-01 01:00"
+                        },
+                        {
+                            "name": "Andy C + Tonn Piper",
+                            "short": "andyca1(1)",
+                            "start": "2019-07-01 01:00",
+                            "end": "2019-07-01 02:00"
+                        },
+                        {
+                            "name": "Arcadia Sound System",
+                            "short": "arcadi1(1)",
+                            "start": "2019-07-01 02:00",
+                            "end": "2019-07-01 02:30"
+                        }
+                    ]
+                },
+                {
+                    "name": "Sonic",
+                    "events": [
+                        {
+                            "name": "DJ Dazee [Ruffneck Ting]",
+                            "short": "djdaze(1)",
+                            "start": "2019-06-28 13:00",
+                            "end": "2019-06-28 14:00"
+                        },
+                        {
+                            "name": "Shy Fx",
+                            "short": "shyfx(1)",
+                            "start": "2019-06-28 14:00",
+                            "end": "2019-06-28 15:00"
+                        },
+                        {
+                            "name": "Rayray",
+                            "short": "rayray(1)",
+                            "start": "2019-06-28 15:00",
+                            "end": "2019-06-28 16:30"
+                        },
+                        {
+                            "name": "DJ Die & Inja [Gutterfunk]",
+                            "short": "djinja(1)",
+                            "start": "2019-06-28 16:30",
+                            "end": "2019-06-28 17:30"
+                        },
+                        {
+                            "name": "Holy Goof",
+                            "short": "holygo(1)",
+                            "start": "2019-06-28 17:30",
+                            "end": "2019-06-28 18:30"
+                        },
+                        {
+                            "name": "My Nu Leng",
+                            "short": "mynule(1)",
+                            "start": "2019-06-28 18:30",
+                            "end": "2019-06-28 19:30"
+                        },
+                        {
+                            "name": "Tqd",
+                            "short": "tqd(1)",
+                            "start": "2019-06-28 19:30",
+                            "end": "2019-06-28 21:00"
+                        },
+                        {
+                            "name": "Hype B2B Randall",
+                            "short": "hypeb2(1)",
+                            "start": "2019-06-28 21:00",
+                            "end": "2019-06-28 22:30"
+                        },
+                        {
+                            "name": "Wilkinson B2B Subfocus",
+                            "short": "wilkin(1)",
+                            "start": "2019-06-28 22:30",
+                            "end": "2019-06-29 00:30"
+                        },
+                        {
+                            "name": "Ellis Roberts",
+                            "short": "ellisr(1)",
+                            "start": "2019-06-29 13:00",
+                            "end": "2019-06-29 14:15"
+                        },
+                        {
+                            "name": "Kiia",
+                            "short": "kiia(1)",
+                            "start": "2019-06-29 14:15",
+                            "end": "2019-06-29 15:30"
+                        },
+                        {
+                            "name": "Crazy P Live",
+                            "short": "crazyp1(1)",
+                            "start": "2019-06-29 15:30",
+                            "end": "2019-06-29 17:00"
+                        },
+                        {
+                            "name": "Dan Shake",
+                            "short": "dansha(2)",
+                            "start": "2019-06-29 17:00",
+                            "end": "2019-06-29 18:30"
+                        },
+                        {
+                            "name": "Artwork",
+                            "short": "artwor(1)",
+                            "start": "2019-06-29 18:30",
+                            "end": "2019-06-29 20:00"
+                        },
+                        {
+                            "name": "Denis Sulta",
+                            "short": "deniss(2)",
+                            "start": "2019-06-29 20:00",
+                            "end": "2019-06-29 21:30"
+                        },
+                        {
+                            "name": "Peggy Gou",
+                            "short": "peggyg(1)",
+                            "start": "2019-06-29 21:30",
+                            "end": "2019-06-29 23:00"
+                        },
+                        {
+                            "name": "Camelphat",
+                            "short": "camelp(1)",
+                            "start": "2019-06-29 23:00",
+                            "end": "2019-06-30 00:30"
+                        },
+                        {
+                            "name": "DJ Bunjy",
+                            "short": "djbunj(1)",
+                            "start": "2019-06-30 13:00",
+                            "end": "2019-06-30 14:00"
+                        },
+                        {
+                            "name": "Ocean Wisdom",
+                            "short": "oceanw(1)",
+                            "start": "2019-06-30 14:15",
+                            "end": "2019-06-30 15:15"
+                        },
+                        {
+                            "name": "Fkj",
+                            "short": "fkj(1)",
+                            "start": "2019-06-30 15:45",
+                            "end": "2019-06-30 16:45"
+                        },
+                        {
+                            "name": "Ray Blk",
+                            "short": "rayblk(1)",
+                            "start": "2019-06-30 17:15",
+                            "end": "2019-06-30 18:15"
+                        },
+                        {
+                            "name": "Iamddb",
+                            "short": "iamddb(1)",
+                            "start": "2019-06-30 18:45",
+                            "end": "2019-06-30 19:30"
+                        },
+                        {
+                            "name": "Emerald",
+                            "short": "emeral(2)",
+                            "start": "2019-06-30 19:30",
+                            "end": "2019-06-30 20:30"
+                        },
+                        {
+                            "name": "Hardy Caprio",
+                            "short": "hardyc(1)",
+                            "start": "2019-06-30 20:30",
+                            "end": "2019-06-30 21:15"
+                        },
+                        {
+                            "name": "Tion Wayne",
+                            "short": "tionwa(1)",
+                            "start": "2019-06-30 21:45",
+                            "end": "2019-06-30 22:45"
+                        },
+                        {
+                            "name": "Maverick Sabre",
+                            "short": "maveri1(1)",
+                            "start": "2019-06-30 23:15",
+                            "end": "2019-07-01 00:30"
+                        }
+                    ]
                 }
             ]
         }
