@@ -63,6 +63,15 @@ class App extends Component {
     this.getUserProfile();
   }
 
+  reload() {
+    if (window.location.href.includes("localhost")) {
+      return (window.location.href = "http://localhost:8888/login");
+    } else {
+      return (window.location.href =
+        "https://clipify-backend.herokuapp.com/login");
+    }
+  }
+
   getUserProfile() {
     fetch(`https://api.spotify.com/v1/me`, headersAPI)
       .then(response => response.json())
@@ -86,10 +95,7 @@ class App extends Component {
         if (response.ok) {
           return response.json();
         } else {
-          throw new Error(
-            "searchBands found no band in spotify",
-            (window.location.href = "http://localhost:8888/login")
-          );
+          throw new Error("searchBands found no band in spotify", this.reload);
         }
       })
       .then(data =>
@@ -152,6 +158,7 @@ class App extends Component {
     let popsong = this.state.popularSongID;
     //console.log("popular song: " + this.state.popularSongID);
     //console.log("images: " + this.state.image);
+    //console.log(window.location.href);
 
     return (
       <div className="App">
