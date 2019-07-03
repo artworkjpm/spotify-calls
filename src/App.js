@@ -165,31 +165,11 @@ class App extends Component {
             <Link to={`/popular?access_token=${parsed}`}>
               Most Popular Song App
             </Link>{" "}
-            / <Link to={`/festivals?access_token=${parsed}`}>Festivals</Link>
+            / <Link to={`/testpage?access_token=${parsed}`}>Test page</Link>
           </nav>
-
           <Route
             exact
             path="/"
-            render={() => (
-              <Home
-                errorApi={this.state.errorApi}
-                username={this.state.userName.split(" ")[0]}
-                artistName={this.state.artistName}
-                artistImage={this.state.image}
-                popularSong={popsong}
-                popularSongsArray={this.state.popularSongs}
-                onSubmitValue={this.handleSubmit}
-                value={this.state.value}
-                onChangeValue={this.handleChange}
-                handleClickSong={this.handleClickSong}
-                handleClickGroup={this.handleClickGroup}
-              />
-            )}
-          />
-          <Route path="/popular" component={Popular} />
-          <Route
-            path="/festivals"
             render={() => (
               <ShowFestivals
                 errorApi={this.state.errorApi}
@@ -209,6 +189,26 @@ class App extends Component {
               />
             )}
           />
+
+          <Route
+            path="/testpage"
+            render={() => (
+              <Home
+                errorApi={this.state.errorApi}
+                username={this.state.userName.split(" ")[0]}
+                artistName={this.state.artistName}
+                artistImage={this.state.image}
+                popularSong={popsong}
+                popularSongsArray={this.state.popularSongs}
+                onSubmitValue={this.handleSubmit}
+                value={this.state.value}
+                onChangeValue={this.handleChange}
+                handleClickSong={this.handleClickSong}
+                handleClickGroup={this.handleClickGroup}
+              />
+            )}
+          />
+          <Route path="/popular" component={Popular} />
         </Router>
       </div>
     );
