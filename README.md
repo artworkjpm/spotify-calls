@@ -9,7 +9,7 @@ move bserver out of repo because its a seperat repo, separate app
 
 git push heroku master
 
-### Understanding OAuth with the Spotify API - #12 React JS prototyping
+Understanding OAuth with the Spotify API - #12 React JS prototyping
 
 ```log out of spotify:
 https://www.spotify.com/is/
