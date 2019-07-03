@@ -77,14 +77,14 @@ const FestivalTable = props => {
           </Menu>
         </div>
 
-        <Grid container>
+        <Grid container style={{ width: "800px" }}>
           <Grid item xs={false} sm={3} className="hide-on-mobile">
             <div className="desktop-menu">
               <p>
                 <b>Stage</b>
               </p>
               {glasto.festival[0].stages.map((stage, i) => (
-                <MenuItem key={i} value={i} onClick={getArray}>
+                <MenuItem key={i} value={i} onClick={getArray} noWrap>
                   {stage.name}
                 </MenuItem>
               ))}
@@ -110,7 +110,7 @@ const FestivalTable = props => {
                     >
                       <td>{findDay(new Date(group.start))}</td>
                       <td>
-                        <Moment format="DD/MM/YYYY">{group.start}</Moment>
+                        <Moment format="DD/MM">{group.start}</Moment>
                       </td>
                       <td>
                         <Moment format="LT">{group.start}</Moment>

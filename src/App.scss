@@ -21,8 +21,8 @@
 
 .center-list {
   text-align: left;
-  width: 500px;
-  margin: 0 auto;
+  width: 600px;
+
   border-spacing: 0px;
 
   th {
@@ -112,12 +112,23 @@ button:visited {
 }
 
 .stage-button {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-left: 10px;
 }
 
 @media (max-width: 600px) {
   .hide-on-mobile {
     display: none;
+  }
+  .center-list{
+    width: unset;
+  }
+  .center-div {
+    h2 {
+      text-align: left;
+      margin-left: 10px;
+    }
   }
 }
 
@@ -125,6 +136,8 @@ button:visited {
   .hide-on-desktop {
     display: none;
   }
+
+  
 }
 .sunday {
   background-color: #ffdfdf;
@@ -138,7 +151,7 @@ button:visited {
 }
 
 .thursday {
-  background-color: aquamarine;
+  background-color: #e0fbff;
 }
 
 .wednesday {
@@ -150,7 +163,7 @@ button:visited {
 }
 
 .monday {
-  background-color: coral;
+  background-color: #dfeeff;
 }
 
 .iframe-style {
