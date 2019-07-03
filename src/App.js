@@ -95,7 +95,11 @@ class App extends Component {
         if (response.ok) {
           return response.json();
         } else {
-          throw new Error("searchBands found no band in spotify", this.reload);
+          throw new Error(
+            "searchBands found no band in spotify",
+            (window.location.href =
+              "https://clipify-backend.herokuapp.com/login")
+          );
         }
       })
       .then(data =>
