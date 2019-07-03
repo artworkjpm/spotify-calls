@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
+import { on } from "cluster";
 
 const FestivalTable = props => {
   const [currentIndex, setIndex] = React.useState(0);
@@ -45,6 +46,18 @@ const FestivalTable = props => {
       return "monday";
     }
   }
+
+  //findDay(new Date(group.start))
+
+  /* let oneDate = glasto.festival[0].stages[currentIndex].events.sort(
+    (a, b) => new Date(b.start) - new Date(a.start)
+  ); */
+
+  //console.log("oneDate: " + oneDate, oneDate === Array);
+
+  //DD/MM/YYYY
+  //[Sun, Sat, Fri, Thu]
+  //[2019-06-30, 2019-06-29, 2019-06-28, 2019-06-27]
 
   return (
     <div className="main-wrap lineup">
@@ -91,12 +104,21 @@ const FestivalTable = props => {
             </div>
           </Grid>
 
-          <Grid item xs={12} sm={9}>
+          <Grid item xs={false} sm={3}>
             <table className="center-list">
               <tbody>
                 <tr>
-                  <th>Day</th>
                   <th>Date</th>
+                </tr>
+                {}
+              </tbody>
+            </table>
+          </Grid>
+
+          <Grid item xs={12} sm={6}>
+            <table className="center-list">
+              <tbody>
+                <tr>
                   <th>Time</th>
                   <th>Artist</th>
                 </tr>
@@ -108,10 +130,6 @@ const FestivalTable = props => {
                       key={i}
                       className={changeClassDay(findDay(new Date(group.start)))}
                     >
-                      <td>{findDay(new Date(group.start))}</td>
-                      <td>
-                        <Moment format="DD/MM/YYYY">{group.start}</Moment>
-                      </td>
                       <td>
                         <Moment format="LT">{group.start}</Moment>
                       </td>
