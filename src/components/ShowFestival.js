@@ -34,50 +34,44 @@ const ShowFestivals = props => {
   return (
     <div className="Home">
       <div className="player-wrap">
-        <Modal
-          aria-labelledby="simple-modal-title"
-          aria-describedby="simple-modal-description"
-          open={open}
-          onClose={props.onHandleClose}
-          style={{ alignItems: "center", justifyContent: "center" }}
-        >
-          <div className="Modal-new">
-            <ImageComponent artistImage={props.artistImage} />
+        <div className="Modal-new">
+          {/* <ImageComponent artistImage={props.artistImage} /> */}
 
-            {spinner ? <CircularProgress className={classes.progress} /> : null}
+          {spinner ? <CircularProgress className={classes.progress} /> : null}
 
-            <iframe
-              className="iframe-style"
-              title="spotify player"
-              src={`https://open.spotify.com/embed/track/${props.popularSong}`}
-              //src={`https://open.spotify.com/embed/artist/${artistID}/top-tracks?country=SE`}
-              width="300"
-              height="80"
-              frameBorder="0"
-              allowtransparency="true"
-              allow="encrypted-media"
-              onLoad={HandleSpinner}
-            />
-            <div className="popular-songs">
-              <p>
-                <b>{props.artistName.name}'s</b> most popular songs:
-              </p>
-              <ol className="popular-songs-list">
-                {props.popularSongsArray.map((song, i) => (
-                  <li key={i}>
-                    <button value={song.id} onClick={props.handleClickSong}>
-                      {song.name}
-                    </button>
-                  </li>
-                ))}
-              </ol>
-            </div>
-            <div className="genres">
-              {props.genres.map(genre => genre + ", ")}
-            </div>
+          <iframe
+            className="iframe-style"
+            title="spotify player"
+            src={`https://open.spotify.com/embed/track/${props.popularSong}`}
+            //src={`https://open.spotify.com/embed/artist/${artistID}/top-tracks?country=SE`}
+            width="300"
+            height="80"
+            frameBorder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+            onLoad={HandleSpinner}
+          />
+          <div className="popular-songs">
+            <p>
+              <b>{props.artistName.name}'s</b> most popular songs:
+            </p>
+            <ol className="popular-songs-list">
+              {props.popularSongsArray.map((song, i) => (
+                <li key={i}>
+                  <button value={song.id} onClick={props.handleClickSong}>
+                    {song.name}
+                  </button>
+                </li>
+              ))}
+            </ol>
           </div>
-        </Modal>
+          <div className="genres">
+            {props.genres.map(genre => genre + ", ")}
+          </div>
+          <div onClick={props.onHandleClose}>Close</div>
+        </div>
       </div>
+
       <FestivalTable handleOpen={handleOpen} />
     </div>
   );

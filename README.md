@@ -1,4 +1,8 @@
-```http://localhost:8888/login
+If developing, changing app.js line 91 to http://localhost:8888/login, from https://clipify-backend.herokuapp.com/login
+
+On developing, start up the dev backend servier, add in the codes into the terminals
+
+````http://localhost:8888/login
 https://github.com/mpj/oauth-bridge-template```
 
 Live version:
@@ -13,20 +17,19 @@ Understanding OAuth with the Spotify API - #12 React JS prototyping
 
 ```log out of spotify:
 https://www.spotify.com/is/
-```
+````
 
 ## great website
+
 https://artist-explorer.glitch.me
 
 ## spotify web player guide
 
 https://developer.spotify.com/documentation/web-playback-sdk/quick-start/
 
-
 ## json of music festival listings
+
 https://clashfinder.com/
-
-
 
 ## Available Scripts
 

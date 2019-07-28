@@ -37,7 +37,7 @@ export default function ImageComponent(props) {
   const handleClose = () => {
     setOpen(false);
   };
-  const classes = useStyles();
+  /* const classes = useStyles(); */
 
   return (
     <>

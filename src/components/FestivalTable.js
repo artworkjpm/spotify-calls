@@ -84,7 +84,7 @@ const FestivalTable = props => {
                 <b>Stage</b>
               </p>
               {glasto.festival[0].stages.map((stage, i) => (
-                <MenuItem key={i} value={i} onClick={getArray} noWrap>
+                <MenuItem key={i} value={i} onClick={getArray}>
                   {stage.name}
                 </MenuItem>
               ))}

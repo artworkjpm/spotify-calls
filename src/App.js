@@ -89,6 +89,14 @@ class App extends Component {
       );
   }
 
+  ifLocalhost() {
+    if (window.location.href.includes("localhost")) {
+      return "http://localhost:8888/login";
+    } else {
+      return "https://clipify-backend.herokuapp.com/login";
+    }
+  }
+
   searchBands(name) {
     fetch(`https://api.spotify.com/v1/search?q=${name}&type=artist`, headersAPI)
       .then(response => {
@@ -97,8 +105,7 @@ class App extends Component {
         } else {
           throw new Error(
             "searchBands found no band in spotify",
-            (window.location.href =
-              "https://clipify-backend.herokuapp.com/login")
+            (window.location.href = this.ifLocalhost())
           );
         }
       })
