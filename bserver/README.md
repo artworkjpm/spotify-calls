@@ -19,6 +19,14 @@ export SPOTIFY_CLIENT_SECRET=YYYY
 npm start
 ```
 
+In Windows - use 'set' instead of 'export'
+
+```
+$env:SPOTIFY_CLIENT_ID="XXXX"
+$env:SPOTIFY_CLIENT_SECRET="YYYY"
+npm start
+```
+
 Then go to http://localhost:8888/login in your browser. This will initiate the login flow and finally redirect to http://localhost:3000?access_token=ZZZZZ where ZZZZZ is a valid access token that you can use to do operations in the Spotify API.
 
 ## Deploying to production
