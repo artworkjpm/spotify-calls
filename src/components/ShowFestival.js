@@ -34,7 +34,7 @@ const ShowFestivals = props => {
   return (
     <div className="Home">
       {open ? (
-        <NewWindow features={{ width: 380, height: 580 }} title="Clipify music player" artistImage={props.artistImage}>
+        <NewWindow features={{ width: 380, height: 580 }} title="Clipify music player">
           <div className="player-wrap">
             <div className="Modal-new">
               <ImageComponent artistImage={props.artistImage} />
