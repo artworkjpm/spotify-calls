@@ -34,7 +34,7 @@ const ShowFestivals = props => {
   return (
     <div className="Home">
       {open ? (
-        <NewWindow features={{ width: 380, height: 580 }} title="Clipify music player">
+        <NewWindow features={{ width: 380, height: 500 }} title="Clipify music player">
           <div className="player-wrap">
             <div className="Modal-new">
               <ImageComponent artistImage={props.artistImage} />
@@ -68,7 +68,6 @@ const ShowFestivals = props => {
                 </ol>
               </div>
               <div className="genres">{props.genres.map(genre => genre + ", ")}</div>
-              <div onClick={props.onHandleClose}>Close</div>
             </div>
           </div>
         </NewWindow>
