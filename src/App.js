@@ -57,6 +57,9 @@ class App extends Component {
   handleClickGroup(e) {
     //alert("name: " + e.target.value);
     this.searchBands(e.target.value);
+    this.setState({
+      setOpen: false
+    });
   }
 
   componentDidMount() {
@@ -67,8 +70,7 @@ class App extends Component {
     if (window.location.href.includes("localhost")) {
       return (window.location.href = "http://localhost:8888/login");
     } else {
-      return (window.location.href =
-        "https://clipify-backend.herokuapp.com/login");
+      return (window.location.href = "https://clipify-backend.herokuapp.com/login");
     }
   }
 
@@ -103,10 +105,7 @@ class App extends Component {
         if (response.ok) {
           return response.json();
         } else {
-          throw new Error(
-            "searchBands found no band in spotify",
-            (window.location.href = this.ifLocalhost())
-          );
+          throw new Error("searchBands found no band in spotify", (window.location.href = this.ifLocalhost()));
         }
       })
       .then(data =>
@@ -138,10 +137,7 @@ class App extends Component {
     artistID = this.state.artistID;
     console.log("artistID: " + this.state.artistID);
 
-    fetch(
-      `https://api.spotify.com/v1/artists/${artistID}/top-tracks?country=GB`,
-      headersAPI
-    )
+    fetch(`https://api.spotify.com/v1/artists/${artistID}/top-tracks?country=GB`, headersAPI)
       .then(response => response.json())
       .then(data =>
         this.setState({
@@ -175,15 +171,11 @@ class App extends Component {
       <div className="App">
         <Router>
           <nav>
-            <a href="http://localhost:8888/login">Login Dev</a> /{" "}
-            <a href="https://clipify-backend.herokuapp.com/login">Login Prod</a>
+            <a href="http://localhost:8888/login">Login Dev</a> / <a href="https://clipify-backend.herokuapp.com/login">Login Prod</a>
           </nav>
           <nav>
-            <Link to={`/?access_token=${parsed}`}>Home</Link> /{" "}
-            <Link to={`/popular?access_token=${parsed}`}>
-              Most Popular Song App
-            </Link>{" "}
-            / <Link to={`/testpage?access_token=${parsed}`}>Test page</Link>
+            <Link to={`/?access_token=${parsed}`}>Home</Link> / <Link to={`/popular?access_token=${parsed}`}>Most Popular Song App</Link> /{" "}
+            <Link to={`/testpage?access_token=${parsed}`}>Test page</Link>
           </nav>
           <Route
             exact
