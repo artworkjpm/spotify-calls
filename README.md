@@ -11,7 +11,12 @@ https://spotify-calls.herokuapp.com/```
 
 move bserver out of repo because its a seperat repo, separate app
 
-git push heroku master
+
+
+////////////////deploying:
+git push heroku master on mac.
+
+On new computers I have added the github repo, you have to go to the heroku site, log in, find the app and manual deploy from the repo.
 
 Understanding OAuth with the Spotify API - #12 React JS prototyping
 
