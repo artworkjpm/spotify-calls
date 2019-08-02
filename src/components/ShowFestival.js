@@ -34,7 +34,7 @@ const ShowFestivals = props => {
   return (
     <div className="Home">
       {open ? (
-        <NewWindow features={{ width: 380, height: 500 }} title="Clipify music player">
+        <NewWindow features={{ width: 380, height: 500 }} title="Clipify music player" id="newMod">
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <div className="player-wrap">
             <div className="Modal-new">
