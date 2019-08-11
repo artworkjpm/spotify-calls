@@ -1,6 +1,6 @@
 import React from "react";
 import Moment from "react-moment";
-import glasto from "../festivals/glasto.json";
+import glasto from "../festivals/ListFestivals";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
@@ -51,13 +51,25 @@ const FestivalTable = props => {
     <div className="main-wrap lineup">
       <div className="center-div">
         <h2>
-          {glasto.festival[0].festival}: {glasto.festival[0].stages[currentIndex].name}
+          {glasto.festival[0].festival}:{" "}
+          {glasto.festival[0].stages[currentIndex].name}
         </h2>
         <div className="hide-on-desktop stage-button">
-          <Button variant="contained" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+          <Button
+            variant="contained"
+            aria-controls="simple-menu"
+            aria-haspopup="true"
+            onClick={handleClick}
+          >
             Stage
           </Button>
-          <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
+          <Menu
+            id="simple-menu"
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
             {glasto.festival[0].stages.map((stage, i) => (
               <MenuItem key={i} value={i} onClick={getArray}>
                 {stage.name}
@@ -93,7 +105,10 @@ const FestivalTable = props => {
                 {glasto.festival[0].stages[currentIndex].events
                   .sort((a, b) => new Date(b.start) - new Date(a.start))
                   .map((group, i) => (
-                    <tr key={i} className={changeClassDay(findDay(new Date(group.start)))}>
+                    <tr
+                      key={i}
+                      className={changeClassDay(findDay(new Date(group.start)))}
+                    >
                       <td>{findDay(new Date(group.start))}</td>
                       <td>
                         <Moment format="DD/MM">{group.start}</Moment>
