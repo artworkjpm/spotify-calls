@@ -5,6 +5,8 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
+import Chip from "@material-ui/core/Chip";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 const FestivalTable = props => {
   const [currentIndex, setIndex] = React.useState(0);
@@ -13,6 +15,7 @@ const FestivalTable = props => {
   const getArray = e => {
     setIndex(e.target.value);
     handleClose();
+    window.scrollTo(0, 0);
   };
 
   function handleClick(event) {
@@ -52,9 +55,12 @@ const FestivalTable = props => {
   return (
     <div className="main-wrap lineup">
       <div className="center-div">
-        <h2>
-          {glasto.name}: {glasto.locations[currentIndex].name}
-        </h2>
+        <div className="alignLeft">
+          <Chip label={glasto.name}></Chip>
+          <ChevronRightIcon className="rightArrow"/>
+          <Chip label={glasto.locations[currentIndex].name}></Chip>
+        </div>
+
         <div className="hide-on-desktop stage-button">
           <Button variant="contained" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
             Stage
