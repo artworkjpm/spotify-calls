@@ -10,7 +10,7 @@ export default function ImageComponent(props) {
 
   return (
     <>
-      <img src={props.artistImage.images[0].url} alt="group" width="80" height="80" onClick={handleOpen} className={open ? "infoImage" : ""} />
+      <img style={{ float: "left" }} src={props.artistImage.images[0].url} alt="group" width="80" height="80" onClick={handleOpen} className={open ? "infoImage" : ""} />
     </>
   );
 }

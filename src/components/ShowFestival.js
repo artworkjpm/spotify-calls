@@ -8,8 +8,8 @@ import NewWindow from "react-new-window";
 const useStyles = makeStyles(theme => ({
   progress: {
     position: "relative",
-    top: -20,
-    left: 20
+    top: -59,
+    left: 100
   }
 }));
 
@@ -36,14 +36,12 @@ const ShowFestivals = props => {
       {open ? (
         <NewWindow features={{ width: 380, height: 500 }} title="Clipify music player" id="newMod">
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          {/*{spinner ? <CircularProgress className={classes.progress} /> : null} */}
           <div className="player-wrap">
             <div className="Modal-new">
               <ImageComponent artistImage={props.artistImage} />
 
-              {spinner ? <CircularProgress className={classes.progress} /> : null}
-
               <iframe
-                className="iframe-style"
                 title="spotify player"
                 src={`https://open.spotify.com/embed/track/${props.popularSong}`}
                 //src={`https://open.spotify.com/embed/artist/${artistID}/top-tracks?country=SE`}
@@ -54,6 +52,8 @@ const ShowFestivals = props => {
                 allow="encrypted-media"
                 onLoad={HandleSpinner}
               />
+              {spinner ? <CircularProgress className={classes.progress} /> : null}
+
               <div className="popular-songs">
                 <p>
                   <b>{props.artistName.name}'s</b> most popular songs:

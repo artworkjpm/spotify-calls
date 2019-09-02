@@ -1,6 +1,7 @@
 import React from "react";
 import Moment from "react-moment";
-import glasto from "../festivals/Glastonbury2019.json";
+//import glasto from "../festivals/Glastonbury2019.json";
+import glasto from "../festivals/read2019.json";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
@@ -57,7 +58,7 @@ const FestivalTable = props => {
       <div className="center-div">
         <div className="alignLeft">
           <Chip label={glasto.name}></Chip>
-          <ChevronRightIcon className="rightArrow"/>
+          <ChevronRightIcon className="rightArrow" />
           <Chip label={glasto.locations[currentIndex].name}></Chip>
         </div>
 
@@ -75,7 +76,7 @@ const FestivalTable = props => {
         </div>
 
         <Grid container style={{ width: "800px" }}>
-          <Grid item xs={false} sm={3} className="hide-on-mobile">
+          <Grid item className="hide-on-mobile" style={{ float: "left" }}>
             <div className="desktop-menu">
               <p>
                 <b>Stage</b>
@@ -88,7 +89,7 @@ const FestivalTable = props => {
             </div>
           </Grid>
 
-          <Grid item xs={12} sm={9}>
+          <Grid item style={{ float: "left" }}>
             <table className="center-list">
               <tbody>
                 <tr>
