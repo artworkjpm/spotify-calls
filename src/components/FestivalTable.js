@@ -1,7 +1,7 @@
 import React from "react";
 import Moment from "react-moment";
-//import glasto from "../festivals/Glastonbury2019.json";
-import glasto from "../festivals/read2019.json";
+import glasto from "../festivals/Glastonbury2019.json";
+//import glasto from "../festivals/read2019.json";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
@@ -89,7 +89,7 @@ const FestivalTable = props => {
             </div>
           </Grid>
 
-          <Grid item style={{ float: "left" }}>
+          <Grid item style={{ float: "left", width: "300px" }}>
             <table className="center-list">
               <tbody>
                 <tr>

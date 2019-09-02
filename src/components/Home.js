@@ -5,8 +5,34 @@ import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
+import { makeStyles } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
+import Button from "@material-ui/core/Button";
+import Icon from "@material-ui/core/Icon";
 
 const Home = props => {
+  const useStyles = makeStyles(theme => ({
+    root: {
+      width: "100%",
+      marginTop: theme.spacing(3),
+      overflowX: "auto"
+    },
+    table: {
+      minWidth: 650
+    },
+    button: {
+      margin: theme.spacing(1)
+    },
+    leftIcon: {
+      marginRight: theme.spacing(1)
+    },
+    rightIcon: {
+      marginLeft: theme.spacing(1)
+    },
+    iconSmall: {
+      fontSize: 20
+    }
+  }));
   const StyledTableCell = withStyles(theme => ({
     head: {
       backgroundColor: theme.palette.common.black,
@@ -30,36 +56,47 @@ const Home = props => {
   }
 
   const rows = [createData("Frozen yoghurt", 159, 6.0, 24, 4.0), createData("Ice cream sandwich", 237, 9.0, 37, 4.3), createData("Eclair", 262, 16.0, 24, 6.0), createData("Cupcake", 305, 3.7, 67, 4.3), createData("Gingerbread", 356, 16.0, 49, 3.9)];
+  const classes = useStyles();
 
   return (
     <div className="home-table">
-      <br />
-      <Table>
-        <TableHead>
-          <TableRow>
-            <StyledTableCell>Festival</StyledTableCell>
-            <StyledTableCell align="right">Country</StyledTableCell>
-            <StyledTableCell align="right">Dates</StyledTableCell>
-            <StyledTableCell align="right">Year</StyledTableCell>
-            <StyledTableCell align="right">Number of stages</StyledTableCell>
-            <StyledTableCell align="right">Estimated attendance</StyledTableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map(row => (
-            <StyledTableRow hover key={row.name}>
-              <StyledTableCell component="th" scope="row">
-                {row.name}
-              </StyledTableCell>
-              <StyledTableCell align="right">{row.calories}</StyledTableCell>
-              <StyledTableCell align="right">{row.fat}</StyledTableCell>
-              <StyledTableCell align="right">{row.carbs}</StyledTableCell>
-              <StyledTableCell align="right">{row.protein}</StyledTableCell>
-              <StyledTableCell align="right">100,000</StyledTableCell>
-            </StyledTableRow>
-          ))}
-        </TableBody>
-      </Table>
+      <div className="container">
+        <h2>Search and listen to bands playing the most popular music festivals around the world</h2>
+        <p>You must have a Spotify account to use this site</p>{" "}
+        <Button variant="contained" color="default" className={classes.button}>
+          Login
+          <Icon className={classes.rightIcon}>send</Icon>
+        </Button>
+        <h2>Most popular festivals</h2>
+      </div>
+      <Paper className={classes.root}>
+        <Table className={classes.table}>
+          <TableHead>
+            <TableRow>
+              <StyledTableCell>Festival</StyledTableCell>
+              <StyledTableCell align="right">Country</StyledTableCell>
+              <StyledTableCell align="right">Dates</StyledTableCell>
+              <StyledTableCell align="right">Year</StyledTableCell>
+              <StyledTableCell align="right">Number of stages</StyledTableCell>
+              <StyledTableCell align="right">Estimated attendance</StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map(row => (
+              <StyledTableRow hover key={row.name}>
+                <StyledTableCell component="th" scope="row">
+                  {row.name}
+                </StyledTableCell>
+                <StyledTableCell align="right">{row.calories}</StyledTableCell>
+                <StyledTableCell align="right">{row.fat}</StyledTableCell>
+                <StyledTableCell align="right">{row.carbs}</StyledTableCell>
+                <StyledTableCell align="right">{row.protein}</StyledTableCell>
+                <StyledTableCell align="right">100,000</StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </Paper>
     </div>
   );
 };

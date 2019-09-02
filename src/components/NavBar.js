@@ -9,6 +9,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import MoreIcon from "@material-ui/icons/MoreVert";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -73,7 +74,9 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function NavBar() {
+export default function NavBar(props) {
+  const parsed = props.parsed;
+  console.log("parsed 2:", parsed);
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -122,7 +125,11 @@ export default function NavBar() {
     <div className={classes.grow}>
       <AppBar position="static">
         <Toolbar>
-          <h1 className="logo">Clipify&nbsp;</h1>
+          <Hidden smDown>
+            <Link to="/">
+              <h1 className="logo">Clipify&nbsp;</h1>
+            </Link>
+          </Hidden>
           <Hidden smDown>
             <p>&nbsp;Music festival listings and play songs</p>
           </Hidden>
@@ -143,10 +150,9 @@ export default function NavBar() {
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <div className={classes.menuButton}>
-              <p>About</p>
-            </div>
-            <div className={classes.menuButton}>
-              <p>Contact</p>
+              <Link to="/">Home</Link>&nbsp;&nbsp;<Link to={`/popular?access_token=${parsed}`}>Most Popular Song App</Link>&nbsp;&nbsp;<Link to={`/festival?access_token=${parsed}`}>Test page</Link>
+              &nbsp;&nbsp;<Link to="/about">About</Link>
+              &nbsp;&nbsp;<Link to="/contact">Contact</Link>
             </div>
           </div>
           <div className={classes.sectionMobile}>

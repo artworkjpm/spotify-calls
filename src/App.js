@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 //import ErrorBoundary from "./components/ErrorBoundary";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Popular from "./components/Popular";
 import Home from "./components/Home";
 import ShowFestivals from "./components/ShowFestival";
@@ -170,20 +170,16 @@ class App extends Component {
 
     return (
       <div className="App">
-        <NavBar />
-        <br></br>
-        <Router>
-          <nav>
-            <a href="http://localhost:8888/login">Login Dev</a> / <a href="https://clipify-backend.herokuapp.com/login">Login Prod</a>
-          </nav>
-          <nav>
-            <Link to={`/?access_token=${parsed}`}>Home</Link> / <Link to={`/popular?access_token=${parsed}`}>Most Popular Song App</Link> / <Link to={`/festival?access_token=${parsed}`}>Test page</Link>
-          </nav>
-          <Route exact path="/" render={() => <Home />} />
-          <Route exact path="/festival" render={() => <ShowFestivals errorApi={this.state.errorApi} username={this.state.userName.split(" ")[0]} artistName={this.state.artistName} artistImage={this.state.image} popularSong={popsong} popularSongsArray={this.state.popularSongs} onSubmitValue={this.handleSubmit} value={this.state.value} onChangeValue={this.handleChange} handleClickSong={this.handleClickSong} handleClickGroup={this.handleClickGroup} setOpen={this.state.setOpen} onHandleClose={this.handleClose} genres={this.state.genres} />} />
-
-          <Route path="/popular" component={Popular} />
-        </Router>
+        <BrowserRouter>
+          <NavBar parsed={this.state.parsed} />
+          <div>
+            <Switch>
+              <Route exact path="/" render={() => <Home />} />
+              <Route exact path="/festival" render={() => <ShowFestivals errorApi={this.state.errorApi} username={this.state.userName.split(" ")[0]} artistName={this.state.artistName} artistImage={this.state.image} popularSong={popsong} popularSongsArray={this.state.popularSongs} onSubmitValue={this.handleSubmit} value={this.state.value} onChangeValue={this.handleChange} handleClickSong={this.handleClickSong} handleClickGroup={this.handleClickGroup} setOpen={this.state.setOpen} onHandleClose={this.handleClose} genres={this.state.genres} />} />
+              <Route path="/popular" component={Popular} />
+            </Switch>
+          </div>
+        </BrowserRouter>
       </div>
     );
   }
