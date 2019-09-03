@@ -111,13 +111,23 @@ export default function NavBar(props) {
 
   const mobileMenuId = "primary-search-account-menu-mobile";
   const renderMobileMenu = (
-    <Menu anchorEl={mobileMoreAnchorEl} anchorOrigin={{ vertical: "top", horizontal: "right" }} id={mobileMenuId} keepMounted transformOrigin={{ vertical: "top", horizontal: "right" }} open={isMobileMenuOpen} onClose={handleMobileMenuClose}>
-      <MenuItem>
-        <p>About</p>
-      </MenuItem>
-      <MenuItem>
-        <p>Contact</p>
-      </MenuItem>
+    <Menu anchorEl={mobileMoreAnchorEl} anchorOrigin={{ vertical: "top", horizontal: "right" }} id={mobileMenuId} transformOrigin={{ vertical: "top", horizontal: "right" }} open={isMobileMenuOpen} onClose={handleMobileMenuClose}>
+      <Link to="/">
+        <MenuItem onClick={handleMenuClose}>Home</MenuItem>
+      </Link>
+      <Link to={`/popular?access_token=${parsed}`}>
+        <MenuItem onClick={handleMenuClose}>PopularSong</MenuItem>
+      </Link>
+      <Link to={`/festival?access_token=${parsed}`}>
+        <MenuItem onClick={handleMenuClose}>Festival</MenuItem>
+      </Link>
+      <Link to="/about">
+        <MenuItem onClick={handleMenuClose}>About</MenuItem>
+      </Link>
+
+      <Link to="/contact">
+        <MenuItem> Contact</MenuItem>
+      </Link>
     </Menu>
   );
 
@@ -131,7 +141,9 @@ export default function NavBar(props) {
             </Link>
           </Hidden>
           <Hidden smDown>
-            <p>&nbsp;Music festival listings and play songs</p>
+            <p>
+              <i>Listen to groups from music festival listings</i>&nbsp;
+            </p>
           </Hidden>
 
           <div className={classes.search}>
@@ -150,7 +162,7 @@ export default function NavBar(props) {
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <div className={classes.menuButton}>
-              <Link to="/">Home</Link>&nbsp;&nbsp;<Link to={`/popular?access_token=${parsed}`}>Most Popular Song App</Link>&nbsp;&nbsp;<Link to={`/festival?access_token=${parsed}`}>Test page</Link>
+              <Link to="/">Home</Link>&nbsp;&nbsp;<Link to={`/popular?access_token=${parsed}`}>PopularSong</Link>&nbsp;&nbsp;<Link to={`/festival?access_token=${parsed}`}>Festival</Link>
               &nbsp;&nbsp;<Link to="/about">About</Link>
               &nbsp;&nbsp;<Link to="/contact">Contact</Link>
             </div>

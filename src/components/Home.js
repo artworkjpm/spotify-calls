@@ -74,11 +74,11 @@ const Home = props => {
           <TableHead>
             <TableRow>
               <StyledTableCell>Festival</StyledTableCell>
-              <StyledTableCell align="right">Country</StyledTableCell>
-              <StyledTableCell align="right">Dates</StyledTableCell>
-              <StyledTableCell align="right">Year</StyledTableCell>
-              <StyledTableCell align="right">Number of stages</StyledTableCell>
-              <StyledTableCell align="right">Estimated attendance</StyledTableCell>
+              <StyledTableCell>Country</StyledTableCell>
+              <StyledTableCell>Dates</StyledTableCell>
+              <StyledTableCell>Year</StyledTableCell>
+              <StyledTableCell>Number of stages</StyledTableCell>
+              <StyledTableCell>Estimated attendance</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -87,11 +87,11 @@ const Home = props => {
                 <StyledTableCell component="th" scope="row">
                   {row.name}
                 </StyledTableCell>
-                <StyledTableCell align="right">{row.calories}</StyledTableCell>
-                <StyledTableCell align="right">{row.fat}</StyledTableCell>
-                <StyledTableCell align="right">{row.carbs}</StyledTableCell>
-                <StyledTableCell align="right">{row.protein}</StyledTableCell>
-                <StyledTableCell align="right">100,000</StyledTableCell>
+                <StyledTableCell>{row.calories}</StyledTableCell>
+                <StyledTableCell>{row.fat}</StyledTableCell>
+                <StyledTableCell>{row.carbs}</StyledTableCell>
+                <StyledTableCell>{row.protein}</StyledTableCell>
+                <StyledTableCell>100,000</StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
