@@ -10,6 +10,7 @@ import Menu from "@material-ui/core/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import { Link } from "react-router-dom";
+import SearchReact from "./SearchReact";
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -134,14 +135,15 @@ export default function NavBar(props) {
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
-            <InputBase
+            <SearchReact />
+            {/*   <InputBase
               placeholder="Search for festival..."
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput
               }}
               inputProps={{ "aria-label": "search" }}
-            />
+            /> */}
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>

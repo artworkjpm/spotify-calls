@@ -174,7 +174,7 @@ class App extends Component {
           <NavBar parsed={this.state.parsed} />
           <div>
             <Switch>
-              <Route exact path="/" render={() => <Home />} />
+              <Route exact path="/" component={Home} />
               <Route exact path="/festival" render={() => <ShowFestivals errorApi={this.state.errorApi} username={this.state.userName.split(" ")[0]} artistName={this.state.artistName} artistImage={this.state.image} popularSong={popsong} popularSongsArray={this.state.popularSongs} onSubmitValue={this.handleSubmit} value={this.state.value} onChangeValue={this.handleChange} handleClickSong={this.handleClickSong} handleClickGroup={this.handleClickGroup} setOpen={this.state.setOpen} onHandleClose={this.handleClose} genres={this.state.genres} />} />
               <Route path="/popular" component={Popular} />
             </Switch>
