@@ -6,7 +6,6 @@ import Typography from "@material-ui/core/Typography";
 import NoSsr from "@material-ui/core/NoSsr";
 import TextField from "@material-ui/core/TextField";
 import Paper from "@material-ui/core/Paper";
-
 import MenuItem from "@material-ui/core/MenuItem";
 
 const suggestions = [{ label: "Afghanistan" }, { label: "Aland Islands" }, { label: "Albania" }, { label: "Algeria" }, { label: "American Samoa" }, { label: "Andorra" }, { label: "Angola" }, { label: "Anguilla" }, { label: "Antarctica" }, { label: "Antigua and Barbuda" }, { label: "Argentina" }, { label: "Armenia" }, { label: "Aruba" }, { label: "Australia" }, { label: "Austria" }, { label: "Azerbaijan" }, { label: "Bahamas" }, { label: "Bahrain" }, { label: "Bangladesh" }, { label: "Barbados" }, { label: "Belarus" }, { label: "Belgium" }, { label: "Belize" }, { label: "Benin" }, { label: "Bermuda" }, { label: "Bhutan" }, { label: "Bolivia, Plurinational State of" }, { label: "Bonaire, Sint Eustatius and Saba" }, { label: "Bosnia and Herzegovina" }, { label: "Botswana" }, { label: "Bouvet Island" }, { label: "Brazil" }, { label: "British Indian Ocean Territory" }, { label: "Brunei Darussalam" }].map(suggestion => ({
@@ -120,27 +119,6 @@ function Control(props) {
   );
 }
 
-Control.propTypes = {
-  /**
-   * Children to render.
-   */
-  children: PropTypes.node,
-  /**
-   * The mouse down event and the innerRef to pass down to the controller element.
-   */
-  innerProps: PropTypes.shape({
-    onMouseDown: PropTypes.func.isRequired
-  }).isRequired,
-  innerRef: PropTypes.oneOfType([
-    PropTypes.oneOf([null]),
-    PropTypes.func,
-    PropTypes.shape({
-      current: PropTypes.any.isRequired
-    })
-  ]).isRequired,
-  selectProps: PropTypes.object.isRequired
-};
-
 function Option(props) {
   return (
     <MenuItem
@@ -157,42 +135,6 @@ function Option(props) {
   );
 }
 
-Option.propTypes = {
-  /**
-   * The children to be rendered.
-   */
-  children: PropTypes.node,
-  /**
-   * props passed to the wrapping element for the group.
-   */
-  innerProps: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    key: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired,
-    onMouseMove: PropTypes.func.isRequired,
-    onMouseOver: PropTypes.func.isRequired,
-    tabIndex: PropTypes.number.isRequired
-  }).isRequired,
-  /**
-   * Inner ref to DOM Node
-   */
-  innerRef: PropTypes.oneOfType([
-    PropTypes.oneOf([null]),
-    PropTypes.func,
-    PropTypes.shape({
-      current: PropTypes.any.isRequired
-    })
-  ]).isRequired,
-  /**
-   * Whether the option is focused.
-   */
-  isFocused: PropTypes.bool.isRequired,
-  /**
-   * Whether the option is selected.
-   */
-  isSelected: PropTypes.bool.isRequired
-};
-
 function Placeholder(props) {
   const { selectProps, innerProps = {}, children } = props;
   return (
@@ -202,18 +144,6 @@ function Placeholder(props) {
   );
 }
 
-Placeholder.propTypes = {
-  /**
-   * The children to be rendered.
-   */
-  children: PropTypes.node,
-  /**
-   * props passed to the wrapping element for the group.
-   */
-  innerProps: PropTypes.object,
-  selectProps: PropTypes.object.isRequired
-};
-
 function SingleValue(props) {
   return (
     <Typography className={props.selectProps.classes.singleValue} {...props.innerProps}>
@@ -222,29 +152,9 @@ function SingleValue(props) {
   );
 }
 
-SingleValue.propTypes = {
-  /**
-   * The children to be rendered.
-   */
-  children: PropTypes.node,
-  /**
-   * Props passed to the wrapping element for the group.
-   */
-  innerProps: PropTypes.any.isRequired,
-  selectProps: PropTypes.object.isRequired
-};
-
 function ValueContainer(props) {
   return <div className={props.selectProps.classes.valueContainer}>{props.children}</div>;
 }
-
-ValueContainer.propTypes = {
-  /**
-   * The children to be rendered.
-   */
-  children: PropTypes.node,
-  selectProps: PropTypes.object.isRequired
-};
 
 function Menu(props) {
   return (
@@ -253,18 +163,6 @@ function Menu(props) {
     </Paper>
   );
 }
-
-Menu.propTypes = {
-  /**
-   * The children to be rendered.
-   */
-  children: PropTypes.element.isRequired,
-  /**
-   * Props to be passed to the menu wrapper.
-   */
-  innerProps: PropTypes.object.isRequired,
-  selectProps: PropTypes.object.isRequired
-};
 
 const components = {
   Control,

@@ -4,7 +4,6 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Hidden from "@material-ui/core/Hidden";
-import InputBase from "@material-ui/core/InputBase";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import SearchIcon from "@material-ui/icons/Search";
@@ -136,14 +135,6 @@ export default function NavBar(props) {
               <SearchIcon />
             </div>
             <SearchReact />
-            {/*   <InputBase
-              placeholder="Search for festival..."
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput
-              }}
-              inputProps={{ "aria-label": "search" }}
-            /> */}
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
