@@ -78,22 +78,14 @@ export default function NavBar(props) {
   const parsed = props.parsed;
   console.log("parsed 2:", parsed);
   const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-
-  const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-  /*  function handleProfileMenuOpen(event) {
-    setAnchorEl(event.currentTarget);
-  }
- */
   function handleMobileMenuClose() {
     setMobileMoreAnchorEl(null);
   }
 
   function handleMenuClose() {
-    setAnchorEl(null);
     handleMobileMenuClose();
   }
 
@@ -101,18 +93,10 @@ export default function NavBar(props) {
     setMobileMoreAnchorEl(event.currentTarget);
   }
 
-  const menuId = "primary-search-account-menu";
-  const renderMenu = (
-    <Menu anchorEl={anchorEl} anchorOrigin={{ vertical: "top", horizontal: "right" }} id={menuId} keepMounted transformOrigin={{ vertical: "top", horizontal: "right" }} open={isMenuOpen} onClose={handleMenuClose}>
-      <MenuItem onClick={handleMenuClose}>About</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Contact</MenuItem>
-    </Menu>
-  );
-
   const mobileMenuId = "primary-search-account-menu-mobile";
   const renderMobileMenu = (
     <Menu anchorEl={mobileMoreAnchorEl} anchorOrigin={{ vertical: "top", horizontal: "right" }} id={mobileMenuId} transformOrigin={{ vertical: "top", horizontal: "right" }} open={isMobileMenuOpen} onClose={handleMobileMenuClose}>
-      <Link to="/">
+      <Link to={`/?access_token=${parsed}`}>
         <MenuItem onClick={handleMenuClose}>Home</MenuItem>
       </Link>
       <Link to={`/popular?access_token=${parsed}`}>
@@ -136,7 +120,7 @@ export default function NavBar(props) {
       <AppBar position="static">
         <Toolbar>
           <Hidden smDown>
-            <Link to="/">
+            <Link to={`/?access_token=${parsed}`}>
               <h1 className="logo">Clipify&nbsp;</h1>
             </Link>
           </Hidden>
@@ -162,7 +146,7 @@ export default function NavBar(props) {
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <div className={classes.menuButton}>
-              <Link to="/">Home</Link>&nbsp;&nbsp;<Link to={`/popular?access_token=${parsed}`}>PopularSong</Link>&nbsp;&nbsp;<Link to={`/festival?access_token=${parsed}`}>Festival</Link>
+              <Link to={`/?access_token=${parsed}`}>Home</Link>&nbsp;&nbsp;<Link to={`/popular?access_token=${parsed}`}>PopularSong</Link>&nbsp;&nbsp;<Link to={`/festival?access_token=${parsed}`}>Festival</Link>
               &nbsp;&nbsp;<Link to="/about">About</Link>
               &nbsp;&nbsp;<Link to="/contact">Contact</Link>
             </div>
@@ -175,7 +159,6 @@ export default function NavBar(props) {
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
-      {renderMenu}
     </div>
   );
 }
