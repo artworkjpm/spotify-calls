@@ -8,7 +8,7 @@ import TableRow from "@material-ui/core/TableRow";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
-import Icon from "@material-ui/core/Icon";
+import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 
 const Home = props => {
   const useStyles = makeStyles(theme => ({
@@ -65,7 +65,7 @@ const Home = props => {
         <p>You must have a Spotify account to use this site</p>{" "}
         <Button variant="contained" color="default" className={classes.button}>
           Login
-          <Icon className={classes.rightIcon}>send</Icon>
+          <PlayArrowIcon className={classes.rightIcon} />
         </Button>
         <h2>Most popular festivals</h2>
       </div>
