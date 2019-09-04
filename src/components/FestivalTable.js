@@ -8,11 +8,9 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Chip from "@material-ui/core/Chip";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import AllFestivals from "../festivals/AllFestivals";
+/* import AllFestivals from "../festivals/AllFestivals";
 
-const G = AllFestivals[0].name;
-
-console.log("G:", G);
+console.log(" AllFestivals[0].name", AllFestivals[0].name); */
 
 const FestivalTable = props => {
   const [currentIndex, setIndex] = React.useState(0);

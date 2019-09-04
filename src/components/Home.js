@@ -9,6 +9,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import AllFestivals from "../festivals/AllFestivals";
 
 const Home = props => {
   const useStyles = makeStyles(theme => ({
@@ -58,6 +59,10 @@ const Home = props => {
   const rows = [createData("Frozen yoghurt", 159, 6.0, 24, 4.0), createData("Ice cream sandwich", 237, 9.0, 37, 4.3), createData("Eclair", 262, 16.0, 24, 6.0), createData("Cupcake", 305, 3.7, 67, 4.3), createData("Gingerbread", 356, 16.0, 49, 3.9)];
   const classes = useStyles();
 
+  AllFestivals.map(item => {
+    return console.log(item.name.timezone);
+  });
+
   return (
     <div className="home-table">
       <div className="container">
@@ -78,7 +83,7 @@ const Home = props => {
               <StyledTableCell>Festival</StyledTableCell>
               <StyledTableCell>Country</StyledTableCell>
               <StyledTableCell>Dates</StyledTableCell>
-              <StyledTableCell>Year</StyledTableCell>
+
               <StyledTableCell>Number of stages</StyledTableCell>
               <StyledTableCell>Estimated attendance</StyledTableCell>
             </TableRow>
@@ -92,7 +97,6 @@ const Home = props => {
                 <StyledTableCell>{row.calories}</StyledTableCell>
                 <StyledTableCell>{row.fat}</StyledTableCell>
                 <StyledTableCell>{row.carbs}</StyledTableCell>
-                <StyledTableCell>{row.protein}</StyledTableCell>
                 <StyledTableCell>100,000</StyledTableCell>
               </StyledTableRow>
             ))}
