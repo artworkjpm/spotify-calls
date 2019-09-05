@@ -5,6 +5,7 @@ import Popular from "./components/Popular";
 import Home from "./components/Home";
 import ShowFestivals from "./components/ShowFestival";
 import NavBar from "./components/NavBar";
+import AllFestivals from "./festivals/AllFestivals";
 
 import "./App.scss";
 
@@ -171,10 +172,10 @@ class App extends Component {
     return (
       <div className="App">
         <BrowserRouter>
-          <NavBar parsed={this.state.parsed} />
+          <NavBar parsed={this.state.parsed} allfestivals={AllFestivals} />
           <div>
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/" render={() => <Home allfestivals={AllFestivals} />} />
               <Route exact path="/festival" render={() => <ShowFestivals errorApi={this.state.errorApi} username={this.state.userName.split(" ")[0]} artistName={this.state.artistName} artistImage={this.state.image} popularSong={popsong} popularSongsArray={this.state.popularSongs} onSubmitValue={this.handleSubmit} value={this.state.value} onChangeValue={this.handleChange} handleClickSong={this.handleClickSong} handleClickGroup={this.handleClickGroup} setOpen={this.state.setOpen} onHandleClose={this.handleClose} genres={this.state.genres} />} />
               <Route path="/popular" component={Popular} />
             </Switch>

@@ -9,10 +9,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
-import AllFestivals from "../festivals/AllFestivals";
 import Moment from "react-moment";
 
 const Home = props => {
+  const AllFestivals = props.allfestivals;
   const useStyles = makeStyles(theme => ({
     root: {
       width: "100%",
@@ -43,9 +43,10 @@ const Home = props => {
 
   const classes = useStyles();
 
-  AllFestivals.map(item => {
+  /*   AllFestivals.map(item => {
     return console.log(item.name.timezone);
   });
+ */
 
   return (
     <div className="home-table">

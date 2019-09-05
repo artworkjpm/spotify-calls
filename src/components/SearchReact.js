@@ -8,11 +8,6 @@ import TextField from "@material-ui/core/TextField";
 import Paper from "@material-ui/core/Paper";
 import MenuItem from "@material-ui/core/MenuItem";
 
-const suggestions = [{ label: "Afghanistan" }, { label: "Aland Islands" }, { label: "Albania" }, { label: "Algeria" }, { label: "American Samoa" }, { label: "Andorra" }, { label: "Angola" }, { label: "Anguilla" }, { label: "Antarctica" }, { label: "Antigua and Barbuda" }, { label: "Argentina" }, { label: "Armenia" }, { label: "Aruba" }, { label: "Australia" }, { label: "Austria" }, { label: "Azerbaijan" }, { label: "Bahamas" }, { label: "Bahrain" }, { label: "Bangladesh" }, { label: "Barbados" }, { label: "Belarus" }, { label: "Belgium" }, { label: "Belize" }, { label: "Benin" }, { label: "Bermuda" }, { label: "Bhutan" }, { label: "Bolivia, Plurinational State of" }, { label: "Bonaire, Sint Eustatius and Saba" }, { label: "Bosnia and Herzegovina" }, { label: "Botswana" }, { label: "Bouvet Island" }, { label: "Brazil" }, { label: "British Indian Ocean Territory" }, { label: "Brunei Darussalam" }].map(suggestion => ({
-  value: suggestion.label,
-  label: suggestion.label
-}));
-
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -166,12 +161,22 @@ const components = {
   ValueContainer
 };
 
-export default function SearchReact() {
+export default function SearchReact(props) {
+  const AllFestivals = props.allfestivals;
+
+  console.log("AllFestivals nav: ", AllFestivals);
+
+  const suggestions = AllFestivals.map(suggestion => ({
+    value: suggestion.name,
+    label: suggestion.SearchName
+  }));
+
   const classes = useStyles();
   const [single, setSingle] = React.useState(null);
 
   function handleChangeSingle(value) {
     setSingle(value);
+    console.log("see value: ", value.value);
   }
 
   return (

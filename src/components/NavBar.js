@@ -76,7 +76,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function NavBar(props) {
   const parsed = props.parsed;
-  console.log("parsed 2:", parsed);
+
   const classes = useStyles();
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -134,7 +134,7 @@ export default function NavBar(props) {
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
-            <SearchReact />
+            <SearchReact allfestivals={props.allfestivals} />
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
