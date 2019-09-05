@@ -134,7 +134,7 @@ export default function NavBar(props) {
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
-            <SearchReact allfestivals={props.allfestivals} />
+            <SearchReact allfestivals={props.allfestivals} onChangeSearch={props.handleChangeSingle} />
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>

@@ -1,6 +1,6 @@
 import React from "react";
 import Moment from "react-moment";
-import glasto from "../festivals/Glastonbury2019.json";
+//import glasto from "../festivals/Glastonbury2019.json";
 //import glasto from "../festivals/read2019.json";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
@@ -13,6 +13,8 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 console.log(" AllFestivals[0].name", AllFestivals[0].name); */
 
 const FestivalTable = props => {
+  const glasto = props.festival.value;
+  console.log("table: ", glasto);
   const [currentIndex, setIndex] = React.useState(0);
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -54,9 +56,9 @@ const FestivalTable = props => {
     }
   }
 
-  console.log(glasto.locations);
+  /*   console.log(glasto.locations); */
 
-  return (
+  return glasto != null ? (
     <div className="main-wrap lineup">
       <div className="center-div">
         <div className="alignLeft">
@@ -132,6 +134,8 @@ const FestivalTable = props => {
         </Grid>
       </div>
     </div>
+  ) : (
+    <div>no data</div>
   );
 };
 

@@ -7,6 +7,7 @@ import NoSsr from "@material-ui/core/NoSsr";
 import TextField from "@material-ui/core/TextField";
 import Paper from "@material-ui/core/Paper";
 import MenuItem from "@material-ui/core/MenuItem";
+import { withRouter } from "react-router";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -164,7 +165,7 @@ const components = {
 export default function SearchReact(props) {
   const AllFestivals = props.allfestivals;
 
-  console.log("AllFestivals nav: ", AllFestivals);
+  /*  console.log("AllFestivals nav: ", AllFestivals); */
 
   const suggestions = AllFestivals.map(suggestion => ({
     value: suggestion.name,
@@ -174,9 +175,17 @@ export default function SearchReact(props) {
   const classes = useStyles();
   const [single, setSingle] = React.useState(null);
 
+  /*   const { match, location, history } = this.props; */
+
   function handleChangeSingle(value) {
     setSingle(value);
     console.log("see value: ", value.value);
+    //get current url and push patientId in order to trigger the react router to load the graph
+    //let currentUrl = this.props.location.pathname;
+    // console.log("currentUrl: ", currentUrl);
+
+    //this.props.history.push(currentUrl + "/" + patientId);
+    props.onChangeSearch(value);
   }
 
   return (

@@ -34,13 +34,15 @@ class App extends Component {
       genres: [],
       errorApi: false,
       userName: "",
-      setOpen: false
+      setOpen: false,
+      festivalSelected: ""
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClickSong = this.handleClickSong.bind(this);
     this.handleClickGroup = this.handleClickGroup.bind(this);
     this.handleClose = this.handleClose.bind(this);
+    this.handleChangeSingle = this.handleChangeSingle.bind(this);
   }
 
   handleChange(event) {
@@ -61,6 +63,14 @@ class App extends Component {
     this.searchBands(e.target.value);
     this.setState({
       setOpen: false
+    });
+  }
+
+  handleChangeSingle(value) {
+    console.log("handleChangeSingle: ", value);
+    //setState is asynchronous, put the log in a callback of the setState() method
+    this.setState({ festivalSelected: value }, () => {
+      console.log("handleChangeSingle2: ", this.state.festivalSelected);
     });
   }
 
@@ -165,6 +175,7 @@ class App extends Component {
 
   render() {
     let popsong = this.state.popularSongID;
+    let festivalSelected = this.state.festivalSelected;
     //console.log("popular song: " + this.state.popularSongID);
     //console.log("images: " + this.state.image);
     //console.log(window.location.href);
@@ -172,11 +183,11 @@ class App extends Component {
     return (
       <div className="App">
         <BrowserRouter>
-          <NavBar parsed={this.state.parsed} allfestivals={AllFestivals} />
+          <NavBar parsed={this.state.parsed} allfestivals={AllFestivals} handleChangeSingle={this.handleChangeSingle} />
           <div>
             <Switch>
               <Route exact path="/" render={() => <Home allfestivals={AllFestivals} />} />
-              <Route exact path="/festival" render={() => <ShowFestivals errorApi={this.state.errorApi} username={this.state.userName.split(" ")[0]} artistName={this.state.artistName} artistImage={this.state.image} popularSong={popsong} popularSongsArray={this.state.popularSongs} onSubmitValue={this.handleSubmit} value={this.state.value} onChangeValue={this.handleChange} handleClickSong={this.handleClickSong} handleClickGroup={this.handleClickGroup} setOpen={this.state.setOpen} onHandleClose={this.handleClose} genres={this.state.genres} />} />
+              <Route exact path="/festival/:name" render={() => <ShowFestivals festival={festivalSelected} errorApi={this.state.errorApi} username={this.state.userName.split(" ")[0]} artistName={this.state.artistName} artistImage={this.state.image} popularSong={popsong} popularSongsArray={this.state.popularSongs} onSubmitValue={this.handleSubmit} value={this.state.value} onChangeValue={this.handleChange} handleClickSong={this.handleClickSong} handleClickGroup={this.handleClickGroup} setOpen={this.state.setOpen} onHandleClose={this.handleClose} genres={this.state.genres} />} />
               <Route path="/popular" component={Popular} />
             </Switch>
           </div>

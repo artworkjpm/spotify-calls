@@ -76,7 +76,7 @@ const ShowFestivals = props => {
         ""
       )}
 
-      <FestivalTable handleOpen={handleOpen} />
+      <FestivalTable handleOpen={handleOpen} festival={props.festival} />
     </div>
   );
 };
