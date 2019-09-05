@@ -187,7 +187,7 @@ class App extends Component {
           <div>
             <Switch>
               <Route exact path="/" render={() => <Home allfestivals={AllFestivals} />} />
-              <Route exact path="/festival/:name" render={() => <ShowFestivals festival={festivalSelected} errorApi={this.state.errorApi} username={this.state.userName.split(" ")[0]} artistName={this.state.artistName} artistImage={this.state.image} popularSong={popsong} popularSongsArray={this.state.popularSongs} onSubmitValue={this.handleSubmit} value={this.state.value} onChangeValue={this.handleChange} handleClickSong={this.handleClickSong} handleClickGroup={this.handleClickGroup} setOpen={this.state.setOpen} onHandleClose={this.handleClose} genres={this.state.genres} />} />
+              <Route exact path="/festival/:festivalName" render={() => <ShowFestivals festival={festivalSelected} errorApi={this.state.errorApi} username={this.state.userName.split(" ")[0]} artistName={this.state.artistName} artistImage={this.state.image} popularSong={popsong} popularSongsArray={this.state.popularSongs} onSubmitValue={this.handleSubmit} value={this.state.value} onChangeValue={this.handleChange} handleClickSong={this.handleClickSong} handleClickGroup={this.handleClickGroup} setOpen={this.state.setOpen} onHandleClose={this.handleClose} genres={this.state.genres} />} />
               <Route path="/popular" component={Popular} />
             </Switch>
           </div>
