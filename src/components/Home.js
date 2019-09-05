@@ -10,6 +10,7 @@ import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import AllFestivals from "../festivals/AllFestivals";
+import Moment from "react-moment";
 
 const Home = props => {
   const useStyles = makeStyles(theme => ({
@@ -20,18 +21,6 @@ const Home = props => {
     },
     table: {
       minWidth: 650
-    },
-    button: {
-      margin: theme.spacing(1)
-    },
-    leftIcon: {
-      marginRight: theme.spacing(1)
-    },
-    rightIcon: {
-      marginLeft: theme.spacing(1)
-    },
-    iconSmall: {
-      fontSize: 20
     }
   }));
   const StyledTableCell = withStyles(theme => ({
@@ -52,11 +41,6 @@ const Home = props => {
     }
   }))(TableRow);
 
-  function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-  }
-
-  const rows = [createData("Frozen yoghurt", 159, 6.0, 24, 4.0), createData("Ice cream sandwich", 237, 9.0, 37, 4.3), createData("Eclair", 262, 16.0, 24, 6.0), createData("Cupcake", 305, 3.7, 67, 4.3), createData("Gingerbread", 356, 16.0, 49, 3.9)];
   const classes = useStyles();
 
   AllFestivals.map(item => {
@@ -89,17 +73,21 @@ const Home = props => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map(row => (
-              <StyledTableRow hover key={row.name}>
-                <StyledTableCell component="th" scope="row">
-                  {row.name}
-                </StyledTableCell>
-                <StyledTableCell>{row.calories}</StyledTableCell>
-                <StyledTableCell>{row.fat}</StyledTableCell>
-                <StyledTableCell>{row.carbs}</StyledTableCell>
-                <StyledTableCell>100,000</StyledTableCell>
-              </StyledTableRow>
-            ))}
+            {AllFestivals.map(festival => {
+              return (
+                <StyledTableRow hover key={festival.SearchName}>
+                  <StyledTableCell component="th" scope="row">
+                    {festival.SearchName}
+                  </StyledTableCell>
+                  <StyledTableCell>{festival.Country}</StyledTableCell>
+                  <StyledTableCell>
+                    <Moment format="DD/MM/YYYY">{festival.start}</Moment> - <Moment format="DD/MM/YYYY">{festival.end}</Moment>
+                  </StyledTableCell>
+                  <StyledTableCell>{festival.name.locations.length}</StyledTableCell>
+                  <StyledTableCell>{festival.attendance.toLocaleString()}</StyledTableCell>
+                </StyledTableRow>
+              );
+            })}
           </TableBody>
         </Table>
       </Paper>
