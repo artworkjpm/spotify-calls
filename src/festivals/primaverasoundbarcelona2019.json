@@ -1,0 +1,452 @@
+{
+	"copyright":"Licensed under a Creative Commons Attribution-NonCommercial 3.0 License http:\/\/creativecommons.org\/licenses\/by-nc\/3.0\/. Free for non-commercial use. Contact halvin@clashfinder.com for other uses.",
+	"modified":"2019-05-27 12:45",
+	"name":"Primavera Sound 2019",
+	"id":"primaverasoundbarcelona2019",
+	"url":"https:\/\/clashfinder.com\/s\/primaverasoundbarcelona2019\/",
+	"printAdvisory":2,
+	"timezone":"Europe\/Madrid",
+	"tzOffset":7200,
+	"tzNote":"Start and end times are given in the timezone of the event. Offset by -tzOffset for UTC.",
+	"locations":[
+		{
+			"name":"Sala Apolo",
+			"events":[
+				{"name":"Kelly Kapowsky","short":"kellyk(1)","start":"2019-05-27 20:00","end":"2019-05-27 20:45"},
+				{"name":"Deerhunter","short":"deerhu(1)","start":"2019-05-27 21:15","end":"2019-05-27 22:45"},
+				{"name":"Cate Le Bon","short":"catebo(1)","start":"2019-05-28 20:30","end":"2019-05-28 21:30"},
+				{"name":"Homeshake","short":"homesh(1)","start":"2019-05-28 22:00","end":"2019-05-28 23:00"},
+				{"name":"Coucou Chloe","short":"coucou(1)","start":"2019-05-30 00:45","end":"2019-05-30 01:30"},
+				{"name":"Fucked Up","short":"fucked(1)","start":"2019-05-30 01:50","end":"2019-05-30 02:45"},
+				{"name":"Apparat dj set","short":"appara(1)","start":"2019-05-30 03:00","end":"2019-05-30 05:00"},
+				{"name":"Agost","short":"agost(2)","start":"2019-06-02 22:30","end":"2019-06-02 23:10"},
+				{"name":"The Beths","short":"beths(1)","start":"2019-06-02 23:30","end":"2019-06-03 00:15"},
+				{"name":"Amyl and The Sniffers","short":"amylan(2)","start":"2019-06-03 00:45","end":"2019-06-03 01:45"},
+				{"name":"cupcakKe","short":"cupcak(2)","start":"2019-06-03 02:00","end":"2019-06-03 02:45"},
+				{"name":"DJ Coco","short":"djcoco(1)","start":"2019-06-03 03:00","end":"2019-06-03 05:00"}
+			]
+		},
+		{
+			"name":"La [2] de Apolo",
+			"events":[
+				{"name":"Teskno","short":"teskno(1)","start":"2019-05-28 19:30","end":"2019-05-28 20:10"},
+				{"name":"Lonker See","short":"lonker(1)","start":"2019-05-28 20:30","end":"2019-05-28 21:15"},
+				{"name":"We Will Fail","short":"wewill(1)","start":"2019-05-28 21:30","end":"2019-05-28 22:15"},
+				{"name":"L8CHNG","short":"l8chng(1)","start":"2019-05-28 23:00","end":"2019-05-28 23:45"},
+				{"name":"Meuko! Meuko!","short":"meukom(1)","start":"2019-05-29 00:00","end":"2019-05-29 00:45"},
+				{"name":"Lolina","short":"lolina(1)","start":"2019-05-29 23:30","end":"2019-05-30 00:15"},
+				{"name":"Bea Pelea","short":"beapel(1)","start":"2019-05-30 00:25","end":"2019-05-30 01:00"},
+				{"name":"Clara!","short":"clara(1)","start":"2019-05-30 01:00","end":"2019-05-30 02:20"},
+				{"name":"Linn da Quebrada","short":"linnda(1)","start":"2019-05-30 02:30","end":"2019-05-30 03:20"},
+				{"name":"Mina","short":"mina(1)","start":"2019-05-30 03:30","end":"2019-05-30 05:00"},
+				{"name":"Lndfk","short":"lndfk(1)","start":"2019-06-02 23:00","end":"2019-06-02 23:40"},
+				{"name":"Efrim Manuel Menuck","short":"efrimm(1)","start":"2019-06-03 00:30","end":"2019-06-03 01:30"},
+				{"name":"Miya Folick","short":"miyafo(2)","start":"2019-06-03 01:45","end":"2019-06-03 02:45"},
+				{"name":"Flaca","short":"flaca(1)","start":"2019-06-03 03:00","end":"2019-06-03 05:00"}
+			]
+		},
+		{
+			"name":"SEAT",
+			"events":[
+				{"name":"The Mani-las","short":"manila(1)","start":"2019-05-30 18:45","end":"2019-05-30 19:30"},
+				{"name":"Mac DeMarco","short":"macdem(1)","start":"2019-05-30 20:30","end":"2019-05-30 21:45"},
+				{"name":"Interpol","short":"interp(1)","start":"2019-05-30 23:15","end":"2019-05-31 00:25"},
+				{"name":"Future","short":"future(1)","start":"2019-05-31 02:05","end":"2019-05-31 03:00"},
+				{"name":"PAVVLA","short":"pavvla(1)","start":"2019-05-31 18:45","end":"2019-05-31 19:30"},
+				{"name":"Carly Rae Jepsen","short":"carlyr(1)","start":"2019-05-31 20:30","end":"2019-05-31 21:30"},
+				{"name":"Miley Cyrus","short":"mileyc(1)","start":"2019-05-31 23:10","end":"2019-06-01 00:10"},
+				{"name":"Robyn","short":"robyn(1)","start":"2019-06-01 01:55","end":"2019-06-01 03:00"},
+				{"name":"Boy Pablo","short":"boypab(1)","start":"2019-06-01 18:45","end":"2019-06-01 19:30"},
+				{"name":"Kali Uchis","short":"kaliuc(1)","start":"2019-06-01 20:45","end":"2019-06-01 21:45"},
+				{"name":"Solange","short":"solang(1)","start":"2019-06-01 23:00","end":"2019-06-02 00:00"},
+				{"name":"James Blake","short":"jamesb(1)","start":"2019-06-02 01:25","end":"2019-06-02 02:45"}
+			]
+		},
+		{
+			"name":"Pull & Bear",
+			"events":[
+				{"name":"Big Thief","short":"bigthi(1)","start":"2019-05-30 19:35","end":"2019-05-30 20:25"},
+				{"name":"Courtney Barnett","short":"courtn(1)","start":"2019-05-30 21:55","end":"2019-05-30 23:05"},
+				{"name":"Erikah Badu","short":"erikah(1)","start":"2019-05-31 00:30","end":"2019-05-31 02:00"},
+				{"name":"Kurt Vile & The Violators","short":"kurtvi(1)","start":"2019-05-31 19:35","end":"2019-05-31 20:25"},
+				{"name":"Janelle Monáe","short":"janell(1)","start":"2019-05-31 21:35","end":"2019-05-31 23:05"},
+				{"name":"Tame Impala","short":"tameim(1)","start":"2019-06-01 00:25","end":"2019-06-01 01:50"},
+				{"name":"Nathy Peluso","short":"nathyp(1)","start":"2019-06-01 19:40","end":"2019-06-01 20:40"},
+				{"name":"Rosalía","short":"rosala(1)","start":"2019-06-01 21:55","end":"2019-06-01 22:55"},
+				{"name":"J Balvin","short":"jbalvi(1)","start":"2019-06-02 00:05","end":"2019-06-02 01:20"}
+			]
+		},
+		{
+			"name":"Ray-Ban",
+			"events":[
+				{"name":"Las Odio","short":"lasodi(1)","start":"2019-05-30 16:40","end":"2019-05-30 17:15"},
+				{"name":"Soccer Mommy","short":"soccer(1)","start":"2019-05-30 18:10","end":"2019-05-30 18:55"},
+				{"name":"Danny Brown","short":"dannyb(1)","start":"2019-05-30 20:05","end":"2019-05-30 21:05"},
+				{"name":"Nas","short":"nas(1)","start":"2019-05-30 22:20","end":"2019-05-30 23:20"},
+				{"name":"Dirty Projectors","short":"dirtyp(1)","start":"2019-05-31 00:45","end":"2019-05-31 01:50"},
+				{"name":"FKA Twigs","short":"fkatwi(1)","start":"2019-05-31 02:50","end":"2019-05-31 03:50"},
+				{"name":"Nina Kraviz","short":"ninakr(1)","start":"2019-05-31 04:00","end":"2019-05-31 06:00"},
+				{"name":"Lucy Dacus","short":"lucyda(1)","start":"2019-05-31 16:45","end":"2019-05-31 17:30"},
+				{"name":"Sons of Kemet XL","short":"sonsof(1)","start":"2019-05-31 18:25","end":"2019-05-31 19:25"},
+				{"name":"Derby Motoreta's Burrito Kachimba","short":"derbym(1)","start":"2019-05-31 20:25","end":"2019-05-31 21:05"},
+				{"name":"Suede","short":"suede(1)","start":"2019-05-31 22:30","end":"2019-05-31 23:45"},
+				{"name":"Kate Tempest","short":"katete(1)","start":"2019-06-01 00:55","end":"2019-06-01 01:55"},
+				{"name":"Mura Masa","short":"murama(1)","start":"2019-06-01 03:05","end":"2019-06-01 04:00"},
+				{"name":"Peggy Gou","short":"peggyg(1)","start":"2019-06-01 04:10","end":"2019-06-01 06:00"},
+				{"name":"Alondra Bentley","short":"alondr(1)","start":"2019-06-01 16:50","end":"2019-06-01 17:25"},
+				{"name":"Daymé Arocena","short":"daymar(1)","start":"2019-06-01 18:20","end":"2019-06-01 19:10"},
+				{"name":"Shellac","short":"shella(1)","start":"2019-06-01 20:25","end":"2019-06-01 21:15"},
+				{"name":"Jarvis Cocker introducing JARV IS...","short":"jarvis(1)","start":"2019-06-01 22:55","end":"2019-06-02 00:10"},
+				{"name":"Stereolab","short":"stereo(1)","start":"2019-06-02 01:30","end":"2019-06-02 02:30"},
+				{"name":"Modeselektor live","short":"modese(1)","start":"2019-06-02 03:40","end":"2019-06-02 04:50"},
+				{"name":"DJ Rosario & Sama Yax","short":"djrosa(1)","start":"2019-06-02 05:00","end":"2019-06-02 06:00"}
+			]
+		},
+		{
+			"name":"Primavera",
+			"events":[
+				{"name":"Mow","short":"mow(1)","start":"2019-05-29 17:00","end":"2019-05-29 17:35"},
+				{"name":"Melenas","short":"melena(1)","start":"2019-05-29 18:00","end":"2019-05-29 18:45"},
+				{"name":"Hatchie","short":"hatchi(1)","start":"2019-05-29 19:10","end":"2019-05-29 20:00"},
+				{"name":"Cuco","short":"cuco(1)","start":"2019-05-29 20:30","end":"2019-05-29 21:30"},
+				{"name":"Big Red Machine","short":"bigred(1)","start":"2019-05-29 22:00","end":"2019-05-29 23:15"},
+				{"name":"Alice Phoebe Lou","short":"alicep(1)","start":"2019-05-30 17:20","end":"2019-05-30 18:05"},
+				{"name":"Stephen Malkmus & The Jicks","short":"stephe(1)","start":"2019-05-30 19:00","end":"2019-05-30 20:00"},
+				{"name":"Christine and The Queens","short":"christ1(1)","start":"2019-05-30 21:10","end":"2019-05-30 22:15"},
+				{"name":"Guided By Voices","short":"guided(1)","start":"2019-05-30 23:25","end":"2019-05-31 00:40"},
+				{"name":"Charli XCX","short":"charli(1)","start":"2019-05-31 01:55","end":"2019-05-31 02:45"},
+				{"name":"Snail Mail","short":"snailm(1)","start":"2019-05-31 17:35","end":"2019-05-31 18:20"},
+				{"name":"BEAK&gt;","short":"beak(1)","start":"2019-05-31 19:30","end":"2019-05-31 20:20"},
+				{"name":"Jawbreaker","short":"jawbre(1)","start":"2019-05-31 21:15","end":"2019-05-31 22:25"},
+				{"name":"Low","short":"low(1)","start":"2019-05-31 23:50","end":"2019-06-01 00:50"},
+				{"name":"Jungle","short":"jungle(1)","start":"2019-06-01 02:00","end":"2019-06-01 03:00"},
+				{"name":"Ama Lou","short":"amalou(1)","start":"2019-06-01 17:30","end":"2019-06-01 18:15"},
+				{"name":"Built To Spill","short":"builtt(1)","start":"2019-06-01 19:15","end":"2019-06-01 20:20"},
+				{"name":"Pusha T","short":"pushat(1)","start":"2019-06-01 22:00","end":"2019-06-01 22:55"},
+				{"name":"Primal Scream","short":"primal(1)","start":"2019-06-02 00:15","end":"2019-06-02 01:25"},
+				{"name":"Róisín Murphy","short":"risnmu(1)","start":"2019-06-02 02:35","end":"2019-06-02 03:35"}
+			]
+		},
+		{
+			"name":"Auditori",
+			"events":[
+				{"name":"Bridget St. John","short":"bridge(1)","start":"2019-05-30 16:00","end":"2019-05-30 16:45"},
+				{"name":"Julien Baker","short":"julien(1)","start":"2019-05-30 17:00","end":"2019-05-30 17:50"},
+				{"name":"The Necks","short":"necks(1)","start":"2019-05-30 18:10","end":"2019-05-30 19:10"},
+				{"name":"Terry Riley & Gyan Riley","short":"terryr(1)","start":"2019-05-30 19:30","end":"2019-05-30 20:30"},
+				{"name":"Apparat live","short":"appara1(1)","start":"2019-05-30 20:55","end":"2019-05-30 22:00"},
+				{"name":"Midori Takada","short":"midori(1)","start":"2019-05-31 16:00","end":"2019-05-31 17:00"},
+				{"name":"María José Llergo","short":"marajo(1)","start":"2019-05-31 17:30","end":"2019-05-31 18:30"},
+				{"name":"Julia Holter","short":"juliah(1)","start":"2019-05-31 19:20","end":"2019-05-31 20:30"},
+				{"name":"Dirty Projectors","short":"dirtyp(2)","start":"2019-05-31 21:00","end":"2019-05-31 22:00"},
+				{"name":"Caterina Barbieri","short":"cateri(1)","start":"2019-06-01 16:00","end":"2019-06-01 16:55"},
+				{"name":"Tirzah","short":"tirzah(2)","start":"2019-06-01 17:30","end":"2019-06-01 18:30"},
+				{"name":"The Mystery of the Bulgarian Voices featuring Lisa Gerrard","short":"myster1(1)","start":"2019-06-01 19:00","end":"2019-06-01 20:00"},
+				{"name":"Tim Hecker & Konoyo Ensemble","short":"timhec(1)","start":"2019-06-01 21:00","end":"2019-06-01 22:00"}
+			]
+		},
+		{
+			"name":"Pitchfork",
+			"events":[
+				{"name":"Odina","short":"odina(1)","start":"2019-05-30 17:45","end":"2019-05-30 18:20"},
+				{"name":"Tomberlin","short":"tomber(1)","start":"2019-05-30 19:15","end":"2019-05-30 20:00"},
+				{"name":"Clairo","short":"clairo(1)","start":"2019-05-30 20:55","end":"2019-05-30 21:40"},
+				{"name":"Sigrid","short":"sigrid(1)","start":"2019-05-30 22:35","end":"2019-05-30 23:25"},
+				{"name":"070 Shake","short":"070sha(1)","start":"2019-05-31 00:35","end":"2019-05-31 01:15"},
+				{"name":"Empress Of","short":"empres(1)","start":"2019-05-31 02:10","end":"2019-05-31 02:55"},
+				{"name":"Mikki Blanco","short":"mikkib(1)","start":"2019-05-31 04:05","end":"2019-05-31 04:55"},
+				{"name":"Putochinomaricón","short":"putoch(1)","start":"2019-05-31 17:45","end":"2019-05-31 18:25"},
+				{"name":"Just Mustard","short":"justmu(1)","start":"2019-05-31 19:20","end":"2019-05-31 20:05"},
+				{"name":"Liz Phair","short":"lizpha(1)","start":"2019-05-31 21:00","end":"2019-05-31 21:45"},
+				{"name":"Aldous Harding","short":"aldous(1)","start":"2019-05-31 23:05","end":"2019-05-31 23:55"},
+				{"name":"Yves Tumor","short":"yvestu(1)","start":"2019-06-01 00:55","end":"2019-06-01 01:40"},
+				{"name":"Flohio","short":"flohio(1)","start":"2019-06-01 02:35","end":"2019-06-01 03:20"},
+				{"name":"Iglooghost","short":"igloog(1)","start":"2019-06-01 04:15","end":"2019-06-01 05:00"},
+				{"name":"Retirada!","short":"retira(2)","start":"2019-06-01 17:45","end":"2019-06-01 18:30"},
+				{"name":"Nilüfer Yanya","short":"nilfer(1)","start":"2019-06-01 19:25","end":"2019-06-01 20:10"},
+				{"name":"Loyle Carner","short":"loylec(1)","start":"2019-06-01 21:05","end":"2019-06-01 22:00"},
+				{"name":"Neneh Cherry","short":"nenehc(1)","start":"2019-06-01 23:00","end":"2019-06-01 23:50"},
+				{"name":"cupcakKe","short":"cupcak(1)","start":"2019-06-02 00:45","end":"2019-06-02 01:30"},
+				{"name":"Danny L Harle","short":"dannyl(1)","start":"2019-06-02 02:30","end":"2019-06-02 03:15"},
+				{"name":"slowthai","short":"slowth(1)","start":"2019-06-02 04:10","end":"2019-06-02 04:55"}
+			]
+		},
+		{
+			"name":"Adidas Originals",
+			"events":[
+				{"name":"Elena Setién","short":"elenas(1)","start":"2019-05-30 17:00","end":"2019-05-30 17:40"},
+				{"name":"Dream Wife","short":"dreamw(1)","start":"2019-05-30 18:25","end":"2019-05-30 19:10"},
+				{"name":"Shonen Knife","short":"shonen(1)","start":"2019-05-30 20:05","end":"2019-05-30 20:50"},
+				{"name":"Stiff Little Fingers","short":"stiffl(1)","start":"2019-05-30 21:50","end":"2019-05-30 22:30"},
+				{"name":"Carcass","short":"carcas(1)","start":"2019-05-30 23:30","end":"2019-05-31 00:30"},
+				{"name":"Myrkur","short":"myrkur(1)","start":"2019-05-31 01:20","end":"2019-05-31 02:05"},
+				{"name":"Nitzer Ebb","short":"nitzer(1)","start":"2019-05-31 03:00","end":"2019-05-31 04:00"},
+				{"name":"Lidia Damunt","short":"lidiad(1)","start":"2019-05-31 17:00","end":"2019-05-31 17:40"},
+				{"name":"Pond","short":"pond(1)","start":"2019-05-31 18:35","end":"2019-05-31 19:15"},
+				{"name":"Fucked Up","short":"fucked(2)","start":"2019-05-31 20:10","end":"2019-05-31 20:55"},
+				{"name":"CHAI","short":"chai(2)","start":"2019-05-31 22:15","end":"2019-05-31 23:00"},
+				{"name":"Amyl and The Sniffers","short":"amylan(1)","start":"2019-06-01 00:00","end":"2019-06-01 00:50"},
+				{"name":"Lisabö","short":"lisab(1)","start":"2019-06-01 01:45","end":"2019-06-01 02:30"},
+				{"name":"Bliss Signal","short":"blisss(1)","start":"2019-06-01 03:25","end":"2019-06-01 04:10"},
+				{"name":"Cariño","short":"cario(1)","start":"2019-06-01 17:00","end":"2019-06-01 17:40"},
+				{"name":"Haru Nemuri","short":"harune(1)","start":"2019-06-01 18:35","end":"2019-06-01 19:20"},
+				{"name":"Frank Carter & The Rattlesnakes","short":"frankc(1)","start":"2019-06-01 20:10","end":"2019-06-01 21:05"},
+				{"name":"Drab Majesty","short":"drabma(1)","start":"2019-06-01 22:05","end":"2019-06-01 22:55"},
+				{"name":"June of 44","short":"juneof(1)","start":"2019-06-01 23:55","end":"2019-06-02 00:40"},
+				{"name":"The Messthetics","short":"messth(1)","start":"2019-06-02 01:35","end":"2019-06-02 02:25"},
+				{"name":"JPEGMAFIA","short":"jpegma(1)","start":"2019-06-02 03:20","end":"2019-06-02 04:05"}
+			]
+		},
+		{
+			"name":"Ray-Ban Studios",
+			"events":[
+				{"name":"upsammy","short":"upsamm(1)","start":"2019-05-30 22:00","end":"2019-05-30 23:00"},
+				{"name":"Objekt","short":"objekt(1)","start":"2019-05-30 23:00","end":"2019-05-31 00:30"},
+				{"name":"Demdike Stare","short":"demdik(1)","start":"2019-05-31 00:35","end":"2019-05-31 01:30"},
+				{"name":"DjRUM","short":"djrum(1)","start":"2019-05-31 01:30","end":"2019-05-31 03:00"},
+				{"name":"Anastasia Kristensen","short":"anasta(1)","start":"2019-05-31 03:00","end":"2019-05-31 04:00"},
+				{"name":"Brat Star","short":"bratst1(1)","start":"2019-05-31 04:00","end":"2019-05-31 05:30"},
+				{"name":"Anthony Naples live","short":"anthon(1)","start":"2019-05-31 22:00","end":"2019-05-31 23:00"},
+				{"name":"Overmono","short":"overmo(1)","start":"2019-05-31 23:00","end":"2019-06-01 00:00"},
+				{"name":"Object Blue","short":"object(1)","start":"2019-06-01 00:00","end":"2019-06-01 01:00"},
+				{"name":"Mad Miran","short":"madmir(1)","start":"2019-06-01 01:00","end":"2019-06-01 02:30"},
+				{"name":"Roza Terenzi ","short":"rozate(1)","start":"2019-06-01 02:30","end":"2019-06-01 04:00"},
+				{"name":"Batu","short":"batu(1)","start":"2019-06-01 04:05","end":"2019-06-01 05:30"},
+				{"name":"Suzanne Ciani","short":"suzann(1)","start":"2019-06-01 22:00","end":"2019-06-01 22:45"},
+				{"name":"DJ Marcelle \/ Another Nice Mess","short":"djmarc(1)","start":"2019-06-01 22:50","end":"2019-06-02 00:15"},
+				{"name":"Forest Drive West","short":"forest(1)","start":"2019-06-02 00:15","end":"2019-06-02 01:45"},
+				{"name":"Aïsha Devi","short":"ashade(1)","start":"2019-06-02 01:45","end":"2019-06-02 02:45"},
+				{"name":"Peach","short":"peach(1)","start":"2019-06-02 02:45","end":"2019-06-02 04:15"},
+				{"name":"Martyn","short":"martyn(1)","start":"2019-06-02 04:15","end":"2019-06-02 05:45"}
+			]
+		},
+		{
+			"name":"Your Heineken Stage",
+			"events":[
+				{"name":"Aliment plays TV Personalities","short":"alimen(1)","start":"2019-05-30 18:25","end":"2019-05-30 19:10"},
+				{"name":"Chandra","short":"chandr(1)","start":"2019-05-30 20:05","end":"2019-05-30 20:50"},
+				{"name":"Viva Belgrado plays At The Drive In","short":"vivabe(1)","start":"2019-05-30 21:45","end":"2019-05-30 22:30"},
+				{"name":"Pylon Reenactment Society","short":"pylonr(1)","start":"2019-05-30 23:30","end":"2019-05-31 00:20"},
+				{"name":"The Comet is Coming","short":"cometi(1)","start":"2019-05-31 01:20","end":"2019-05-31 02:05"},
+				{"name":"Severed Heads","short":"severe(1)","start":"2019-05-31 03:00","end":"2019-05-31 04:00"},
+				{"name":"Birkins feat. Ken Stringfellow plays Ziggy Stardust","short":"birkin(1)","start":"2019-05-31 18:30","end":"2019-05-31 19:15"},
+				{"name":"Piroshka","short":"pirosh(1)","start":"2019-05-31 20:10","end":"2019-05-31 20:55"},
+				{"name":"El mató a un policía motorizado feat. Amaia, J, Manu Ferrón","short":"mataap(1)","start":"2019-05-31 21:50","end":"2019-05-31 22:50"},
+				{"name":"107 Faunos","short":"107fau(1)","start":"2019-06-01 00:00","end":"2019-06-01 00:50"},
+				{"name":"Swervedriver","short":"swerve(1)","start":"2019-06-01 01:50","end":"2019-06-01 02:30"},
+				{"name":"Kokoshka plays Las Grecas","short":"kokosh(1)","start":"2019-06-01 03:30","end":"2019-06-01 04:20"},
+				{"name":"Evripidis and his Tragedies plays The Magnetic Fields","short":"evripi(1)","start":"2019-06-01 18:35","end":"2019-06-01 19:20"},
+				{"name":"Me and The Bees plays The Breeders","short":"meandb(1)","start":"2019-06-01 20:15","end":"2019-06-01 21:00"},
+				{"name":"The Bevis Frond","short":"bevisf(1)","start":"2019-06-01 23:55","end":"2019-06-02 00:40"},
+				{"name":"Bush Tetras","short":"bushte(1)","start":"2019-06-02 01:40","end":"2019-06-02 02:20"},
+				{"name":"Mujeres plays Los Laicos","short":"mujere(1)","start":"2019-06-02 03:20","end":"2019-06-02 04:05"}
+			]
+		},
+		{
+			"name":"SEAT Village Stage",
+			"events":[
+				{"name":"Erik Urano","short":"erikur(1)","start":"2019-05-30 21:00","end":"2019-05-30 21:45"},
+				{"name":"Chynna","short":"chynna(1)","start":"2019-05-30 22:15","end":"2019-05-30 23:00"},
+				{"name":"Celeste","short":"celest(1)","start":"2019-05-31 00:00","end":"2019-05-31 00:45"},
+				{"name":"IDK","short":"idk(1)","start":"2019-05-31 01:30","end":"2019-05-31 02:30"},
+				{"name":"Jarvis Cocker dj set","short":"jarvis1(1)","start":"2019-05-31 03:00","end":"2019-05-31 05:00"},
+				{"name":"La Tiguerita","short":"tiguer(1)","start":"2019-05-31 21:00","end":"2019-05-31 21:45"},
+				{"name":"Mucho Muchacho","short":"muchom(1)","start":"2019-05-31 22:15","end":"2019-05-31 23:00"},
+				{"name":"Junglepussy","short":"jungle1(1)","start":"2019-05-31 23:45","end":"2019-06-01 00:30"},
+				{"name":"AJ Tracey","short":"ajtrac(1)","start":"2019-06-01 01:30","end":"2019-06-01 02:30"},
+				{"name":"Tim Burgess dj set","short":"timbur(1)","start":"2019-06-01 03:00","end":"2019-06-01 05:00"},
+				{"name":"Ninhomalo","short":"ninhom(1)","start":"2019-06-01 21:00","end":"2019-06-01 21:30"},
+				{"name":"Cálido Lehamo","short":"clidol(1)","start":"2019-06-01 21:55","end":"2019-06-01 22:40"},
+				{"name":"Kaydy Cain","short":"kaydyc(1)","start":"2019-06-01 22:50","end":"2019-06-01 23:40"},
+				{"name":"Bbymutha","short":"bbymut(1)","start":"2019-06-01 23:55","end":"2019-06-02 00:45"},
+				{"name":"Little Simz","short":"little(1)","start":"2019-06-02 01:45","end":"2019-06-02 02:30"},
+				{"name":"Richard Colburn dj set","short":"richar(1)","start":"2019-06-02 03:00","end":"2019-06-02 05:00"}
+			]
+		},
+		{
+			"name":"OCB Paper Sessions",
+			"events":[
+				{"name":"Alice Phoebe Lou","short":"alicep(2)","start":"2019-05-30 19:00","end":"2019-05-30 19:30"},
+				{"name":"CHAI","short":"chai(1)","start":"2019-05-31 19:00","end":"2019-05-31 19:30"},
+				{"name":"Miya Folick","short":"miyafo(1)","start":"2019-06-01 19:00","end":"2019-06-01 19:30"}
+			]
+		},
+		{
+			"name":"Night Pro",
+			"events":[
+				{"name":"Egosex","short":"egosex(1)","start":"2019-05-29 18:00","end":"2019-05-29 18:40"},
+				{"name":"L8CHING","short":"l8chin(1)","start":"2019-05-29 19:10","end":"2019-05-29 19:50"},
+				{"name":"Meuko! Meuko!","short":"meukom(2)","start":"2019-05-29 20:10","end":"2019-05-29 20:50"},
+				{"name":"Teskno","short":"teskno(2)","start":"2019-05-30 18:20","end":"2019-05-30 19:00"},
+				{"name":"Belau","short":"belau(1)","start":"2019-05-30 19:20","end":"2019-05-30 20:00"},
+				{"name":"Malihini","short":"malihi(2)","start":"2019-05-30 20:20","end":"2019-05-30 21:00"},
+				{"name":"Lonker See","short":"lonker(2)","start":"2019-05-30 21:20","end":"2019-05-30 22:00"},
+				{"name":"We Will Fail","short":"wewill(2)","start":"2019-05-30 22:20","end":"2019-05-30 23:00"},
+				{"name":"P Postman","short":"ppostm(1)","start":"2019-05-30 23:25","end":"2019-05-31 00:05"},
+				{"name":"HÅN","short":"hn(1)","start":"2019-05-31 16:55","end":"2019-05-31 17:35"},
+				{"name":"Mayberian Sanskülotts","short":"mayber(2)","start":"2019-05-31 17:55","end":"2019-05-31 18:35"},
+				{"name":"Birthh","short":"birthh(2)","start":"2019-05-31 18:50","end":"2019-05-31 19:30"},
+				{"name":"NFX","short":"nfx(2)","start":"2019-05-31 20:00","end":"2019-05-31 20:40"},
+				{"name":"Edsun","short":"edsun(2)","start":"2019-05-31 21:00","end":"2019-05-31 21:40"},
+				{"name":"Bronko Yotte","short":"bronko(2)","start":"2019-05-31 22:00","end":"2019-05-31 22:40"},
+				{"name":"5K HD","short":"5khd(2)","start":"2019-05-31 23:00","end":"2019-05-31 23:40"},
+				{"name":"Bonish","short":"bonish(2)","start":"2019-06-01 17:30","end":"2019-06-01 18:10"},
+				{"name":"Kirara","short":"kirara(1)","start":"2019-06-01 18:30","end":"2019-06-01 19:10"},
+				{"name":"DTSQ","short":"dtsq(1)","start":"2019-06-01 19:30","end":"2019-06-01 20:10"},
+				{"name":"Phoro","short":"phoro(2)","start":"2019-06-01 20:30","end":"2019-06-01 21:10"},
+				{"name":"Eli Almic","short":"elialm(2)","start":"2019-06-01 22:00","end":"2019-06-01 22:40"},
+				{"name":"Sistemas Inestables","short":"sistem(2)","start":"2019-06-01 23:00","end":"2019-06-01 23:40"},
+				{"name":"F5","short":"f5(2)","start":"2019-06-02 00:00","end":"2019-06-02 00:40"}
+			]
+		},
+		{
+			"name":"Lotus Stage",
+			"events":[
+				{"name":"r.e.a.l.","short":"real(1)","start":"2019-05-30 18:30","end":"2019-05-30 19:15"},
+				{"name":"Bakar","short":"bakar(1)","start":"2019-05-30 20:15","end":"2019-05-30 21:10"},
+				{"name":"Marie Davidson","short":"maried(1)","start":"2019-05-30 21:40","end":"2019-05-30 22:35"},
+				{"name":"Princess Nokia","short":"prince(1)","start":"2019-05-30 23:10","end":"2019-05-31 00:10"},
+				{"name":"SOPHIE","short":"sophie(1)","start":"2019-05-31 00:50","end":"2019-05-31 01:50"},
+				{"name":"Yaeji","short":"yaeji(1)","start":"2019-05-31 02:25","end":"2019-05-31 03:25"},
+				{"name":"Maribou State","short":"maribo(1)","start":"2019-05-31 03:55","end":"2019-05-31 04:55"},
+				{"name":"BFlecha","short":"bflech(1)","start":"2019-05-31 19:00","end":"2019-05-31 19:45"},
+				{"name":"Wednesday Campanella","short":"wednes(1)","start":"2019-05-31 20:00","end":"2019-05-31 20:45"},
+				{"name":"Sticky M.A.","short":"sticky(1)","start":"2019-05-31 21:00","end":"2019-05-31 21:45"},
+				{"name":"Tony Touch & Friends","short":"tonyto1(1)","start":"2019-05-31 22:35","end":"2019-05-31 23:35"},
+				{"name":"Ivy Queen","short":"ivyque(1)","start":"2019-06-01 00:15","end":"2019-06-01 01:15"},
+				{"name":"Cybotron live","short":"cybotr(1)","start":"2019-06-01 01:40","end":"2019-06-01 02:50"},
+				{"name":"Objekt live","short":"objekt1(1)","start":"2019-06-01 03:20","end":"2019-06-01 04:20"},
+				{"name":"Agoria live","short":"agoria(1)","start":"2019-06-01 04:50","end":"2019-06-01 05:45"},
+				{"name":"Museless","short":"musele(2)","start":"2019-06-01 19:00","end":"2019-06-01 19:45"},
+				{"name":"RRUCCULLA","short":"rruccu(1)","start":"2019-06-01 20:00","end":"2019-06-01 20:45"},
+				{"name":"Channel Tres","short":"channe(1)","start":"2019-06-01 21:00","end":"2019-06-01 21:45"},
+				{"name":"Lizzo","short":"lizzo(1)","start":"2019-06-01 22:35","end":"2019-06-01 23:35"},
+				{"name":"Tierra Whack","short":"tierra(1)","start":"2019-06-02 00:00","end":"2019-06-02 00:40"},
+				{"name":"David August","short":"davida(1)","start":"2019-06-02 01:10","end":"2019-06-02 02:15"},
+				{"name":"Richie Hawtin CLOSE","short":"richie(1)","start":"2019-06-02 02:50","end":"2019-06-02 04:05"},
+				{"name":"Avalon Emerson","short":"avalon(1)","start":"2019-06-02 04:20","end":"2019-06-02 05:45"}
+			]
+		},
+		{
+			"name":"Desperados Cube",
+			"events":[
+				{"name":"Mafalda","short":"mafald(1)","start":"2019-05-30 18:05","end":"2019-05-30 19:00"},
+				{"name":"Dâm-Funk","short":"dmfunk(1)","start":"2019-05-30 19:00","end":"2019-05-30 20:30"},
+				{"name":"Krystal Klear","short":"krysta(1)","start":"2019-05-30 20:30","end":"2019-05-30 22:00"},
+				{"name":"Jayda G","short":"jaydag(1)","start":"2019-05-30 22:00","end":"2019-05-30 23:30"},
+				{"name":"Denis Sulta","short":"deniss(1)","start":"2019-05-30 23:30","end":"2019-05-31 01:00"},
+				{"name":"Job Jobse","short":"jobjob(1)","start":"2019-05-31 01:00","end":"2019-05-31 02:30"},
+				{"name":"Octo Octa b2b Eris Drew","short":"octooc(1)","start":"2019-05-31 02:30","end":"2019-05-31 05:30"},
+				{"name":"Ylia","short":"ylia(1)","start":"2019-05-31 18:00","end":"2019-05-31 19:00"},
+				{"name":"Laurel Halo dj set","short":"laurel(1)","start":"2019-05-31 19:00","end":"2019-05-31 20:30"},
+				{"name":"Steffi","short":"steffi(1)","start":"2019-05-31 20:30","end":"2019-05-31 22:00"},
+				{"name":"Courtesy","short":"courte(1)","start":"2019-05-31 22:00","end":"2019-05-31 23:30"},
+				{"name":"Dr. Rubinstein","short":"drrubi(1)","start":"2019-05-31 23:30","end":"2019-06-01 01:00"},
+				{"name":"Overmono","short":"overmo(2)","start":"2019-06-01 01:00","end":"2019-06-01 02:30"},
+				{"name":"Joy Orbison","short":"joyorb(1)","start":"2019-06-01 02:30","end":"2019-06-01 04:00"},
+				{"name":"Helena Hauff","short":"helena(1)","start":"2019-06-01 04:00","end":"2019-06-01 05:30"},
+				{"name":"Nosedrip","short":"nosedr(1)","start":"2019-06-01 18:00","end":"2019-06-01 19:30"},
+				{"name":"Epsilove","short":"epsilo(1)","start":"2019-06-01 19:30","end":"2019-06-01 20:30"},
+				{"name":"Izabel","short":"izabel(1)","start":"2019-06-01 20:30","end":"2019-06-01 21:50"},
+				{"name":"Fantastic Man b2b Tornado Wallace","short":"fantas(1)","start":"2019-06-01 21:55","end":"2019-06-01 23:30"},
+				{"name":"Hieroglyphic Being","short":"hierog(1)","start":"2019-06-01 23:30","end":"2019-06-02 00:30"},
+				{"name":"Mozhgan","short":"mozhga(1)","start":"2019-06-02 00:30","end":"2019-06-02 02:00"},
+				{"name":"Veronica Vasicka","short":"veroni(1)","start":"2019-06-02 02:00","end":"2019-06-02 02:40"},
+				{"name":"JASSS","short":"jasss(1)","start":"2019-06-02 02:40","end":"2019-06-02 04:30"},
+				{"name":"Voiski","short":"voiski(1)","start":"2019-06-02 05:00","end":"2019-06-02 06:00"}
+			]
+		},
+		{
+			"name":"El Xiringuito Aperol",
+			"events":[
+				{"name":"IM","short":"im(1)","start":"2019-05-30 14:00","end":"2019-05-30 15:15"},
+				{"name":"Shakti Alliance (Ivy, Modet, Vir)","short":"shakti(1)","start":"2019-05-30 15:15","end":"2019-05-30 18:00"},
+				{"name":"Isa·bel","short":"isabel(1)","start":"2019-05-31 14:00","end":"2019-05-31 15:15"},
+				{"name":"Xols","short":"xols(1)","start":"2019-05-31 15:15","end":"2019-05-31 16:45"},
+				{"name":"Phosky","short":"phosky(1)","start":"2019-05-31 16:45","end":"2019-05-31 18:00"},
+				{"name":"Frinda Di Lanco","short":"frinda(1)","start":"2019-06-01 14:00","end":"2019-06-01 15:15"},
+				{"name":"Ecran Total","short":"ecrant(1)","start":"2019-06-01 15:15","end":"2019-06-01 16:30"},
+				{"name":"Dj Supermarkt","short":"djsupe(1)","start":"2019-06-01 16:30","end":"2019-06-01 18:00"}
+			]
+		},
+		{
+			"name":"El Punto",
+			"events":[
+				{"name":"Goa","short":"goa(1)","start":"2019-05-30 23:15","end":"2019-05-31 00:00"},
+				{"name":"Brat Star dj set","short":"bratst(1)","start":"2019-05-31 00:00","end":"2019-05-31 01:15"},
+				{"name":"Gangsta Boo","short":"gangst(1)","start":"2019-05-31 01:15","end":"2019-05-31 02:00"},
+				{"name":"Rico Nasty","short":"ricona(1)","start":"2019-05-31 02:00","end":"2019-05-31 02:45"},
+				{"name":"Japanese","short":"japane(1)","start":"2019-05-31 02:45","end":"2019-05-31 03:30"},
+				{"name":"Uzielito mix","short":"uzieli(1)","start":"2019-05-31 03:30","end":"2019-05-31 05:00"},
+				{"name":"Somadamantina","short":"somada(1)","start":"2019-05-31 23:15","end":"2019-06-01 00:00"},
+				{"name":"La Zowi","short":"zowi(1)","start":"2019-06-01 00:00","end":"2019-06-01 00:45"},
+				{"name":"Mark Luva","short":"marklu(1)","start":"2019-06-01 00:45","end":"2019-06-01 01:45"},
+				{"name":"Goth Boi Clique","short":"gothbo(1)","start":"2019-06-01 01:45","end":"2019-06-01 02:45"},
+				{"name":"La Goony Chonga","short":"goonyc(1)","start":"2019-06-01 03:00","end":"2019-06-01 03:45"},
+				{"name":"Rosa Pistola","short":"rosapi(1)","start":"2019-06-01 03:45","end":"2019-06-01 05:00"},
+				{"name":"Albany","short":"albany(1)","start":"2019-06-01 23:15","end":"2019-06-02 00:00"},
+				{"name":"Ian Isiah","short":"ianisi(1)","start":"2019-06-02 00:00","end":"2019-06-02 00:25"},
+				{"name":"Hurricane G feat Tony Touch","short":"hurric(1)","start":"2019-06-02 00:25","end":"2019-06-02 01:10"},
+				{"name":"Kodie Shane","short":"kodies(1)","start":"2019-06-02 01:10","end":"2019-06-02 02:00"},
+				{"name":"Dj Playero","short":"djplay(1)","start":"2019-06-02 02:00","end":"2019-06-02 04:00"},
+				{"name":"Yung Beef","short":"yungbe(1)","start":"2019-06-02 04:00","end":"2019-06-02 05:00"}
+			]
+		},
+		{
+			"name":"Day Pro",
+			"events":[
+				{"name":"Lorena Álvarez","short":"lorena(1)","start":"2019-05-29 13:30","end":"2019-05-29 14:00"},
+				{"name":"Conttra","short":"conttr(1)","start":"2019-05-29 14:30","end":"2019-05-29 15:00"},
+				{"name":"Ominira","short":"ominir(1)","start":"2019-05-29 15:30","end":"2019-05-29 16:00"},
+				{"name":"Malihini","short":"malihi(1)","start":"2019-05-29 16:30","end":"2019-05-29 17:00"},
+				{"name":"Agost","short":"agost(1)","start":"2019-05-29 18:30","end":"2019-05-29 19:00"},
+				{"name":"Retirada!","short":"retira(1)","start":"2019-05-29 19:30","end":"2019-05-29 20:00"},
+				{"name":"Museless","short":"musele(1)","start":"2019-05-29 20:30","end":"2019-05-29 21:00"},
+				{"name":"Mayberian Sanskülotts","short":"mayber(1)","start":"2019-05-30 11:50","end":"2019-05-30 12:20"},
+				{"name":"5K HD","short":"5khd(1)","start":"2019-05-30 12:40","end":"2019-05-30 13:10"},
+				{"name":"Birthh","short":"birthh(1)","start":"2019-05-30 13:30","end":"2019-05-30 14:00"},
+				{"name":"LAOISE","short":"laoise(1)","start":"2019-05-30 14:20","end":"2019-05-30 14:50"},
+				{"name":"A.Smyth","short":"asmyth(1)","start":"2019-05-30 15:10","end":"2019-05-30 15:40"},
+				{"name":"Wyvern Lingo","short":"wyvern(1)","start":"2019-05-30 16:00","end":"2019-05-30 16:30"},
+				{"name":"Kojaque","short":"kojaqu(1)","start":"2019-05-30 16:50","end":"2019-05-30 17:20"},
+				{"name":"Thumper","short":"thumpe(1)","start":"2019-05-30 17:40","end":"2019-05-30 18:10"},
+				{"name":"Bronko Yotte","short":"bronko(1)","start":"2019-05-31 11:00","end":"2019-05-31 11:30"},
+				{"name":"NFX","short":"nfx(1)","start":"2019-05-31 11:50","end":"2019-05-31 12:20"},
+				{"name":"Sistemas Inestables","short":"sistem(1)","start":"2019-05-31 12:40","end":"2019-05-31 13:10"},
+				{"name":"Belau","short":"belau(2)","start":"2019-05-31 13:30","end":"2019-05-31 14:00"},
+				{"name":"Phoro","short":"phoro(1)","start":"2019-05-31 14:20","end":"2019-05-31 14:50"},
+				{"name":"Eli Almic","short":"elialm(1)","start":"2019-05-31 15:10","end":"2019-05-31 15:40"},
+				{"name":"Bonish","short":"bonish(1)","start":"2019-05-31 16:00","end":"2019-05-31 16:30"},
+				{"name":"F5","short":"f5(1)","start":"2019-05-31 16:50","end":"2019-05-31 17:20"},
+				{"name":"Edsun","short":"edsun(1)","start":"2019-05-31 17:40","end":"2019-05-31 18:10"},
+				{"name":"P Postman","short":"ppostm(2)","start":"2019-06-01 14:00","end":"2019-06-01 14:30"},
+				{"name":"Mr. Perfumme","short":"mrperf(1)","start":"2019-06-01 15:00","end":"2019-06-01 15:30"},
+				{"name":"HÅN","short":"hn(2)","start":"2019-06-01 16:00","end":"2019-06-01 16:30"},
+				{"name":"L8CHING","short":"l8chin(2)","start":"2019-06-01 17:00","end":"2019-06-01 17:30"},
+				{"name":"New Act","short":"newact(1)","start":"2019-06-02 11:15","end":"2019-06-02 12:05"},
+				{"name":"DTSQ","short":"dtsq(2)","start":"2019-06-02 14:00","end":"2019-06-02 14:30"},
+				{"name":"Kirara","short":"kirara(2)","start":"2019-06-02 15:00","end":"2019-06-02 15:30"},
+				{"name":"Tin Robots","short":"tinrob(1)","start":"2019-06-02 16:00","end":"2019-06-02 16:30"}
+			]
+		},
+		{
+			"name":"Barcelona",
+			"events":[
+				{"name":"minimusica","short":"minimu(1)","start":"2019-06-02 12:30","end":"2019-06-02 13:30"},
+				{"name":"Aleesha","short":"aleesh(1)","start":"2019-06-02 16:30","end":"2019-06-02 17:10"},
+				{"name":"Lil Moss","short":"lilmos(1)","start":"2019-06-02 17:20","end":"2019-06-02 18:00"},
+				{"name":"Filthy Friends","short":"filthy(1)","start":"2019-06-02 18:20","end":"2019-06-02 19:20"},
+				{"name":"Christina Rosenvinge","short":"christ(1)","start":"2019-06-02 19:50","end":"2019-06-02 20:45"},
+				{"name":"Cupido","short":"cupido(1)","start":"2019-06-02 21:00","end":"2019-06-02 22:00"}
+			]
+		},
+		{
+			"name":"Living Primavera",
+			"events":[
+				{"name":"Cuco","short":"cuco(2)","start":"2019-05-30 13:00","end":"2019-05-30 14:00"},
+				{"name":"Hatchie","short":"hatchi(2)","start":"2019-05-31 13:00","end":"2019-05-31 14:00"},
+				{"name":"Tirzah","short":"tirzah(1)","start":"2019-06-01 13:00","end":"2019-06-01 14:00"}
+			]
+		}
+	]
+}
