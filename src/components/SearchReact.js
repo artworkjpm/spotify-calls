@@ -1,4 +1,5 @@
 import React from "react";
+
 import PropTypes from "prop-types";
 import Select from "react-select";
 import { makeStyles } from "@material-ui/core/styles";
@@ -12,8 +13,7 @@ import { withRouter } from "react-router-dom";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    height: 250,
-    minWidth: 290
+    minWidth: 240
   },
   input: {
     display: "flex",
@@ -25,7 +25,9 @@ const useStyles = makeStyles(theme => ({
     flexWrap: "wrap",
     flex: 1,
     alignItems: "center",
-    overflow: "hidden"
+    overflow: "hidden",
+    position: "relative",
+    left: 40
   },
 
   noOptionsMessage: {
