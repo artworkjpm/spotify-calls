@@ -53,10 +53,10 @@ const Home = props => {
       <div className="container">
         <h2>Search and listen to bands playing the most popular music festivals around the world</h2>
         <p>You must have a Spotify account to use this site</p>{" "}
-        <a href="https://clipify-backend.herokuapp.com/login">
-          <Button variant="contained" color="default" className={classes.button}>
+        <a href={props.ifLocalhost}>
+          <Button variant="contained" color="default">
             Login
-            <PlayArrowIcon className={classes.rightIcon} />
+            <PlayArrowIcon />
           </Button>
         </a>
         <h2>Most popular festivals</h2>
@@ -82,7 +82,7 @@ const Home = props => {
                   </StyledTableCell>
                   <StyledTableCell>{festival.Country}</StyledTableCell>
                   <StyledTableCell>
-                    <Moment format="DD/MM/YYYY">{festival.start}</Moment> - <Moment format="DD/MM/YYYY">{festival.end}</Moment>
+                    <Moment format="DD/MM">{festival.start}</Moment> - <Moment format="DD/MM/YYYY">{festival.end}</Moment>
                   </StyledTableCell>
                   <StyledTableCell>{festival.name.locations.length}</StyledTableCell>
                   <StyledTableCell>{festival.attendance.toLocaleString()}</StyledTableCell>

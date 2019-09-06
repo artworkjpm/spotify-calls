@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import SearchBands from "./SearchBand";
 import { withRouter } from "react-router-dom";
+import Button from "@material-ui/core/Button";
+import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 //get local json bands list
 var bands = require("../festivals/bands.json");
 
@@ -114,10 +116,7 @@ class Popular extends Component {
     artistID = this.state.artistID;
     console.log("artistID: " + this.state.artistID);
 
-    fetch(
-      `https://api.spotify.com/v1/artists/${artistID}/top-tracks?country=GB`,
-      headersAPI
-    )
+    fetch(`https://api.spotify.com/v1/artists/${artistID}/top-tracks?country=GB`, headersAPI)
       .then(response => response.json())
       .then(data =>
         this.setState({
@@ -142,18 +141,20 @@ class Popular extends Component {
     return (
       <div className="App">
         <>
-          <h1>Hi {this.state.userName}! POPULAR PAGE</h1>
-          <h2>Most popular Artist's songs on Spotify</h2>
-          <SearchBands
-            onSubmitValue={this.handleSubmit}
-            value={this.state.value}
-            onChangeValue={this.handleChange}
-          />
+          <p>You must have a Spotify account to use this site</p>{" "}
+          <a href={this.props.ifLocalhost}>
+            <Button variant="contained" color="default">
+              Login
+              <PlayArrowIcon />
+            </Button>
+          </a>
+          <h1>Hi {this.state.userName}!</h1>
+          <h2>Find out the most popular songs for your favourite artists</h2>
+          <SearchBands onSubmitValue={this.handleSubmit} value={this.state.value} onChangeValue={this.handleChange} />
           <p>
             {this.state.artistName.name}, artist id: {this.state.artistName.id}
           </p>
           <img src={this.state.image} alt="group" width="200" />
-
           <iframe
             title="spotify player"
             src={`https://open.spotify.com/embed/track/${popsong}`}
