@@ -135,7 +135,7 @@ const FestivalTable = props => {
       </div>
     </div>
   ) : (
-    <div>no data</div>
+    ""
   );
 };
 

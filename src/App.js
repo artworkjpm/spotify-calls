@@ -32,7 +32,6 @@ class App extends Component {
       popularSongs: [],
       image: [],
       genres: [],
-      errorApi: false,
       userName: "",
       setOpen: false,
       festivalSelected: ""
@@ -82,13 +81,6 @@ class App extends Component {
 
   }
  */
-  reload() {
-    if (window.location.href.includes("localhost")) {
-      return (window.location.href = "http://localhost:8888/login");
-    } else {
-      return (window.location.href = "https://clipify-backend.herokuapp.com/login");
-    }
-  }
 
   //use url to show festival
   getURLFestival(festival) {
@@ -136,22 +128,24 @@ class App extends Component {
         if (response.ok) {
           return response.json();
         } else {
-          return new Error(console.log("this does nothing"), (window.location.href = this.ifLocalhost()));
+          return new Error(alert("reconnecting you to Spotify"), (window.location.href = this.ifLocalhost()));
         }
       })
-      .then(data =>
-        this.setState(
-          {
-            artistName: data.artists.items[0],
-            errorApi: false,
-            log: console.log(data),
-            image: data.artists.items[0],
-            artistID: data.artists.items[0].id,
-            genres: data.artists.items[0].genres
-          },
-          this.getTopTracks
-        )
-      );
+      .then(data => {
+        if (data.artists.items.length > 0) {
+          this.setState(
+            {
+              artistName: data.artists.items[0],
+              image: data.artists.items[0],
+              artistID: data.artists.items[0].id,
+              genres: data.artists.items[0].genres
+            },
+            this.getTopTracks
+          );
+        } else {
+          alert("Sorry, there are no artists with that name on Spotify");
+        }
+      });
     /*  .catch(error =>
         this.setState(
           {
