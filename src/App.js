@@ -78,6 +78,10 @@ class App extends Component {
     this.getUserProfile();
   }
 
+  /*  componentDidUpdate(prevProps) {
+
+  }
+ */
   reload() {
     if (window.location.href.includes("localhost")) {
       return (window.location.href = "http://localhost:8888/login");
@@ -86,15 +90,30 @@ class App extends Component {
     }
   }
 
+  //use url to show festival
+  getURLFestival(festival) {
+    const festivalURL = festival.split("festival/")[1];
+    const result = AllFestivals.filter(name => name.name.id === festivalURL);
+    // console.log(result[0].name);
+    this.handleChangeSingle({ value: result[0].name });
+  }
+
   getUserProfile() {
     fetch(`https://api.spotify.com/v1/me`, headersAPI)
-      .then(response => response.json())
-      .then(data =>
-        this.setState({
-          userName: data.display_name.split(" ")[0],
-          log: console.log(data)
-        })
-      )
+      .then(response => {
+        if (!response.ok) {
+          if (window.location.href.indexOf("festival") > -1) {
+            this.getURLFestival(window.location.toString());
+          }
+        } else {
+          response.json().then(data =>
+            this.setState({
+              userName: data.display_name.split(" ")[0]
+              /* log: console.log(data) */
+            })
+          );
+        }
+      })
       .catch(error =>
         this.setState({
           log: console.error("Error:", error),
@@ -117,7 +136,7 @@ class App extends Component {
         if (response.ok) {
           return response.json();
         } else {
-          throw new Error("searchBands found no band in spotify", (window.location.href = this.ifLocalhost()));
+          return new Error(console.log("this does nothing"), (window.location.href = this.ifLocalhost()));
         }
       })
       .then(data =>
@@ -132,8 +151,8 @@ class App extends Component {
           },
           this.getTopTracks
         )
-      )
-      .catch(error =>
+      );
+    /*  .catch(error =>
         this.setState(
           {
             log: console.error("Error:", error),
@@ -142,7 +161,7 @@ class App extends Component {
           },
           alert("Sorry, there are no artists with that name on Spotify")
         )
-      );
+      ); */
   }
 
   getTopTracks() {

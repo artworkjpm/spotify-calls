@@ -1,7 +1,7 @@
 import React from "react";
 import Moment from "react-moment";
-//import glasto from "../festivals/Glastonbury2019.json";
-//import glasto from "../festivals/read2019.json";
+//import festival from "../festivals/festivalnbury2019.json";
+//import festival from "../festivals/read2019.json";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
@@ -13,8 +13,8 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 console.log(" AllFestivals[0].name", AllFestivals[0].name); */
 
 const FestivalTable = props => {
-  const glasto = props.festival.value;
-  console.log("table: ", glasto);
+  const festival = props.festival.value;
+  //console.log("festival: ", festival);
   const [currentIndex, setIndex] = React.useState(0);
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -56,15 +56,15 @@ const FestivalTable = props => {
     }
   }
 
-  /*   console.log(glasto.locations); */
+  /*   console.log(festival.locations); */
 
-  return glasto != null ? (
+  return festival != null ? (
     <div className="main-wrap lineup">
       <div className="center-div">
         <div className="alignLeft">
-          <Chip label={glasto.name}></Chip>
+          <Chip label={festival.name}></Chip>
           <ChevronRightIcon className="rightArrow" />
-          <Chip label={glasto.locations[currentIndex].name}></Chip>
+          <Chip label={festival.locations[currentIndex].name}></Chip>
         </div>
 
         <div className="hide-on-desktop stage-button">
@@ -72,7 +72,7 @@ const FestivalTable = props => {
             Stage
           </Button>
           <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
-            {glasto.locations.map((stage, i) => (
+            {festival.locations.map((stage, i) => (
               <MenuItem key={i} value={i} onClick={getArray}>
                 {stage.name}
               </MenuItem>
@@ -86,7 +86,7 @@ const FestivalTable = props => {
               <p>
                 <b>Stage</b>
               </p>
-              {glasto.locations.map((stage, i) => (
+              {festival.locations.map((stage, i) => (
                 <MenuItem key={i} value={i} onClick={getArray}>
                   {stage.name}
                 </MenuItem>
@@ -104,7 +104,7 @@ const FestivalTable = props => {
                   <th>Artist</th>
                 </tr>
 
-                {glasto.locations[currentIndex].events
+                {festival.locations[currentIndex].events
                   .sort((a, b) => new Date(b.start) - new Date(a.start))
                   .map((group, i) => (
                     <tr key={i} className={changeClassDay(findDay(new Date(group.start)))}>

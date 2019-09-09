@@ -164,6 +164,7 @@ const components = {
   ValueContainer
 };
 
+//I'm using withRouter to optain url location and history and to easily add and reload the url
 const SearchReact = withRouter(props => {
   const AllFestivals = props.allfestivals;
 
@@ -181,8 +182,8 @@ const SearchReact = withRouter(props => {
 
   function handleChangeSingle(value) {
     setSingle(value);
-    console.log("props ", props);
-    console.log("value ", value);
+    /* console.log("props ", props);
+    console.log("value ", value); */
     //get current url and push patientId in order to trigger the react router to load the graph
     //let currentUrl = this.props.location.pathname;
     // console.log("currentUrl: ", currentUrl);
