@@ -238,3 +238,7 @@ table th.MuiTableCell-root {
 div.MuiInput-underline:after {
   border-bottom: 2px solid black;
 }
+
+button.MuiIconButton-root {
+  padding: unset;
+}
