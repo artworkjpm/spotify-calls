@@ -141,14 +141,20 @@ class Popular extends Component {
     return (
       <div className="App">
         <>
-          <p>You must have a Spotify account to use this site</p>{" "}
-          <a href={this.props.ifLocalhost}>
-            <Button variant="contained" color="default">
-              Login
-              <PlayArrowIcon />
-            </Button>
-          </a>
-          <h1>Hi {this.state.userName}!</h1>
+          {this.state.userName ? (
+            <h1>Hi {this.state.userName}!</h1>
+          ) : (
+            <div>
+              <p>You must have a Spotify account to use this site</p>
+              <a href={this.props.ifLocalhost}>
+                <Button variant="contained" color="default">
+                  Login
+                  <PlayArrowIcon />
+                </Button>
+              </a>
+            </div>
+          )}
+
           <h2>Find out the most popular songs for your favourite artists</h2>
           <SearchBands onSubmitValue={this.handleSubmit} value={this.state.value} onChangeValue={this.handleChange} />
           <p>

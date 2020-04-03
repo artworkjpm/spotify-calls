@@ -51,14 +51,21 @@ const Home = props => {
   return (
     <div className="home-table">
       <div className="container">
+        {props.username ? (
+          <h1>Hi {props.username}!</h1>
+        ) : (
+          <div>
+            <p>You must have a Spotify account to use this site</p>
+            <a href={props.ifLocalhost}>
+              <Button variant="contained" color="default">
+                Login
+                <PlayArrowIcon />
+              </Button>
+            </a>
+          </div>
+        )}
         <h2>Search and listen to bands playing the most popular music festivals around the world</h2>
-        <p>You must have a Spotify account to use this site</p>{" "}
-        <a href={props.ifLocalhost}>
-          <Button variant="contained" color="default">
-            Login
-            <PlayArrowIcon />
-          </Button>
-        </a>
+
         <h2>Most popular festivals</h2>
       </div>
       <Paper className={classes.root}>

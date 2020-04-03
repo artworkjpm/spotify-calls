@@ -199,8 +199,30 @@ class App extends Component {
           <NavBar parsed={this.state.parsed} allfestivals={AllFestivals} handleChangeSingle={this.handleChangeSingle} />
           <div>
             <Switch>
-              <Route exact path="/" render={() => <Home allfestivals={AllFestivals} ifLocalhost={this.ifLocalhost()} />} />
-              <Route exact path="/festival/:festivalName" render={() => <ShowFestivals festival={festivalSelected} errorApi={this.state.errorApi} username={this.state.userName.split(" ")[0]} artistName={this.state.artistName} artistImage={this.state.image} popularSong={popsong} popularSongsArray={this.state.popularSongs} onSubmitValue={this.handleSubmit} value={this.state.value} onChangeValue={this.handleChange} handleClickSong={this.handleClickSong} handleClickGroup={this.handleClickGroup} setOpen={this.state.setOpen} onHandleClose={this.handleClose} genres={this.state.genres} />} />
+              <Route exact path="/" render={() => <Home allfestivals={AllFestivals} ifLocalhost={this.ifLocalhost()} username={this.state.userName.split(" ")[0]} />} />
+              <Route
+                exact
+                path="/festival/:festivalName"
+                render={() => (
+                  <ShowFestivals
+                    festival={festivalSelected}
+                    errorApi={this.state.errorApi}
+                    username={this.state.userName.split(" ")[0]}
+                    artistName={this.state.artistName}
+                    artistImage={this.state.image}
+                    popularSong={popsong}
+                    popularSongsArray={this.state.popularSongs}
+                    onSubmitValue={this.handleSubmit}
+                    value={this.state.value}
+                    onChangeValue={this.handleChange}
+                    handleClickSong={this.handleClickSong}
+                    handleClickGroup={this.handleClickGroup}
+                    setOpen={this.state.setOpen}
+                    onHandleClose={this.handleClose}
+                    genres={this.state.genres}
+                  />
+                )}
+              />
               <Route path="/popular" component={Popular} ifLocalhost={this.ifLocalhost()} />
             </Switch>
           </div>
