@@ -31,6 +31,8 @@ Then go to http://localhost:8888/login in your browser. This will initiate the l
 
 ## Deploying to production
 
+go here https://dashboard.heroku.com/apps/spotify-calls/deploy/github
+
 This template is indended to be deployed on Heroku. After installing the heroku CLI tools you can run the below commands in the same directory as server.js(replacing abc123, cba456, mybackend and myfrontend with your actual stuff - the below example assume that you already have your frontend running on http://myfrontend.herokuapp.com.
 
 ```
