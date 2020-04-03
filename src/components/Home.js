@@ -10,6 +10,7 @@ import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import Moment from "react-moment";
+/* import { Redirect } from "react-router"; */
 
 const Home = props => {
   const AllFestivals = props.allfestivals;
@@ -51,6 +52,7 @@ const Home = props => {
   return (
     <div className="home-table">
       <div className="container">
+        {/* {!props.username ? <Redirect to="{props.ifLocalhost}" /> : ""} */}
         {props.username ? (
           <h1>Hi {props.username}!</h1>
         ) : (
