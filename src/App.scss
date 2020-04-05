@@ -172,7 +172,7 @@ button:visited {
 }
 
 .thursday {
-  background-color: #e0fbff;
+  background-color: #ffe8b5;
 }
 
 .wednesday {
@@ -180,7 +180,7 @@ button:visited {
 }
 
 .tuesday {
-  background-color: darkcyan;
+  background-color: rgb(227, 255, 189);
 }
 
 .monday {
@@ -217,6 +217,7 @@ header.MuiAppBar-colorPrimary {
 
 table th.MuiTableCell-root {
   padding: 10px;
+  font-size: 16px;
 }
 
 /* div.makeStyles-root-59 {
@@ -241,4 +242,8 @@ div.MuiInput-underline:after {
 
 button.MuiIconButton-root {
   padding: unset;
+}
+
+.rowLink {
+  cursor: pointer;
 }

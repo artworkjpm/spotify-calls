@@ -31,7 +31,7 @@ const Home = withRouter((props) => {
       color: theme.palette.common.white,
     },
     body: {
-      fontSize: 14,
+      fontSize: 16,
     },
   }))(TableCell);
 
@@ -49,17 +49,13 @@ const Home = withRouter((props) => {
     const value = {
       value: clickedFromTable,
     };
-    console.log("value HOME:", value);
-
     props.handleChangeSingle(value);
-    let currentUrl = props.location.pathname;
-    console.log("currentUrl ", currentUrl);
     props.history.push("/festival/" + value.value.id);
   }
 
   return (
     <div className="home-table">
-      <div className="container">
+      <div>
         {/* {!props.username ? <Redirect to="{props.ifLocalhost}" /> : ""} */}
         {props.username ? (
           <h1>Hi {props.username}!</h1>
@@ -86,15 +82,15 @@ const Home = withRouter((props) => {
               <StyledTableCell>Country</StyledTableCell>
               <StyledTableCell>Dates</StyledTableCell>
 
-              <StyledTableCell>Number of stages</StyledTableCell>
-              <StyledTableCell>Estimated attendance</StyledTableCell>
+              <StyledTableCell>Stages</StyledTableCell>
+              <StyledTableCell>Attendance</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {AllFestivals.map((festival) => {
               return (
-                <StyledTableRow hover key={festival.SearchName}>
-                  <StyledTableCell component="th" scope="row" onClick={() => handleChangeSingle(festival.name)}>
+                <StyledTableRow hover key={festival.SearchName} onClick={() => handleChangeSingle(festival.name)} className="rowLink">
+                  <StyledTableCell component="th" scope="row">
                     {festival.SearchName}
                   </StyledTableCell>
                   <StyledTableCell>{festival.Country}</StyledTableCell>

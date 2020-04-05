@@ -36,34 +36,28 @@ class App extends Component {
       setOpen: false,
       festivalSelected: "",
     };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleClickSong = this.handleClickSong.bind(this);
-    this.handleClickGroup = this.handleClickGroup.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-    this.handleChangeSingle = this.handleChangeSingle.bind(this);
   }
 
-  handleChange(event) {
+  handleChange = (event) => {
     this.setState({ searchName: event.target.value });
-  }
+  };
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     event.preventDefault();
     this.searchBands(this.state.searchName);
-  }
+  };
 
-  handleClickSong(e) {
+  handleClickSong = (e) => {
     this.setState({ popularSongID: e.target.value });
-  }
+  };
 
-  handleClickGroup(e) {
+  handleClickGroup = (e) => {
     //alert("name: " + e.target.value);
     this.searchBands(e.target.value);
     this.setState({
       setOpen: false,
     });
-  }
+  };
 
   //use url to show festival
   getURLFestival(festival) {
@@ -163,20 +157,17 @@ class App extends Component {
       );
   }
 
-  handleClose() {
+  handleClose = () => {
     this.setState({
       setOpen: false,
     });
-  }
+  };
 
-  handleChangeSingle(value) {
-    console.log("handleChangeSingle: ", value);
+  handleChangeSingle = (value) => {
     //setState is asynchronous, put the log in a callback of the setState() method
-    this.setState({ festivalSelected: value }, () => {
-      console.log("handleChangeSingle2: ", this.state.festivalSelected);
-    });
+    this.setState({ festivalSelected: value });
     //this.props.history.push("/festival/" + value.value.id);
-  }
+  };
 
   componentDidMount() {
     this.getUserProfile();
@@ -193,7 +184,7 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <NavBar parsed={this.state.parsed} allfestivals={AllFestivals} handleChangeSingle={this.handleChangeSingle} />
-          <div>
+          <div className="container">
             <Switch>
               <Route exact path="/" render={() => <Home allfestivals={AllFestivals} ifLocalhost={this.ifLocalhost()} username={this.state.userName.split(" ")[0]} handleChangeSingle={this.handleChangeSingle} />} />
               <Route

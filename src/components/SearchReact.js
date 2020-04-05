@@ -167,9 +167,6 @@ const components = {
 //I'm using withRouter to optain url location and history and to easily add and reload the url
 const SearchReact = withRouter((props) => {
   const AllFestivals = props.allfestivals;
-
-  /*  console.log("AllFestivals nav: ", AllFestivals); */
-
   const suggestions = AllFestivals.map((suggestion) => ({
     value: suggestion.name,
     label: suggestion.SearchName,
@@ -178,14 +175,9 @@ const SearchReact = withRouter((props) => {
   const classes = useStyles();
   const [single, setSingle] = React.useState(null);
 
-  /*   const { match, location, history } = this.props; */
-
   function handleChangeSingle(value) {
-    console.log("value SEARCHREACT", value);
     setSingle(value);
     props.onChangeSearch(value);
-    let currentUrl = props.location.pathname;
-    console.log("currentUrl ", currentUrl);
     props.history.push("/festival/" + value.value.id);
   }
 
