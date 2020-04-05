@@ -10,44 +10,52 @@ import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import Moment from "react-moment";
+import { withRouter } from "react-router-dom";
 /* import { Redirect } from "react-router"; */
 
-const Home = props => {
+const Home = withRouter((props) => {
   const AllFestivals = props.allfestivals;
-  const useStyles = makeStyles(theme => ({
+  const useStyles = makeStyles((theme) => ({
     root: {
       width: "100%",
       marginTop: theme.spacing(3),
-      overflowX: "auto"
+      overflowX: "auto",
     },
     table: {
-      minWidth: 650
-    }
+      minWidth: 650,
+    },
   }));
-  const StyledTableCell = withStyles(theme => ({
+  const StyledTableCell = withStyles((theme) => ({
     head: {
       backgroundColor: theme.palette.common.black,
-      color: theme.palette.common.white
+      color: theme.palette.common.white,
     },
     body: {
-      fontSize: 14
-    }
+      fontSize: 14,
+    },
   }))(TableCell);
 
-  const StyledTableRow = withStyles(theme => ({
+  const StyledTableRow = withStyles((theme) => ({
     root: {
       "&:nth-of-type(odd)": {
-        backgroundColor: theme.palette.background.default
-      }
-    }
+        backgroundColor: theme.palette.background.default,
+      },
+    },
   }))(TableRow);
 
   const classes = useStyles();
 
-  /*   AllFestivals.map(item => {
-    return console.log(item.name.timezone);
-  });
- */
+  function handleChangeSingle(clickedFromTable) {
+    const value = {
+      value: clickedFromTable,
+    };
+    console.log("value HOME:", value);
+
+    props.handleChangeSingle(value);
+    let currentUrl = props.location.pathname;
+    console.log("currentUrl ", currentUrl);
+    props.history.push("/festival/" + value.value.id);
+  }
 
   return (
     <div className="home-table">
@@ -83,10 +91,10 @@ const Home = props => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {AllFestivals.map(festival => {
+            {AllFestivals.map((festival) => {
               return (
                 <StyledTableRow hover key={festival.SearchName}>
-                  <StyledTableCell component="th" scope="row">
+                  <StyledTableCell component="th" scope="row" onClick={() => handleChangeSingle(festival.name)}>
                     {festival.SearchName}
                   </StyledTableCell>
                   <StyledTableCell>{festival.Country}</StyledTableCell>
@@ -103,6 +111,6 @@ const Home = props => {
       </Paper>
     </div>
   );
-};
+});
 
 export default Home;

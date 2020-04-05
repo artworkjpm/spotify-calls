@@ -12,13 +12,13 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 console.log(" AllFestivals[0].name", AllFestivals[0].name); */
 
-const FestivalTable = props => {
+const FestivalTable = (props) => {
   const festival = props.festival.value;
   //console.log("festival: ", festival);
   const [currentIndex, setIndex] = React.useState(0);
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const getArray = e => {
+  const getArray = (e) => {
     setIndex(e.target.value);
     handleClose();
     window.scrollTo(0, 0);
@@ -119,7 +119,7 @@ const FestivalTable = props => {
                         {" "}
                         <button
                           value={group.name}
-                          onClick={e => {
+                          onClick={(e) => {
                             props.handleOpen(e);
                           }}
                         >

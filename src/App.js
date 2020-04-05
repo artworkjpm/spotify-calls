@@ -13,7 +13,7 @@ import "./App.scss";
 var artistID;
 const parsed = new URLSearchParams(window.location.search).get("access_token");
 const headersAPI = {
-  headers: { Authorization: "Bearer " + parsed }
+  headers: { Authorization: "Bearer " + parsed },
 };
 
 //https://api.spotify.com/v1/artists/{id}/top-tracks
@@ -34,7 +34,7 @@ class App extends Component {
       genres: [],
       userName: "",
       setOpen: false,
-      festivalSelected: ""
+      festivalSelected: "",
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -61,55 +61,38 @@ class App extends Component {
     //alert("name: " + e.target.value);
     this.searchBands(e.target.value);
     this.setState({
-      setOpen: false
+      setOpen: false,
     });
   }
-
-  handleChangeSingle(value) {
-    console.log("handleChangeSingle: ", value);
-    //setState is asynchronous, put the log in a callback of the setState() method
-    this.setState({ festivalSelected: value }, () => {
-      console.log("handleChangeSingle2: ", this.state.festivalSelected);
-    });
-  }
-
-  componentDidMount() {
-    this.getUserProfile();
-  }
-
-  /*  componentDidUpdate(prevProps) {
-
-  }
- */
 
   //use url to show festival
   getURLFestival(festival) {
     const festivalURL = festival.split("festival/")[1];
-    const result = AllFestivals.filter(name => name.name.id === festivalURL);
+    const result = AllFestivals.filter((name) => name.name.id === festivalURL);
     // console.log(result[0].name);
     this.handleChangeSingle({ value: result[0].name });
   }
 
   getUserProfile() {
     fetch(`https://api.spotify.com/v1/me`, headersAPI)
-      .then(response => {
+      .then((response) => {
         if (!response.ok) {
           if (window.location.href.indexOf("festival") > -1) {
             this.getURLFestival(window.location.toString());
           }
         } else {
-          response.json().then(data =>
+          response.json().then((data) =>
             this.setState({
-              userName: data.display_name.split(" ")[0]
+              userName: data.display_name.split(" ")[0],
               /* log: console.log(data) */
             })
           );
         }
       })
-      .catch(error =>
+      .catch((error) =>
         this.setState({
           log: console.error("Error:", error),
-          errorApi: true
+          errorApi: true,
         })
       );
   }
@@ -124,21 +107,21 @@ class App extends Component {
 
   searchBands(name) {
     fetch(`https://api.spotify.com/v1/search?q=${name}&type=artist`, headersAPI)
-      .then(response => {
+      .then((response) => {
         if (response.ok) {
           return response.json();
         } else {
           return new Error(alert("reconnecting you to Spotify"), (window.location.href = this.ifLocalhost()));
         }
       })
-      .then(data => {
+      .then((data) => {
         if (data.artists.items.length > 0) {
           this.setState(
             {
               artistName: data.artists.items[0],
               image: data.artists.items[0],
               artistID: data.artists.items[0].id,
-              genres: data.artists.items[0].genres
+              genres: data.artists.items[0].genres,
             },
             this.getTopTracks
           );
@@ -163,27 +146,40 @@ class App extends Component {
     console.log("artistID: " + this.state.artistID);
 
     fetch(`https://api.spotify.com/v1/artists/${artistID}/top-tracks?country=GB`, headersAPI)
-      .then(response => response.json())
-      .then(data =>
+      .then((response) => response.json())
+      .then((data) =>
         this.setState({
           log: console.log(data),
           popularSongID: data.tracks[0].id,
           popularSongs: data.tracks,
-          setOpen: true
+          setOpen: true,
         })
       )
-      .catch(error =>
+      .catch((error) =>
         this.setState({
           log: console.error("Error:", error),
-          errorApi: true
+          errorApi: true,
         })
       );
   }
 
   handleClose() {
     this.setState({
-      setOpen: false
+      setOpen: false,
     });
+  }
+
+  handleChangeSingle(value) {
+    console.log("handleChangeSingle: ", value);
+    //setState is asynchronous, put the log in a callback of the setState() method
+    this.setState({ festivalSelected: value }, () => {
+      console.log("handleChangeSingle2: ", this.state.festivalSelected);
+    });
+    //this.props.history.push("/festival/" + value.value.id);
+  }
+
+  componentDidMount() {
+    this.getUserProfile();
   }
 
   render() {
@@ -199,7 +195,7 @@ class App extends Component {
           <NavBar parsed={this.state.parsed} allfestivals={AllFestivals} handleChangeSingle={this.handleChangeSingle} />
           <div>
             <Switch>
-              <Route exact path="/" render={() => <Home allfestivals={AllFestivals} ifLocalhost={this.ifLocalhost()} username={this.state.userName.split(" ")[0]} />} />
+              <Route exact path="/" render={() => <Home allfestivals={AllFestivals} ifLocalhost={this.ifLocalhost()} username={this.state.userName.split(" ")[0]} handleChangeSingle={this.handleChangeSingle} />} />
               <Route
                 exact
                 path="/festival/:festivalName"

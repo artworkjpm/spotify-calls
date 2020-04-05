@@ -10,15 +10,15 @@ import Paper from "@material-ui/core/Paper";
 import MenuItem from "@material-ui/core/MenuItem";
 import { withRouter } from "react-router-dom";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    minWidth: 240
+    minWidth: 240,
   },
   input: {
     display: "flex",
     padding: 0,
-    height: "auto"
+    height: "auto",
   },
   valueContainer: {
     display: "flex",
@@ -27,28 +27,28 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     overflow: "hidden",
     position: "relative",
-    left: 40
+    left: 40,
   },
 
   noOptionsMessage: {
-    padding: theme.spacing(1, 2)
+    padding: theme.spacing(1, 2),
   },
   singleValue: {
-    fontSize: 16
+    fontSize: 16,
   },
   placeholder: {
     position: "absolute",
     left: 2,
     bottom: 6,
-    fontSize: 16
+    fontSize: 16,
   },
   paper: {
     position: "absolute",
     zIndex: 1,
     marginTop: theme.spacing(1),
     left: 0,
-    right: 0
-  }
+    right: 0,
+  },
 }));
 
 function NoOptionsMessage(props) {
@@ -68,7 +68,7 @@ NoOptionsMessage.propTypes = {
    * Props to be passed on to the wrapper.
    */
   innerProps: PropTypes.object.isRequired,
-  selectProps: PropTypes.object.isRequired
+  selectProps: PropTypes.object.isRequired,
 };
 
 function inputComponent({ inputRef, ...props }) {
@@ -79,9 +79,9 @@ inputComponent.propTypes = {
   inputRef: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.shape({
-      current: PropTypes.any.isRequired
-    })
-  ])
+      current: PropTypes.any.isRequired,
+    }),
+  ]),
 };
 
 function Control(props) {
@@ -89,7 +89,7 @@ function Control(props) {
     children,
     innerProps,
     innerRef,
-    selectProps: { classes, TextFieldProps }
+    selectProps: { classes, TextFieldProps },
   } = props;
 
   return (
@@ -101,8 +101,8 @@ function Control(props) {
           className: classes.input,
           ref: innerRef,
           children,
-          ...innerProps
-        }
+          ...innerProps,
+        },
       }}
       {...TextFieldProps}
     />
@@ -116,7 +116,7 @@ function Option(props) {
       selected={props.isFocused}
       component="div"
       style={{
-        fontWeight: props.isSelected ? 500 : 400
+        fontWeight: props.isSelected ? 500 : 400,
       }}
       {...props.innerProps}
     >
@@ -161,18 +161,18 @@ const components = {
   Option,
   Placeholder,
   SingleValue,
-  ValueContainer
+  ValueContainer,
 };
 
 //I'm using withRouter to optain url location and history and to easily add and reload the url
-const SearchReact = withRouter(props => {
+const SearchReact = withRouter((props) => {
   const AllFestivals = props.allfestivals;
 
   /*  console.log("AllFestivals nav: ", AllFestivals); */
 
-  const suggestions = AllFestivals.map(suggestion => ({
+  const suggestions = AllFestivals.map((suggestion) => ({
     value: suggestion.name,
-    label: suggestion.SearchName
+    label: suggestion.SearchName,
   }));
 
   const classes = useStyles();
@@ -181,18 +181,11 @@ const SearchReact = withRouter(props => {
   /*   const { match, location, history } = this.props; */
 
   function handleChangeSingle(value) {
+    console.log("value SEARCHREACT", value);
     setSingle(value);
-    /* console.log("props ", props);
-    console.log("value ", value); */
-    //get current url and push patientId in order to trigger the react router to load the graph
-    //let currentUrl = this.props.location.pathname;
-    // console.log("currentUrl: ", currentUrl);
-
-    //this.props.history.push(currentUrl + "/" + patientId);
     props.onChangeSearch(value);
     let currentUrl = props.location.pathname;
     console.log("currentUrl ", currentUrl);
-
     props.history.push("/festival/" + value.value.id);
   }
 
@@ -205,8 +198,8 @@ const SearchReact = withRouter(props => {
           TextFieldProps={{
             InputLabelProps: {
               htmlFor: "react-select-single",
-              shrink: true
-            }
+              shrink: true,
+            },
           }}
           placeholder="Search a festival..."
           options={suggestions}
